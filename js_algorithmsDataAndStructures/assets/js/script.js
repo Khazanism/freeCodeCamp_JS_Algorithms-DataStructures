@@ -22,7 +22,6 @@ const lastName = "Lovelace";
 // firstLetterOfLastName = lastName; // Change this line
 firstLetterOfLastName = lastName[0]; // Change this line
 
-*/
 
 // ===>Understand String Immutability<===
 
@@ -36,3 +35,20 @@ let myStr = "Jello World";
 // myStr[0] = "H"; // Change this line
 myStr = "Hello World"; // Change this line
 // Only change code above this line
+
+*/
+
+
+// ===>Use Bracket Notation to Find the Nth Character in a String<===
+
+// Setup
+const lastName = "Lovelace";
+
+//You can also use bracket notation to get the character at other positions within a string.
+
+//Remember that computers start counting at 0, so the first character is actually the zeroth character.
+
+// Only change code below this line
+// const thirdLetterOfLastName = lastName; // Change this line
+const thirdLetterOfLastName = lastName[2]; // Change this line
+
