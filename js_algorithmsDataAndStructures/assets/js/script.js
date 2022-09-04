@@ -85,10 +85,22 @@ const wordBlanks = "The" + " " + myAdjective + " " + myNoun + " " + myVerb + " "
 console.log(wordBlanks)
 // Only change code above this line
 
-*/
 
 // ===> Store Multiple Values in one Variable using JavaScript Arrays <===
 
 // Only change code below this line
 // const myArray = [];
 const myArray = ["This is number", 9];
+
+
+*/
+
+// ===>Nest one Array within Another Array<===
+
+// Only change code below this line
+// const myArray = [];
+const myArray = [["Salme", 29], ["Fayzeh", 25], ["Farhad", 26]];
+
+// This is also called a multi-dimensional array.
+
+// Create a nested array called myArray.
