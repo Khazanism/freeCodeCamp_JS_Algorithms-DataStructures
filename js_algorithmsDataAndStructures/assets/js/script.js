@@ -103,7 +103,6 @@ const myArray = [["Salme", 29], ["Fayzeh", 25], ["Farhad", 26]];
 // This is also called a multi-dimensional array.
 // Create a nested array called myArray.
 
-*/
 
 // ===> Access Array Data with Indexes <===
 // const myArray = [50, 60, 70]; 
@@ -117,4 +116,18 @@ const myArray = [["Salme", 29], ["Fayzeh", 25], ["Farhad", 26]];
 const myArray = [50, 60, 70];
 const myData = myArray[0];
 console.log(myData);
+*/
 
+// ===> Modify Array Data With Indexes <===
+// Setup
+// const myArray = [18, 64, 99];
+
+const myArray = [18, 64, 99];
+myArray[0] = 45;
+console.log(myArray);
+
+// Only change code below this line
+
+// Unlike strings, the entries of arrays are mutable
+// and can be changed freely,
+//even if the array was declared with const.
