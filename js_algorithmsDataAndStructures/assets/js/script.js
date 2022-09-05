@@ -93,7 +93,6 @@ console.log(wordBlanks)
 const myArray = ["This is number", 9];
 
 
-*/
 
 // ===>Nest one Array within Another Array<===
 
@@ -102,5 +101,20 @@ const myArray = ["This is number", 9];
 const myArray = [["Salme", 29], ["Fayzeh", 25], ["Farhad", 26]];
 
 // This is also called a multi-dimensional array.
-
 // Create a nested array called myArray.
+
+*/
+
+// ===> Access Array Data with Indexes <===
+// const myArray = [50, 60, 70]; 
+
+// Array indexes are written in the same bracket notation 
+//that strings use, except that instead of specifying a character, 
+//they are specifying an entry in the array. Like strings, 
+//arrays use zero-based indexing, 
+//so the first element in an array has an index of 0.
+
+const myArray = [50, 60, 70];
+const myData = myArray[0];
+console.log(myData);
+
