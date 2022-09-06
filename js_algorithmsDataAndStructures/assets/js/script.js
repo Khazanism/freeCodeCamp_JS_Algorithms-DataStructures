@@ -131,23 +131,35 @@ console.log(myArray);
 // and can be changed freely,
 //even if the array was declared with const.
 
-*/
 
 // ===> Access Multi-Dimensional Arrays With Indexes <===
 // One way to think of a multi-dimensional array, is as an array of arrays. When you use brackets to access your array, the first set of brackets refers to the entries in the outer-most (the first level) array, and each additional pair of brackets refers to the next level of entries inside.
 
 // Example
 // const myArray = [
-//     [1, 2, 3],
-//     [4, 5, 6],
-//     [7, 8, 9],
-//     [[10, 11, 12], 13, 14],
-//   ];
-  
-//   const myData = myArray[0][0];
+    //     [1, 2, 3],
+    //     [4, 5, 6],
+    //     [7, 8, 9],
+    //     [[10, 11, 12], 13, 14],
+    //   ];
+    
+    //   const myData = myArray[0][0];
+    
+    const myArray = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [[10, 11, 12], 13, 14], ];
+    const myData = myArray[2][1];
+    console.log(myData);
+    */
 
-const myArray = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [[10, 11, 12], 13, 14], ];
+// // ===> Manipulate Arrays With push() <===
 
-const myData = myArray[2][1];
+// An easy way to append data to the end of an array is via the push() function.
 
-console.log(myData);
+// .push() takes one or more parameters and "pushes" them onto the end of the array.
+
+// Setup
+const myArray = [["John", 23], ["cat", 2]];
+
+
+// Only change code below this line
+myArray.push(["dog", 3]);
+console.log(myArray);
