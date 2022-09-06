@@ -116,7 +116,6 @@ const myArray = [["Salme", 29], ["Fayzeh", 25], ["Farhad", 26]];
 const myArray = [50, 60, 70];
 const myData = myArray[0];
 console.log(myData);
-*/
 
 // ===> Modify Array Data With Indexes <===
 // Setup
@@ -131,3 +130,24 @@ console.log(myArray);
 // Unlike strings, the entries of arrays are mutable
 // and can be changed freely,
 //even if the array was declared with const.
+
+*/
+
+// ===> Access Multi-Dimensional Arrays With Indexes <===
+// One way to think of a multi-dimensional array, is as an array of arrays. When you use brackets to access your array, the first set of brackets refers to the entries in the outer-most (the first level) array, and each additional pair of brackets refers to the next level of entries inside.
+
+// Example
+// const myArray = [
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9],
+//     [[10, 11, 12], 13, 14],
+//   ];
+  
+//   const myData = myArray[0][0];
+
+const myArray = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [[10, 11, 12], 13, 14], ];
+
+const myData = myArray[2][1];
+
+console.log(myData);
