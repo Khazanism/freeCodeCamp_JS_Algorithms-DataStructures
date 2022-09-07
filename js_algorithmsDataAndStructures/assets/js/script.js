@@ -163,7 +163,6 @@ const myArray = [["John", 23], ["cat", 2]];
 myArray.push(["dog", 3]);
 console.log(myArray);
 // Only change code below this line
-*/
 
 // ===> Manipulate Arrays With pop() <===
 
@@ -178,5 +177,19 @@ console.log(removedFromMyArray);
 console.log(myArray);
 
 // Only change code below this line
+*/
 
+// ===> Manipulate Arrays With shift() <===
 
+// Setup
+// pop() always removes the last element of an array. What if you want to remove the first?
+// That's where .shift() comes in. It works just like .pop(), except it removes the first element instead of the last
+
+// const myArray = [["John", 23], ["dog", 3]];
+const myArray = [["John", 23], ["dog", 3]];
+
+const removedFromMyArray = myArray.shift();
+console.log(myArray);
+console.log(removedFromMyArray);
+
+// Only change code below this line
