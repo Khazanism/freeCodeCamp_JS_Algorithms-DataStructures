@@ -137,20 +137,19 @@ console.log(myArray);
 
 // Example
 // const myArray = [
-    //     [1, 2, 3],
-    //     [4, 5, 6],
-    //     [7, 8, 9],
-    //     [[10, 11, 12], 13, 14],
-    //   ];
-    
-    //   const myData = myArray[0][0];
-    
-    const myArray = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [[10, 11, 12], 13, 14], ];
-    const myData = myArray[2][1];
-    console.log(myData);
-    */
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9],
+//     [[10, 11, 12], 13, 14],
+//   ];
 
-// // ===> Manipulate Arrays With push() <===
+//   const myData = myArray[0][0];
+
+const myArray = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [[10, 11, 12], 13, 14], ];
+const myData = myArray[2][1];
+console.log(myData);
+
+// ===> Manipulate Arrays With push() <===
 
 // An easy way to append data to the end of an array is via the push() function.
 
@@ -163,3 +162,21 @@ const myArray = [["John", 23], ["cat", 2]];
 // Only change code below this line
 myArray.push(["dog", 3]);
 console.log(myArray);
+// Only change code below this line
+*/
+
+// ===> Manipulate Arrays With pop() <===
+
+// .pop() is used to pop a value off of the end of an array. We can store this popped off value by assigning it to a variable. In other words, .pop() removes the last element from an array and returns that element.
+
+// Setup
+// const myArray = [["John", 23], ["cat", 2]];
+const myArray = [["John", 23], ["cat", 2]];
+
+const removedFromMyArray = myArray.pop();
+console.log(removedFromMyArray);
+console.log(myArray);
+
+// Only change code below this line
+
+
