@@ -192,7 +192,6 @@ console.log(myArray);
 console.log(removedFromMyArray);
 
 // Only change code below this line
-*/
 
 // ===> Manipulate Arrays With unshift() <===
 
@@ -208,3 +207,17 @@ myArray.shift();
 // Only change code below this line
 myArray.unshift(["Paul", 35]);
 console.log(myArray);
+*/
+
+// ===> Shopping List <===
+// const myList = [];
+// answer below
+const myList = [
+  ["Mars", 15],
+  ["Snikkers", 14],
+  ["Kitkat", 13],
+  ["Bueno", 12],
+  ["Milka", 11],
+];
+
+console.log(myList);
