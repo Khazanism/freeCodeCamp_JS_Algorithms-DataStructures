@@ -207,17 +207,26 @@ myArray.shift();
 // Only change code below this line
 myArray.unshift(["Paul", 35]);
 console.log(myArray);
-*/
 
 // ===> Shopping List <===
+// create a shopping list with 5 elements 
 // const myList = [];
 // answer below
 const myList = [
-  ["Mars", 15],
-  ["Snikkers", 14],
-  ["Kitkat", 13],
-  ["Bueno", 12],
-  ["Milka", 11],
+    ["Mars", 15],
+    ["Snikkers", 14],
+    ["Kitkat", 13],
+    ["Bueno", 12],
+    ["Milka", 11],
 ];
-
 console.log(myList);
+*/
+
+// ===> Write Reusable JavaScript with Functions <===
+
+function reusableFunction() {
+  console.log("Hi World");
+}
+reusableFunction();
+
+
