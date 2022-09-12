@@ -284,7 +284,6 @@ function fun2() {
     }
     console.log(output);
 }
-*/
 
 
 // ===> Local Scope and Functions <===
@@ -297,9 +296,28 @@ function myLocalScope() {
     const myVar = "Potato"
     // answer
     console.log('inside myLocalScope', myVar);
-  }
-  myLocalScope();
-  
-  // Run and check the console
-  // myVar is not defined outside of myLocalScope
-  console.log('outside myLocalScope', myVar);
+}
+myLocalScope();
+
+// Run and check the console
+// myVar is not defined outside of myLocalScope
+console.log('outside myLocalScope', myVar);
+*/
+
+// ===> Global vs. Local Scope in Functions <===
+
+// It is possible to have both local and global variables with the same name. When you do this, the local variable takes precedence over the global variable.
+
+// Setup
+const outerWear = "T-Shirt";
+
+function myOutfit() {
+  // Only change code below this line
+  // answer
+  const outerWear = "sweater";
+  // answer
+  // Only change code above this line
+  return outerWear;
+}
+
+myOutfit();
