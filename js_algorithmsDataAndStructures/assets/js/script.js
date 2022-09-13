@@ -302,7 +302,6 @@ myLocalScope();
 // Run and check the console
 // myVar is not defined outside of myLocalScope
 console.log('outside myLocalScope', myVar);
-*/
 
 // ===> Global vs. Local Scope in Functions <===
 
@@ -312,12 +311,37 @@ console.log('outside myLocalScope', myVar);
 const outerWear = "T-Shirt";
 
 function myOutfit() {
-  // Only change code below this line
-  // answer
-  const outerWear = "sweater";
-  // answer
-  // Only change code above this line
-  return outerWear;
+    // Only change code below this line
+    // answer
+    const outerWear = "sweater";
+    // answer
+    // Only change code above this line
+    return outerWear;
 }
 
 myOutfit();
+
+*/
+
+// ===> Understanding Undefined Value returned from a Function <===
+
+// A function can include the return statement but it does not have to. In the case that the function doesn't have a return statement,
+// when you call it, the function processes the inner code but the returned value is undefined.
+
+// Setup
+let sum = 0;
+
+function addThree() {
+  sum = sum + 3;
+}
+
+// Only change code below this line
+function addFive() {
+  sum = sum + 5;
+}
+
+// Only change code above this line
+
+addThree();
+addFive();
+console.log(sum);
