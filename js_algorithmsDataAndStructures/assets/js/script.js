@@ -344,8 +344,6 @@ function addFive() {
 addThree();
 addFive();
 console.log(sum);
-*/
-
 
 // ===> Assignment with a Returned Value <===
 
@@ -355,9 +353,38 @@ console.log(sum);
 let processed = 0;
 
 function processArg(num) {
-  return (num + 3) / 5;
+    return (num + 3) / 5;
 }
 
 // Only change code below this line
 processed = processArg(7);
 console.log(processed);
+*/
+
+// ===> Stand in Line <===
+
+// In Computer Science a queue is an abstract Data Structure where items are kept in order. New items can be added at the back of the queue and old items are taken off from the front of the queue.
+
+function nextInLine(arr, item) {
+  // Only change code below this line
+  arr.push(item);
+  const removed = arr.shift();
+  return removed;
+
+  //   return item;
+  // Only change code above this line
+}
+
+// Setup
+const testArr = [1, 2, 3, 4, 5];
+
+// Display code
+console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr, 6));
+console.log("After: " + JSON.stringify(testArr));
+
+console.log(nextInLine([], 1));
+console.log(nextInLine([2], 1));
+console.log(nextInLine([5, 6, 7, 8, 9], 1));
+console.log(nextInLine(testArr, 10));
+console.log(testArr[4]);
