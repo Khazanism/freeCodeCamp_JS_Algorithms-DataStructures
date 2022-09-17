@@ -443,17 +443,35 @@ testEqual(10);
 testEqual(12);
 //answer
 
-*/
-// ===> Comparison with the Equality Operator === <===
+// ===> Comparison with the Strict Equality Operator === <===
 
 // Setup
 function testStrict(val) {
-  if (val === 7) {
+    if (val === 7) {
+        // Change this line
+        return "Equal";
+    }
+    return "Not Equal";
+}
+
+testStrict(10);
+testStrict(7);
+*/
+
+// ===> Practice comparing different values <===
+
+// In the last two challenges, we learned about the equality operator (==) and the strict equality operator (===). Let's do a quick review and practice using these operators some more.
+
+// If the values being compared are not of the same type, the equality operator will perform a type conversion, and then evaluate the values. However, the strict equality operator will compare both the data type and value as-is, without converting one type to the other.
+
+// Setup
+function compareEquality(a, b) {
+  if (a == b) {
     // Change this line
     return "Equal";
   }
   return "Not Equal";
 }
 
-testStrict(10);
-testStrict(7);
+compareEquality(10, "10");
+compareEquality(20, "20");
