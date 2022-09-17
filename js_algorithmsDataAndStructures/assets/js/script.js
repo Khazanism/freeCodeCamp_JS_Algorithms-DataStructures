@@ -456,7 +456,6 @@ function testStrict(val) {
 
 testStrict(10);
 testStrict(7);
-*/
 
 // ===> Practice comparing different values <===
 
@@ -466,12 +465,30 @@ testStrict(7);
 
 // Setup
 function compareEquality(a, b) {
-  if (a == b) {
-    // Change this line
-    return "Equal";
-  }
-  return "Not Equal";
+    if (a == b) {
+        // Change this line
+        return "Equal";
+    }
+    return "Not Equal";
 }
 
 compareEquality(10, "10");
 compareEquality(20, "20");
+*/
+
+// ===> Comparison with the Inequality Operator <===
+
+// Setup
+function testNotEqual(val) {
+  if (val != "99") {
+    // Change this line
+    return "Not Equal";
+  }
+  return "Equal";
+}
+
+console.log(testNotEqual("99"));
+console.log(testNotEqual(99));
+console.log(testNotEqual(12));
+console.log(testNotEqual("12"));
+console.log(testNotEqual("bob"));
