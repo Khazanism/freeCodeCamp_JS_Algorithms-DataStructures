@@ -560,22 +560,21 @@ console.log(testGreaterOrEqual(11));
 console.log(testGreaterOrEqual(19));
 console.log(testGreaterOrEqual(100));
 console.log(testGreaterOrEqual(21));
-*/
 
 // ===> Comparison with the Less Than Operator <===
 
 function testLessThan(val) {
-  if (val < 25) {
-    // Change this line
-    return "Under 25";
-  }
-
-  if (val < 55) {
-    // Change this line
-    return "Under 55";
-  }
-
-  return "55 or Over";
+    if (val < 25) {
+        // Change this line
+        return "Under 25";
+    }
+    
+    if (val < 55) {
+        // Change this line
+        return "Under 55";
+    }
+    
+    return "55 or Over";
 }
 
 console.log(testLessThan(0));
@@ -584,3 +583,26 @@ console.log(testLessThan(25));
 console.log(testLessThan(54));
 console.log(testLessThan(55));
 console.log(testLessThan(99));
+*/
+
+// ===> Comparison with the Less Than Or Equal To Operator <===
+
+function testLessOrEqual(val) {
+    if (val <= 12) {  // Change this line
+      return "Smaller Than or Equal to 12";
+    }
+  
+    if (val <= 24) {  // Change this line
+      return "Smaller Than or Equal to 24";
+    }
+  
+    return "More Than 24";
+  }
+  
+  console.log(testLessOrEqual(0));
+  console.log(testLessOrEqual(11));
+  console.log(testLessOrEqual(12));
+  console.log(testLessOrEqual(23));
+  console.log(testLessOrEqual(24));
+  console.log(testLessOrEqual(25));
+  console.log(testLessOrEqual(55));
