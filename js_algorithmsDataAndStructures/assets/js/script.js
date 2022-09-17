@@ -474,17 +474,16 @@ function compareEquality(a, b) {
 
 compareEquality(10, "10");
 compareEquality(20, "20");
-*/
 
 // ===> Comparison with the Inequality Operator <===
 
 // Setup
 function testNotEqual(val) {
-  if (val != "99") {
-    // Change this line
-    return "Not Equal";
-  }
-  return "Equal";
+    if (val != "99") {
+        // Change this line
+        return "Not Equal";
+    }
+    return "Equal";
 }
 
 console.log(testNotEqual("99"));
@@ -492,3 +491,21 @@ console.log(testNotEqual(99));
 console.log(testNotEqual(12));
 console.log(testNotEqual("12"));
 console.log(testNotEqual("bob"));
+
+*/
+
+// ===> Comparison with the Strict Inequality Operator <===
+
+// Setup
+function testStrictNotEqual(val) {
+  if (val !== 17) {
+    // Change this line
+    return "Not Equal";
+  }
+  return "Equal";
+}
+
+console.log(testStrictNotEqual(17));
+console.log(testStrictNotEqual("17"));
+console.log(testStrictNotEqual(12));
+console.log(testStrictNotEqual("bob"));
