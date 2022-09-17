@@ -359,20 +359,19 @@ function processArg(num) {
 // Only change code below this line
 processed = processArg(7);
 console.log(processed);
-*/
 
 // ===> Stand in Line <===
 
 // In Computer Science a queue is an abstract Data Structure where items are kept in order. New items can be added at the back of the queue and old items are taken off from the front of the queue.
 
 function nextInLine(arr, item) {
-  // Only change code below this line
-  arr.push(item);
-  const removed = arr.shift();
-  return removed;
-
-  //   return item;
-  // Only change code above this line
+    // Only change code below this line
+    arr.push(item);
+    const removed = arr.shift();
+    return removed;
+    
+    //   return item;
+    // Only change code above this line
 }
 
 // Setup
@@ -388,3 +387,20 @@ console.log(nextInLine([2], 1));
 console.log(nextInLine([5, 6, 7, 8, 9], 1));
 console.log(nextInLine(testArr, 10));
 console.log(testArr[4]);
+
+*/
+
+// ===> Understanding Boolean Values <===
+
+// Another data type is the Boolean. Booleans may only be one of two values: true or false. They are basically little on-off switches, where true is on and false is off. These two states are mutually exclusive.
+
+// Note: Boolean values are never written with quotes. The strings "true" and "false" are not Boolean and have no special meaning in JavaScript.
+
+function welcomeToBooleans() {
+    // Only change code below this line
+  
+    return  true//false; // Change this line
+  
+    // Only change code above this line
+  }
+
