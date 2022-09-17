@@ -508,7 +508,6 @@ console.log(testStrictNotEqual(17));
 console.log(testStrictNotEqual("17"));
 console.log(testStrictNotEqual(12));
 console.log(testStrictNotEqual("bob"));
-*/
 
 // ===> Comparison with the Greater Than Operator <===
 
@@ -517,17 +516,17 @@ console.log(testStrictNotEqual("bob"));
 // Like the equality operator, the greater than operator will convert data types of values while comparing.
 
 function testGreaterThan(val) {
-  if (val > 100) {
-    // Change this line
-    return "Over 100";
-  }
-
-  if (val > 10) {
-    // Change this line
-    return "Over 10";
-  }
-
-  return "10 or Under";
+    if (val > 100) {
+        // Change this line
+        return "Over 100";
+    }
+    
+    if (val > 10) {
+        // Change this line
+        return "Over 10";
+    }
+    
+    return "10 or Under";
 }
 
 console.log(testGreaterThan(0));
@@ -537,3 +536,30 @@ console.log(testGreaterThan(99));
 console.log(testGreaterThan(100));
 console.log(testGreaterThan(101));
 console.log(testGreaterThan(150));
+*/
+
+// ===> Comparison with the Greater Than Or Equal To Operator <===
+
+function testGreaterOrEqual(val) {
+  if (val >= 20) {
+    // Change this line
+    return "20 or Over";
+  }
+
+  if (val >= 10) {
+    // Change this line
+    return "10 or Over";
+  }
+
+  return "Less than 10";
+}
+
+console.log(testGreaterOrEqual(0));
+console.log(testGreaterOrEqual(9));
+console.log(testGreaterOrEqual(10));
+console.log(testGreaterOrEqual(11));
+console.log(testGreaterOrEqual(19));
+console.log(testGreaterOrEqual(100));
+console.log(testGreaterOrEqual(21));
+
+
