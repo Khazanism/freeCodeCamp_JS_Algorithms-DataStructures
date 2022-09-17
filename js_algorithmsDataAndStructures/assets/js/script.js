@@ -402,7 +402,6 @@ function welcomeToBooleans() {
     
     // Only change code above this line
 }
-*/
 
 // ===> Use Conditional Logic with If Statements <===
 
@@ -411,15 +410,36 @@ function welcomeToBooleans() {
 // When the condition evaluates to true, the program executes the statement inside the curly braces. When the Boolean condition evaluates to false, the statement inside the curly braces will not execute.
 
 function trueOrFalse(wasThatTrue) {
-  // Only change code below this line
-
-  if (wasThatTrue) {
-    return "Yes, that was true";
-  }
-  return "No, that was false";
-  
-  // Only change code above this line
+    // Only change code below this line
+    
+    if (wasThatTrue) {
+        return "Yes, that was true";
+    }
+    return "No, that was false";
+    
+    // Only change code above this line
 }
 
 trueOrFalse(true);
 // trueOrFalse(false);
+
+*/
+// ===> Comparison with the Equality Operator == <===
+
+// There are many comparison operators in JavaScript. All of these operators return a boolean true or false value.
+
+// The most basic operator is the equality operator ==. The equality operator compares two values and returns true if they're equivalent or false if they are not. Note that equality is different from assignment (=), which assigns the value on the right of the operator to a variable on the left.
+
+// Setup
+function testEqual(val) {
+  if (val == 12) {
+    // Change this line
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+testEqual(10);
+//answer
+testEqual(12);
+//answer
