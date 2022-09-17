@@ -423,7 +423,6 @@ function trueOrFalse(wasThatTrue) {
 trueOrFalse(true);
 // trueOrFalse(false);
 
-*/
 // ===> Comparison with the Equality Operator == <===
 
 // There are many comparison operators in JavaScript. All of these operators return a boolean true or false value.
@@ -432,14 +431,29 @@ trueOrFalse(true);
 
 // Setup
 function testEqual(val) {
-  if (val == 12) {
-    // Change this line
-    return "Equal";
-  }
-  return "Not Equal";
+    if (val == 12) {
+        // Change this line
+        return "Equal";
+    }
+    return "Not Equal";
 }
 
 testEqual(10);
 //answer
 testEqual(12);
 //answer
+
+*/
+// ===> Comparison with the Equality Operator === <===
+
+// Setup
+function testStrict(val) {
+  if (val === 7) {
+    // Change this line
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+testStrict(10);
+testStrict(7);
