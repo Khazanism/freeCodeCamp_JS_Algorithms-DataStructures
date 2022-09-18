@@ -605,21 +605,20 @@ console.log(testLessOrEqual(23));
 console.log(testLessOrEqual(24));
 console.log(testLessOrEqual(25));
 console.log(testLessOrEqual(55));
-*/
 
 // ===> Comparisons with the Logical And Operator <===
 
 // Sometimes you will need to test more than one thing at a time. The logical and operator (&&) returns true if and only if the operands to the left and right of it are true.
 
 function testLogicalAnd(val) {
-  // Only change code below this line
-
-  if (val <= 50 && val >= 25) {
-    return "Yes";
-  }
-
-  // Only change code above this line
-  return "No";
+    // Only change code below this line
+    
+    if (val <= 50 && val >= 25) {
+        return "Yes";
+    }
+    
+    // Only change code above this line
+    return "No";
 }
 
 console.log(testLogicalAnd(0));
@@ -630,3 +629,28 @@ console.log(testLogicalAnd(50));
 console.log(testLogicalAnd(51));
 console.log(testLogicalAnd(75));
 console.log(testLogicalAnd(80));
+*/
+
+
+// ===> Comparisons with the Logical Or Operator || <===
+
+// The logical or operator (||) returns true if either of the operands is true. Otherwise, it returns false.
+
+function testLogicalOr(val) {
+    // Only change code below this line
+  
+      if (val > 20 || val < 10) {
+        return "Outside";
+    }
+  
+    // Only change code above this line
+    return "Inside";
+  }
+  console.log(testLogicalOr(0));
+  console.log(testLogicalOr(9));
+  console.log(testLogicalOr(10));
+  console.log(testLogicalOr(15));
+  console.log(testLogicalOr(19));
+  console.log(testLogicalOr(20));
+  console.log(testLogicalOr(21));
+  console.log(testLogicalOr(25));
