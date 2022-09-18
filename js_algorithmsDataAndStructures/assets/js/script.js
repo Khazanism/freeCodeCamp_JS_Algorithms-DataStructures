@@ -583,26 +583,50 @@ console.log(testLessThan(25));
 console.log(testLessThan(54));
 console.log(testLessThan(55));
 console.log(testLessThan(99));
-*/
 
 // ===> Comparison with the Less Than Or Equal To Operator <===
 
 function testLessOrEqual(val) {
     if (val <= 12) {  // Change this line
-      return "Smaller Than or Equal to 12";
+        return "Smaller Than or Equal to 12";
     }
-  
+    
     if (val <= 24) {  // Change this line
-      return "Smaller Than or Equal to 24";
+        return "Smaller Than or Equal to 24";
     }
-  
+    
     return "More Than 24";
+}
+
+console.log(testLessOrEqual(0));
+console.log(testLessOrEqual(11));
+console.log(testLessOrEqual(12));
+console.log(testLessOrEqual(23));
+console.log(testLessOrEqual(24));
+console.log(testLessOrEqual(25));
+console.log(testLessOrEqual(55));
+*/
+
+// ===> Comparisons with the Logical And Operator <===
+
+// Sometimes you will need to test more than one thing at a time. The logical and operator (&&) returns true if and only if the operands to the left and right of it are true.
+
+function testLogicalAnd(val) {
+  // Only change code below this line
+
+  if (val <= 50 && val >= 25) {
+    return "Yes";
   }
-  
-  console.log(testLessOrEqual(0));
-  console.log(testLessOrEqual(11));
-  console.log(testLessOrEqual(12));
-  console.log(testLessOrEqual(23));
-  console.log(testLessOrEqual(24));
-  console.log(testLessOrEqual(25));
-  console.log(testLessOrEqual(55));
+
+  // Only change code above this line
+  return "No";
+}
+
+console.log(testLogicalAnd(0));
+console.log(testLogicalAnd(24));
+console.log(testLogicalAnd(25));
+console.log(testLogicalAnd(30));
+console.log(testLogicalAnd(50));
+console.log(testLogicalAnd(51));
+console.log(testLogicalAnd(75));
+console.log(testLogicalAnd(80));
