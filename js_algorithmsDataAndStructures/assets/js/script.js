@@ -629,8 +629,6 @@ console.log(testLogicalAnd(50));
 console.log(testLogicalAnd(51));
 console.log(testLogicalAnd(75));
 console.log(testLogicalAnd(80));
-*/
-
 
 // ===> Comparisons with the Logical Or Operator || <===
 
@@ -638,19 +636,42 @@ console.log(testLogicalAnd(80));
 
 function testLogicalOr(val) {
     // Only change code below this line
-  
-      if (val > 20 || val < 10) {
+    
+    if (val > 20 || val < 10) {
         return "Outside";
+    }
+    
+    // Only change code above this line
+    return "Inside";
+}
+console.log(testLogicalOr(0));
+console.log(testLogicalOr(9));
+console.log(testLogicalOr(10));
+console.log(testLogicalOr(15));
+console.log(testLogicalOr(19));
+console.log(testLogicalOr(20));
+console.log(testLogicalOr(21));
+console.log(testLogicalOr(25));
+*/
+
+// ===> Introducing Else Statements <===
+
+// When a condition for an if statement is true, the block of code following it is executed. What about when that condition is false? Normally nothing would happen. With an else statement, an alternate block of code can be executed.
+
+function testElse(val) {
+    let result = "";
+    // Only change code below this line
+  
+    if (val > 5) {
+      result = "Bigger than 5";
+    }
+  
+    if (val <= 5) {
+      result = "5 or Smaller";
     }
   
     // Only change code above this line
-    return "Inside";
+    return result;
   }
-  console.log(testLogicalOr(0));
-  console.log(testLogicalOr(9));
-  console.log(testLogicalOr(10));
-  console.log(testLogicalOr(15));
-  console.log(testLogicalOr(19));
-  console.log(testLogicalOr(20));
-  console.log(testLogicalOr(21));
-  console.log(testLogicalOr(25));
+  
+  console.log(testElse(4));
