@@ -675,20 +675,19 @@ console.log(testElse(4));
 console.log(testElse(5));
 console.log(testElse(6));
 console.log(testElse(10));
-*/
 
 // ===> Introducing Else If Statements <===
 
 // If you have multiple conditions that need to be addressed, you can chain if statements together with else if statements.
 
 function testElseIf(val) {
-  if (val > 10) {
-    return "Greater than 10";
-  } else if (val < 5) {
-    return "Smaller than 5";
-  } else {
-    return "Between 5 and 10";
-  }
+    if (val > 10) {
+        return "Greater than 10";
+    } else if (val < 5) {
+        return "Smaller than 5";
+    } else {
+        return "Between 5 and 10";
+    }
 }
 
 console.log(testElseIf(0));
@@ -696,3 +695,25 @@ console.log(testElseIf(5));
 console.log(testElseIf(7));
 console.log(testElseIf(10));
 console.log(testElseIf(12));
+*/
+
+// ===> Logical Order in If Else Statements <===
+
+// Order is important in if, else if statements.
+
+// The function is executed from top to bottom so you will want to be careful of what statement comes first.
+
+function orderMyLogic(val) {
+  if (val < 10) {
+    return "Less than 10";
+  } else if (val < 5) {
+    return "Less than 5";
+  } else {
+    return "Greater than or equal to 10";
+  }
+}
+
+console.log(orderMyLogic(0));
+console.log(orderMyLogic(4));
+console.log(orderMyLogic(6));
+console.log(orderMyLogic(11));
