@@ -652,27 +652,47 @@ console.log(testLogicalOr(19));
 console.log(testLogicalOr(20));
 console.log(testLogicalOr(21));
 console.log(testLogicalOr(25));
-*/
 
 // ===> Introducing Else Statements <===
 
 // When a condition for an if statement is true, the block of code following it is executed. What about when that condition is false? Normally nothing would happen. With an else statement, an alternate block of code can be executed.
 
 function testElse(val) {
-  let result = "";
-  // Only change code below this line
-
-  if (val > 5) {
-    result = "Bigger than 5";
-  } else {
-    result = "5 or Smaller";
-  }
-
-  // Only change code above this line
-  return result;
+    let result = "";
+    // Only change code below this line
+    
+    if (val > 5) {
+        result = "Bigger than 5";
+    } else {
+        result = "5 or Smaller";
+    }
+    
+    // Only change code above this line
+    return result;
 }
 
 console.log(testElse(4));
 console.log(testElse(5));
 console.log(testElse(6));
 console.log(testElse(10));
+*/
+
+// ===> Introducing Else If Statements <===
+
+// If you have multiple conditions that need to be addressed, you can chain if statements together with else if statements.
+
+function testElseIf(val) {
+  if (val > 10) {
+    return "Greater than 10";
+  } else if (val < 5) {
+    return "Smaller than 5";
+  } else {
+    return "Between 5 and 10";
+  }
+}
+
+console.log(testElseIf(0));
+console.log(testElseIf(5));
+console.log(testElseIf(7));
+console.log(testElseIf(10));
+console.log(testElseIf(12));
