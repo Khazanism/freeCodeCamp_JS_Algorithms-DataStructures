@@ -748,37 +748,36 @@ console.log(testSize(15));
 console.log(testSize(17));
 console.log(testSize(20));
 console.log(testSize(25));
-*/
 
 // ===> Golf Code <===
 
 const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
 
 function golfScore(par, strokes) {
-  // Only change code below this line
+    // Only change code below this line
   if (strokes === 1) {
     return names[0];
-  }
-  else if (strokes <= par - 2) {
+}
+else if (strokes <= par - 2) {
     return names[1];
   }
   else if (strokes === par - 1) {
     return names[2];
-  }
-  else if (strokes === par) {
+}
+else if (strokes === par) {
     return names[3];
-  }
-  else if (strokes === par + 1) {
+}
+else if (strokes === par + 1) {
     return names[4];
-  }
-  else if (strokes === par + 2) {
+}
+else if (strokes === par + 2) {
     return names[5];
-  }
-  else {
+}
+else {
     return names[6];
-  }
+}
 
-  // Only change code above this line
+// Only change code above this line
 }
 
 console.log(golfScore(4, 1));
@@ -792,3 +791,35 @@ console.log(golfScore(4, 5));
 console.log(golfScore(4, 6));
 console.log(golfScore(4, 7));
 console.log(golfScore(5, 9));
+*/
+
+// ===> Selecting from Many Options with Switch Statements <===
+
+// If you have many options to choose from, use a switch statement. A switch statement tests a value and can have many case statements which define various possible values. Statements are executed from the first matched case value until a break is encountered.
+
+function caseInSwitch(val) {
+  let answer = "";
+  // Only change code below this line
+  switch (val) {
+    case 1:
+      answer = "alpha";
+      break;
+    case 2:
+      answer = "beta";
+      break;
+    case 3:
+      answer = "gamma";
+      break;
+    case 4:
+      answer = "delta";
+      break;
+  }
+
+  // Only change code above this line
+  return answer;
+}
+
+console.log(caseInSwitch(1));
+console.log(caseInSwitch(2));
+console.log(caseInSwitch(3));
+console.log(caseInSwitch(4));
