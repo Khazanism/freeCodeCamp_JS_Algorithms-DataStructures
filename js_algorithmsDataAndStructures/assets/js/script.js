@@ -715,24 +715,24 @@ console.log(orderMyLogic(0));
 console.log(orderMyLogic(4));
 console.log(orderMyLogic(6));
 console.log(orderMyLogic(11));
-*/
 
 // ===> Chaining If Else Statements <===
 
 // if/else statements can be chained together for complex logic. Here is pseudocode of multiple chained if / else if statements:
 
 function testSize(num) {
-  // Only change code below this line
-
-  if (num < 5) {
-    return "Tiny";
-  } else if (num < 10) {
-    return "Small";
+    // Only change code below this line
+  
+    if (num < 5) {
+        return "Tiny";
+    } else if (num < 10) {
+        return "Small";
   } else if (num < 15) {
     return "Medium";
+    [--]
   } else if (num < 20) {
-    return "Large";
-  } else {
+      return "Large";
+    } else {
     return "Huge";
   }
   // Only change code above this line
@@ -748,3 +748,47 @@ console.log(testSize(15));
 console.log(testSize(17));
 console.log(testSize(20));
 console.log(testSize(25));
+*/
+
+// ===> Golf Code <===
+
+const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+
+function golfScore(par, strokes) {
+  // Only change code below this line
+  if (strokes === 1) {
+    return names[0];
+  }
+  else if (strokes <= par - 2) {
+    return names[1];
+  }
+  else if (strokes === par - 1) {
+    return names[2];
+  }
+  else if (strokes === par) {
+    return names[3];
+  }
+  else if (strokes === par + 1) {
+    return names[4];
+  }
+  else if (strokes === par + 2) {
+    return names[5];
+  }
+  else {
+    return names[6];
+  }
+
+  // Only change code above this line
+}
+
+console.log(golfScore(4, 1));
+console.log(golfScore(4, 2));
+console.log(golfScore(5, 2));
+console.log(golfScore(4, 3));
+console.log(golfScore(4, 4));
+console.log(golfScore(1, 1));
+console.log(golfScore(5, 5));
+console.log(golfScore(4, 5));
+console.log(golfScore(4, 6));
+console.log(golfScore(4, 7));
+console.log(golfScore(5, 9));
