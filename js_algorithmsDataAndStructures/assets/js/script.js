@@ -823,7 +823,6 @@ console.log(caseInSwitch(2));
 console.log(caseInSwitch(3));
 console.log(caseInSwitch(4));
                 
-*/
 
 // ===>Adding a Default Option in Switch Statements<===
 
@@ -836,13 +835,13 @@ function switchOfStuff(val) {
     case "a":
       answer = "apple";
       break;
-
-    case "b":
-      answer = "bird";
-      break;
-
-    case "c":
-      answer = "cat";
+      
+      case "b":
+        answer = "bird";
+        break;
+        
+        case "c":
+          answer = "cat";
       break;
 
     default:
@@ -859,3 +858,45 @@ console.log(switchOfStuff("b"));
 console.log(switchOfStuff("c"));
 console.log(switchOfStuff("d"));
 console.log(switchOfStuff(4));
+*/
+
+// ===> Multiple Identical Options in Switch Statements <===
+
+// If the break statement is omitted from a switch statement's case, the following case statement(s) are executed until a break is encountered. If you have multiple inputs with the same output, you can represent
+
+function sequentialSizes(val) {
+  let answer = "";
+  // Only change code below this line
+  switch (val) {
+    case 1:
+    case 2:
+    case 3:
+      answer = "Low";
+      break;
+
+    case 4:
+    case 5:
+    case 6:
+      answer = "Mid";
+      break;
+
+    case 7:
+    case 8:
+    case 9:
+      answer = "High";
+      break;
+  }
+
+  // Only change code above this line
+  return answer;
+}
+
+console.log(sequentialSizes(1));
+console.log(sequentialSizes(2));
+console.log(sequentialSizes(3));
+console.log(sequentialSizes(4));
+console.log(sequentialSizes(5));
+console.log(sequentialSizes(6));
+console.log(sequentialSizes(7));
+console.log(sequentialSizes(8));
+console.log(sequentialSizes(9));
