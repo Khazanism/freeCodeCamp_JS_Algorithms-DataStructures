@@ -791,27 +791,62 @@ console.log(golfScore(4, 5));
 console.log(golfScore(4, 6));
 console.log(golfScore(4, 7));
 console.log(golfScore(5, 9));
-*/
 
 // ===> Selecting from Many Options with Switch Statements <===
 
 // If you have many options to choose from, use a switch statement. A switch statement tests a value and can have many case statements which define various possible values. Statements are executed from the first matched case value until a break is encountered.
 
 function caseInSwitch(val) {
+let answer = "";
+// Only change code below this line
+switch (val) {
+case 1:
+answer = "alpha";
+break;
+case 2:
+answer = "beta";
+break;
+case 3:
+answer = "gamma";
+break;
+case 4:
+answer = "delta";
+break;
+}
+
+// Only change code above this line
+return answer;
+}
+
+console.log(caseInSwitch(1));
+console.log(caseInSwitch(2));
+console.log(caseInSwitch(3));
+console.log(caseInSwitch(4));
+                
+*/
+
+// ===>Adding a Default Option in Switch Statements<===
+
+// In a switch statement you may not be able to specify all possible values as case statements. Instead, you can add the default statement which will be executed if no matching case statements are found. Think of it like the final else statement in an if/else chain.
+
+function switchOfStuff(val) {
   let answer = "";
   // Only change code below this line
   switch (val) {
-    case 1:
-      answer = "alpha";
+    case "a":
+      answer = "apple";
       break;
-    case 2:
-      answer = "beta";
+
+    case "b":
+      answer = "bird";
       break;
-    case 3:
-      answer = "gamma";
+
+    case "c":
+      answer = "cat";
       break;
-    case 4:
-      answer = "delta";
+
+    default:
+      answer = "stuff";
       break;
   }
 
@@ -819,7 +854,8 @@ function caseInSwitch(val) {
   return answer;
 }
 
-console.log(caseInSwitch(1));
-console.log(caseInSwitch(2));
-console.log(caseInSwitch(3));
-console.log(caseInSwitch(4));
+console.log(switchOfStuff("a"));
+console.log(switchOfStuff("b"));
+console.log(switchOfStuff("c"));
+console.log(switchOfStuff("d"));
+console.log(switchOfStuff(4));
