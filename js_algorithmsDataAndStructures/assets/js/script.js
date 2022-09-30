@@ -986,10 +986,54 @@ console.log(abTest(2, -2));
 console.log(abTest(2, 8));
 console.log(abTest(3, 3));
 console.log(abTest(0, 0));
-*/
 
 // ===> Counting Cards <==
 
+let count = 0;
+
+function cc(card) {
+    // Only change code below this line
+    switch (card) {
+        case 2:
+            case 3:
+                case 4:
+                    case 5:
+                        case 6:
+                            count += 1;
+                            break;
+                            case 7:
+                                case 8:
+                                    case 9:
+                                        count += 0;
+                                        break;
+                                        case 10:
+                                            case "j":
+                                                case "q":
+                                                    case "k":
+                                                        case "a":
+                                                            count -= 1;
+                                                            break;
+                                                        }
+                                                        
+                                                        
+                                                        if (count > 0) {
+                                                            return count + "Bet";
+                                                        } else {
+    return count + "Hold";
+}
+
+
+// Only change code above this line
+}
+
+cc(2);
+cc(3);
+cc(7);
+cc("K");
+cc("A");
+
+*/
+// ===> Counting Cards 01 <==
 let count = 0;
 
 function cc(card) {
@@ -1000,35 +1044,22 @@ function cc(card) {
     case 4:
     case 5:
     case 6:
-      count += 1;
-      break;
-    case 7:
-    case 8:
-    case 9:
-      count += 0;
+      count++;
       break;
     case 10:
-    case "j":
-    case "q":
-    case "k":
-    case "a":
-      count -= 1;
+    case "J":
+    case "Q":
+    case "K":
+    case "A":
+      count--;
       break;
   }
-
-
   if (count > 0) {
-    return count + "Bet";
+    return count + " Bet";
   } else {
-    return count + "Hold";
+    return count + " Hold";
   }
-
-
   // Only change code above this line
 }
 
-cc(2);
-cc(3);
-cc(7);
-cc("K");
-cc("A");
+cc(2); cc(3); cc(7); cc('K'); cc('A');
