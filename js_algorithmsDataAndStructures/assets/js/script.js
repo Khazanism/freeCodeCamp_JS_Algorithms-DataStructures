@@ -1032,34 +1032,60 @@ cc(7);
 cc("K");
 cc("A");
 
-*/
+
 // ===> Counting Cards 01 <==
 let count = 0;
 
 function cc(card) {
-  // Only change code below this line
-  switch (card) {
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-    case 6:
-      count++;
-      break;
-    case 10:
-    case "J":
-    case "Q":
-    case "K":
-    case "A":
-      count--;
-      break;
-  }
-  if (count > 0) {
-    return count + " Bet";
-  } else {
-    return count + " Hold";
-  }
+    // Only change code below this line
+    switch (card) {
+        case 2:
+            case 3:
+                case 4:
+                    case 5:
+                        case 6:
+                            count++;
+                            break;
+                            case 10:
+                                case "J":
+                                    case "Q":
+                                        case "K":
+                                            case "A":
+                                                count--;
+                                                break;
+                                            }
+                                            if (count > 0) {
+                                                return count + " Bet";
+                                            } else {
+                                                return count + " Hold";
+                                            }
   // Only change code above this line
 }
 
 cc(2); cc(3); cc(7); cc('K'); cc('A');
+
+*/
+
+// ===> Build JavaScript Objects <==
+
+// Objects are similar to arrays, except that instead of using indexes to access and modify their data, you access the data in objects through what are called properties.
+
+// Objects are useful for storing data in a structured way, and can represent real world objects, like a cat.
+
+const myDog = {
+    // Only change code below this line
+  
+    // Objects are similar to arrays, except that instead of using indexes to access and modify their data, you access the data in objects through what are called properties.
+
+    // Here’s a sample object:
+    
+    const cat = {
+      name: "Whiskers",
+      legs: 4,
+      tails: 1,
+      enemies: ["Water", "Dogs"]
+    };
+
+    // Objects are useful for storing data in a structured way, and can represents real world objects, like a cats.
+    // Only change code above this line
+  };
