@@ -1115,22 +1115,39 @@ const testObj = {
   // Only change code below this line
   const hatValue = testObj.hat;      // Change this line
   const shirtValue = testObj.shirt;    // Change this line
-  */
   
   // ===> Accessing Object Properties with Bracket Notation <==
-
-//   The second way to access the properties of an object is bracket notation ([]). If the property of the object you are trying to access has a space in its name, you will need to use bracket notation.
+  
+  //   The second way to access the properties of an object is bracket notation ([]). If the property of the object you are trying to access has a space in its name, you will need to use bracket notation.
 
 // However, you can still use bracket notation on object properties without spaces.
-  // Setup
+// Setup
 const testObj = {
     "an entree": "hamburger",
     "my side": "veggies",
     "the drink": "water"
-  };
+};
   
   // Only change code below this line
   const entreeValue = testObj ["an entree"];   // Change this line
   const drinkValue = testObj ["the drink"];    // Change this line
+  
+  */
+ 
+ // ===> Accessing Object Properties with Variables <==
+
+//  Another use of bracket notation on objects is to access a property which is stored as the value of a variable. This can be very useful for iterating through an object's properties or when accessing a lookup table.
+
+// Setup
+const testObj = {
+    12: "Namath",
+    16: "Montana",
+    19: "Unitas"
+  };
+  
+  // Only change code below this line
+  const playerNumber = 16;  // Change this line
+  const player = testObj [playerNumber];   // Change this line
+  console.log(player);
 
   
