@@ -1088,7 +1088,6 @@ const myDog = {
     // Objects are useful for storing data in a structured way, and can represents real world objects, like a cats.
     // Only change code above this line
 };
-*/
 
 // ===> Build JavaScript Objects <==
 const myDog = {
@@ -1097,5 +1096,24 @@ const myDog = {
   legs: 4,
   tails:1,
   "friends": ["mimi", "modi"]
-    // Only change code above this line
+  // Only change code above this line
+};
+*/
+
+// ===> Accessing Object Properties with Dot Notation <==
+
+// There are two ways to access the properties of an object: dot notation (.) and bracket notation ([]), similar to an array.
+
+// Dot notation is what you use when you know the name of the property you're trying to access ahead of time.
+
+// Setup
+const testObj = {
+    "hat": "ballcap",
+    "shirt": "jersey",
+    "shoes": "cleats"
   };
+  
+  // Only change code below this line
+  const hatValue = testObj.hat;      // Change this line
+  const shirtValue = testObj.shirt;    // Change this line
+  
