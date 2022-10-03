@@ -1064,7 +1064,6 @@ function cc(card) {
 
 cc(2); cc(3); cc(7); cc('K'); cc('A');
 
-*/
 
 // ===> Build JavaScript Objects <==
 
@@ -1074,18 +1073,29 @@ cc(2); cc(3); cc(7); cc('K'); cc('A');
 
 const myDog = {
     // Only change code below this line
-  
+    
     // Objects are similar to arrays, except that instead of using indexes to access and modify their data, you access the data in objects through what are called properties.
-
+    
     // Here’s a sample object:
     
     const cat = {
-      name: "Whiskers",
-      legs: 4,
-      tails: 1,
-      enemies: ["Water", "Dogs"]
+        name: "Whiskers",
+        legs: 4,
+        tails: 1,
+        enemies: ["Water", "Dogs"]
     };
 
     // Objects are useful for storing data in a structured way, and can represents real world objects, like a cats.
+    // Only change code above this line
+};
+*/
+
+// ===> Build JavaScript Objects <==
+const myDog = {
+    // Only change code below this line
+  name: "lilly",
+  legs: 4,
+  tails:1,
+  "friends": ["mimi", "modi"]
     // Only change code above this line
   };
