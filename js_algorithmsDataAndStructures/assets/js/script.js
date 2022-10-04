@@ -1148,7 +1148,6 @@ const testObj = {
 const playerNumber = 16;  // Change this line
 const player = testObj [playerNumber];   // Change this line
 console.log(player);
-*/
 
 // ===>Updating Object Properties<==
 
@@ -1160,10 +1159,23 @@ const myDog = {
     "legs": 4,
     "tails": 1,
     "friends": ["freeCodeCamp Campers"]
-  };
-  
-  // Only change code below this line
-  myDog ["name"] = "happy Coder";
-  
+};
 
-  
+// Only change code below this line
+myDog ["name"] = "happy Coder";
+
+*/
+
+// ===> Add New Properties to a JavaScript Object <==
+
+// You can add new properties to existing JavaScript objects the same way you would modify them.
+
+const myDog = {
+  name: "Happy Coder",
+  legs: 4,
+  tails: 1,
+  friends: ["freeCodeCamp Campers"],
+};
+
+myDog["bark"] = "woof";
+console.log(myDog);
