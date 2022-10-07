@@ -1193,64 +1193,86 @@ const myDog = {
 // Only change code below this line
 delete myDog.tails;
 console.log(myDog);
-*/
 
 // ===> Using Objects for Lookups <==
 
+// Objects can be thought of as a key/value storage, like a dictionary. If you have tabular data, you can use an object to lookup values rather than a switch statement or an if/else chain. This is most useful when you know that your input data is limited to a certain range.
+
 // Setup
 function phoneticLookup(val) {
-  let result = "";
-
-//   // Only change code below this line
-//   switch (val) {
-//     case "alpha":
-//       result = "Adams";
-//       break;
-//     case "bravo":
-//       result = "Boston";
-//       break;
-//     case "charlie":
-//       result = "Chicago";
-//       break;
-//     case "delta":
-//       result = "Denver";
-//       break;
-//     case "echo":
-//       result = "Easy";
-//       break;
-//     case "foxtrot":
-//       result = "Frank";
-//   }
-
-//   // Only change code above this line
-//   return result;
-// }
-
+    let result = "";
+    
+    //   // Only change code below this line
+    //   switch (val) {
+        //     case "alpha":
+        //       result = "Adams";
+        //       break;
+        //     case "bravo":
+        //       result = "Boston";
+        //       break;
+        //     case "charlie":
+        //       result = "Chicago";
+        //       break;
+        //     case "delta":
+        //       result = "Denver";
+        //       break;
+        //     case "echo":
+        //       result = "Easy";
+        //       break;
+        //     case "foxtrot":
+        //       result = "Frank";
+        //   }
+        
+        //   // Only change code above this line
+        //   return result;
+        // }
+        
 // phoneticLookup("charlie");
 
 // Setup
 function phoneticLookup(val) {
     let result = "";
-  
+    
     // Only change code below this line
     var lookup = {
-      "alpha": "Adams",
-      "bravo": "Boston",
-      "charlie": "Chicago",
-      "delta": "Denver",
-      "echo": "Easy",
-      "foxtrot": "Frank"
+        "alpha": "Adams",
+        "bravo": "Boston",
+        "charlie": "Chicago",
+        "delta": "Denver",
+        "echo": "Easy",
+        "foxtrot": "Frank"
     }
-  
+    
     result = lookup[val]
     // Only change code above this line
     return result;
-  }
-  
-  console.log(phoneticLookup("alpha"));
-  console.log(phoneticLookup("bravo"));a
-  console.log(phoneticLookup("charlie"));
-  console.log(phoneticLookup("delta"));
-  console.log(phoneticLookup("echo"));
-  console.log(phoneticLookup("foxtrot"));
+}
+
+console.log(phoneticLookup("alpha"));
+console.log(phoneticLookup("bravo"));a
+console.log(phoneticLookup("charlie"));
+console.log(phoneticLookup("delta"));
+console.log(phoneticLookup("echo"));
+console.log(phoneticLookup("foxtrot"));
 //   console.log(phoneticLookup(""));
+*/
+
+// ===> Testing Objects for Properties <==
+
+// Sometimes it is useful to check if the property of a given object exists or not. We can use the .hasOwnProperty(propname) method of objects to determine if that object has the given property name. .hasOwnProperty() returns true or false if the property is found or not.
+
+function checkObj(obj, checkProp) {
+    // Only change code below this line
+    if (obj.hasOwnProperty(checkProp)) {
+      return obj[checkProp];
+    } else {
+      return "Not Found";
+    }
+    // Only change code above this line
+  }
+  console.log(checkObj({ gift: "pony", pet: "kitten", bed: "sleigh" }, "gift"));
+  console.log(checkObj({ gift: "pony", pet: "kitten", bed: "sleigh" }, "pet"));
+  console.log(checkObj({gift: "pony", pet: "kitten", bed: "sleigh"}, "house"));
+  console.log(checkObj({ city: "Seattle" }, "city"));
+  console.log(checkObj({ city: "Seattle" }, "district"));
+  console.log(checkObj({ pet: "kitten", bed: "sleigh" }, "gift"));
