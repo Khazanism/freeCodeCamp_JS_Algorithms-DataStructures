@@ -1275,7 +1275,6 @@ console.log(checkObj({ gift: "pony", pet: "kitten", bed: "sleigh" }, "house"));
 console.log(checkObj({ city: "Seattle" }, "city"));
 console.log(checkObj({ city: "Seattle" }, "district"));
 console.log(checkObj({ pet: "kitten", bed: "sleigh" }, "gift"));
-*/
 
 // ===> Manipulating Complex Objects <==
 
@@ -1283,25 +1282,47 @@ console.log(checkObj({ pet: "kitten", bed: "sleigh" }, "gift"));
 
 const myMusic = [
     {
-      "artist": "Billy Joel",
-      "title": "Piano Man",
-      "release_year": 1973,
-      "formats": [
-        "CD",
-        "8T",
-        "LP"
-      ],
-      "gold": true
+        "artist": "Billy Joel",
+        "title": "Piano Man",
+        "release_year": 1973,
+        "formats": [
+            "CD",
+            "8T",
+            "LP"
+        ],
+        "gold": true
     },
     {
-      "artist": "Polar Bear",
-      "title": "Aqua Man",
-      "release_year": 2005,
-      "formats": [
-        "CD",
-        "8T",
-        "LP"
-      ],
-      "gold": true
+        "artist": "Polar Bear",
+        "title": "Aqua Man",
+        "release_year": 2005,
+        "formats": [
+            "CD",
+            "8T",
+            "LP"
+        ],
+        "gold": true
     }
-  ];
+];
+*/
+
+// ===> Accessing Nested Objects <==
+
+// The sub-properties of objects can be accessed by chaining together the dot or bracket notation.
+
+const myStorage = {
+  car: {
+    inside: {
+      "glove box": "maps",
+      "passenger seat": "crumbs",
+    },
+    outside: {
+      trunk: "jack",
+    },
+  },
+};
+
+// let x = myStorage.car["inside"]["glove box"];
+const gloveBoxContents = myStorage.car.inside["glove box"];
+
+console.log(gloveBoxContents);
