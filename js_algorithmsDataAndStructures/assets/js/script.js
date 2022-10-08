@@ -1304,25 +1304,44 @@ const myMusic = [
         "gold": true
     }
 ];
-*/
 
 // ===> Accessing Nested Objects <==
 
 // The sub-properties of objects can be accessed by chaining together the dot or bracket notation.
 
 const myStorage = {
-  car: {
-    inside: {
-      "glove box": "maps",
-      "passenger seat": "crumbs",
+    car: {
+        inside: {
+            "glove box": "maps",
+            "passenger seat": "crumbs",
+        },
+        outside: {
+            trunk: "jack",
+        },
     },
-    outside: {
-      trunk: "jack",
-    },
-  },
 };
 
 // let x = myStorage.car["inside"]["glove box"];
 const gloveBoxContents = myStorage.car.inside["glove box"];
 
 console.log(gloveBoxContents);
+*/
+
+// ===> Accessing Nested Arrays <==
+
+// As we have seen in earlier examples, objects can contain both nested objects and nested arrays. Similar to accessing nested objects, array bracket notation can be chained to access nested arrays.
+
+const myPlants = [
+  {
+    type: "flowers",
+    list: ["rose", "tulip", "dandelion"],
+  },
+  {
+    type: "trees",
+    list: ["fir", "pine", "birch"],
+  },
+];
+
+const secondTree = myPlants[1].list[1];
+
+console.log(secondTree);
