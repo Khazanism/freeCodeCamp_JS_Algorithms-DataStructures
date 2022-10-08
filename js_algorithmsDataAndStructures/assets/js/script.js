@@ -1255,7 +1255,6 @@ console.log(phoneticLookup("delta"));
 console.log(phoneticLookup("echo"));
 console.log(phoneticLookup("foxtrot"));
 //   console.log(phoneticLookup(""));
-*/
 
 // ===> Testing Objects for Properties <==
 
@@ -1264,15 +1263,45 @@ console.log(phoneticLookup("foxtrot"));
 function checkObj(obj, checkProp) {
     // Only change code below this line
     if (obj.hasOwnProperty(checkProp)) {
-      return obj[checkProp];
+        return obj[checkProp];
     } else {
-      return "Not Found";
+        return "Not Found";
     }
     // Only change code above this line
-  }
-  console.log(checkObj({ gift: "pony", pet: "kitten", bed: "sleigh" }, "gift"));
-  console.log(checkObj({ gift: "pony", pet: "kitten", bed: "sleigh" }, "pet"));
-  console.log(checkObj({gift: "pony", pet: "kitten", bed: "sleigh"}, "house"));
-  console.log(checkObj({ city: "Seattle" }, "city"));
-  console.log(checkObj({ city: "Seattle" }, "district"));
-  console.log(checkObj({ pet: "kitten", bed: "sleigh" }, "gift"));
+}
+console.log(checkObj({ gift: "pony", pet: "kitten", bed: "sleigh" }, "gift"));
+console.log(checkObj({ gift: "pony", pet: "kitten", bed: "sleigh" }, "pet"));
+console.log(checkObj({ gift: "pony", pet: "kitten", bed: "sleigh" }, "house"));
+console.log(checkObj({ city: "Seattle" }, "city"));
+console.log(checkObj({ city: "Seattle" }, "district"));
+console.log(checkObj({ pet: "kitten", bed: "sleigh" }, "gift"));
+*/
+
+// ===> Manipulating Complex Objects <==
+
+// Sometimes you may want to store data in a flexible Data Structure. A JavaScript object is one way to handle flexible data. They allow for arbitrary combinations of strings, numbers, booleans, arrays, functions, and objects.
+
+const myMusic = [
+    {
+      "artist": "Billy Joel",
+      "title": "Piano Man",
+      "release_year": 1973,
+      "formats": [
+        "CD",
+        "8T",
+        "LP"
+      ],
+      "gold": true
+    },
+    {
+      "artist": "Polar Bear",
+      "title": "Aqua Man",
+      "release_year": 2005,
+      "formats": [
+        "CD",
+        "8T",
+        "LP"
+      ],
+      "gold": true
+    }
+  ];
