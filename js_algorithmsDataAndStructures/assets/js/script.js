@@ -1372,14 +1372,13 @@ const recordCollection = {
 // Only change code below this line
 if (prop !== "tracks" && value !== "") {
   records[id][prop] = value;
-} else if (prop == "tracks" ) {
-
+} else if (prop == "tracks"[] == value) {
 }
 function updateRecords(records, id, prop, value) {
   return records;
 }
 
-console.log(updateRecords(recordCollection, 5439, "artist", "ABBA"));
+console.log(JSON.stringify(updateRecords(recordCollection, 5439, "artist", "ABBA")));
 console.log(
   updateRecords(recordCollection, 5439, "tracks", "Take a Chance on Me")
 );
