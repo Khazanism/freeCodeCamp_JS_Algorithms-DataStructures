@@ -1373,8 +1373,8 @@ const recordCollection = {
 function updateRecords(records, id, prop, value) {
   if (prop !== "tracks" && value !== "") {
     records[id][prop] = value;
-  } else if (prop == "tracks" && records[id][prop] === undefined) {
-    records[id][prop] = [] = value;
+  } else if (prop === "tracks" && records[id][prop] === undefined) {
+    records[id][prop] = [value];
   } else {
     return records;
   }
