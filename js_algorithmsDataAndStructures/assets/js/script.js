@@ -1370,24 +1370,36 @@ const recordCollection = {
 };
 
 // Only change code below this line
-if (prop !== "tracks" && value !== "") {
-  records[id][prop] = value;
-} else if (prop == "tracks" && records[id][prop] === undefined) {
-    records[id][prop] =[];
-    records[id][prop].push(value);
-}
 function updateRecords(records, id, prop, value) {
-  return records;
+  if (prop !== "tracks" && value !== "") {
+    records[id][prop] = value;
+  } else if (prop == "tracks" && records[id][prop] === undefined) {
+    records[id][prop] = [] = value;
+  } else {
+    return records;
+  }
 }
 
-console.log(JSON.stringify(updateRecords(recordCollection, 5439, "artist", "ABBA")));
+console.log(
+  JSON.stringify(updateRecords(recordCollection, 5439, "artist", "ABBA"))
+);
 console.log(
   updateRecords(recordCollection, 5439, "tracks", "Take a Chance on Me")
 );
-console.log(JSON.stringify(updateRecords(recordCollection, 2548, "artist", "")));
-console.log(JSON.stringify(
-  updateRecords(recordCollection, 1245, "tracks", "Addicted to Love")
-));
-console.log(JSON.stringify(updateRecords(recordCollection, 2468, "tracks", "Free")));
-console.log(JSON.stringify(updateRecords(recordCollection, 2548, "tracks", "")));
-console.log(JSON.stringify(updateRecords(recordCollection, 1245, "albumTitle", "Riptide")));
+console.log(
+  JSON.stringify(updateRecords(recordCollection, 2548, "artist", ""))
+);
+console.log(
+  JSON.stringify(
+    updateRecords(recordCollection, 1245, "tracks", "Addicted to Love")
+  )
+);
+console.log(
+  JSON.stringify(updateRecords(recordCollection, 2468, "tracks", "Free"))
+);
+console.log(
+  JSON.stringify(updateRecords(recordCollection, 2548, "tracks", ""))
+);
+console.log(
+  JSON.stringify(updateRecords(recordCollection, 1245, "albumTitle", "Riptide"))
+);
