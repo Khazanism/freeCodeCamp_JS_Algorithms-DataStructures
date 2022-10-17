@@ -1447,11 +1447,8 @@ const myArray = [];
  };
 
  console.log(myArray);
- */
-
-// ===> Iterate Odd Numbers With a For Loop <==
-
-
+ 
+ // ===> Iterate Odd Numbers With a For Loop <==
 
 // Setup
 const myArray = [];
@@ -1463,3 +1460,26 @@ for (let i = 1; i < 10; i += 2) {
 };
 
 console.log(myArray);
+
+*/
+
+// ===> Count Backwards With a For Loop <===
+
+// A for loop can also count backwards, so long as we can define the right conditions.
+
+// In order to decrement by two each iteration, we'll need to change our initialization, condition, and final expression.
+
+// Setup
+const myArray = [];
+
+// Only change code below this line
+
+for ( let i = 9; i > 0; i -= 2) {
+ myArray.push(i) ;
+};
+
+console.log(myArray);
+
+
+
+
