@@ -1526,7 +1526,6 @@ console.log(
     [3, 9],
 ])
 );
-*/
 
 // ===> Iterate with JavaScript Do...While Loops <===
 
@@ -1538,13 +1537,34 @@ let i = 10;
 
 // Only change code below this line
 do {
-  myArray.push(i);
-  i++;
+    myArray.push(i);
+    i++;
 } while (i < 5);
 {
-  // myArray.push(i);
-  // i++;
+    // myArray.push(i);
+    // i++;
 }
 
 console.log(myArray);
 console.log([i]);
+*/
+
+// ===> Replace Loops using Recursion <===
+
+// Recursion is the concept that a function can be expressed in terms of itself.
+
+function sum(arr, n) {
+  // Only change code below this line
+  if (n <= 0) {
+    return 0;
+  } else {
+    return sum(arr, n - 1) + arr[n - 1];
+  }
+  // Only change code above this line
+}
+
+console.log(sum([1], 0));
+
+console.log(sum([2, 3, 4], 1));
+
+console.log(sum([2, 3, 4, 5], 3));
