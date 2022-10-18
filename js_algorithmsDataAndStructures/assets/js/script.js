@@ -1478,7 +1478,6 @@ for ( let i = 9; i > 0; i -= 2) {
 };
 
 console.log(myArray);
-*/
 
 // ===> Iterate Through an Array with a For Loop <===
 
@@ -1490,10 +1489,41 @@ const myArr = [2, 3, 4, 5, 6];
 // Only change code below this line
 let total = 0;
 for (let i = 0; i < myArr.length; i++) {
-  total += myArr[i];
+    total += myArr[i];
 };
 
 console.log(total);
+*/
 
+// ===> Nesting For Loops <===
 
+// If you have a multi-dimensional array, you can use the same logic as the prior waypoint to loop through both the array and any sub-arrays.
 
+function multiplyAll(arr) {
+  let product = 1;
+  // Only change code below this line
+
+  for (var i = 0; i < arr.length; i++) {
+    for (var j = 0; j < arr[i].length; j++) {
+      product *= arr[i][j];
+    }
+  }
+  // Only change code above this line
+  return product;
+}
+
+console.log(multiplyAll([[1], [2], [3]]));
+console.log(
+  multiplyAll([
+    [1, 2],
+    [3, 4],
+    [5, 6, 7],
+  ])
+);
+console.log(
+  multiplyAll([
+    [5, 1],
+    [0.2, 4, 0.5],
+    [3, 9],
+  ])
+);
