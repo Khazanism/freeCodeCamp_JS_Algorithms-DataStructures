@@ -1601,7 +1601,7 @@ const contacts = [
 
 function lookUpProfile(name, prop) {
   // Only change code below this line
-  for (i = 0; i < contacts.length; i++) {
+  for (let i = 0; i < contacts.length; i++) {
     if (contacts[i].firstName === name) {
       if (contacts[i].hasOwnProperty(prop)) {
         return contacts[i][prop];
@@ -1619,5 +1619,3 @@ console.log(lookUpProfile("Harry", "likes"));
 console.log(lookUpProfile("Bob", "number"));
 console.log(lookUpProfile("Bob", "potato"));
 console.log(lookUpProfile("Akira", "address"));
-
-// lookUpProfile("Akira", "likes");
