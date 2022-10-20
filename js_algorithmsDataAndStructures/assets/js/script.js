@@ -1618,7 +1618,6 @@ console.log(lookUpProfile("Harry", "likes"));
 console.log(lookUpProfile("Bob", "number"));
 console.log(lookUpProfile("Bob", "potato"));
 console.log(lookUpProfile("Akira", "address"));
-*/
 
 // ===> Generate Random Fractions with JavaScript <===
 
@@ -1629,10 +1628,28 @@ console.log(lookUpProfile("Akira", "address"));
 // Note: Like Storing Values with the Assignment Operator, all function calls will be resolved before the return executes, so we can return the value of the Math.random() function.
 
 function randomFraction() {
-  // Only change code below this line
-
-  return Math.random();
-
-  // Only change code above this line
+    // Only change code below this line
+    
+    return Math.random();
+    
+    // Only change code above this line
 }
 console.log(randomFraction());
+*/
+
+// ===> Generate Random Whole Numbers with JavaScript <===
+
+// It's great that we can generate random decimal numbers, but it's even more useful if we use it to generate random whole numbers.
+
+// Use Math.random() to generate a random decimal.
+// Multiply that random decimal by 20.
+// Use another function, Math.floor() to round the number down to its nearest whole number.
+// Remember that Math.random() can never quite return a 1 and, because we're rounding down, it's impossible to actually get 20. This technique will give us a whole number between 0 and 19.
+function randomWholeNum() {
+
+    // Only change code below this line
+  
+    return Math.floor(Math.random() * 10);
+  }
+  
+  console.log(randomWholeNum());
