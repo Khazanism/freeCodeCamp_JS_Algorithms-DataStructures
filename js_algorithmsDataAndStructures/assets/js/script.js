@@ -1567,51 +1567,50 @@ console.log(sum([1], 0));
 console.log(sum([2, 3, 4], 1));
 
 console.log(sum([2, 3, 4, 5], 3));
-*/
 
 // ===> Profile Lookup <===
 
 // Setup
 const contacts = [
-  {
-    firstName: "Akira",
+    {
+        firstName: "Akira",
     lastName: "Laine",
     number: "0543236543",
     likes: ["Pizza", "Coding", "Brownie Points"],
-  },
-  {
+},
+{
     firstName: "Harry",
     lastName: "Potter",
     number: "0994372684",
     likes: ["Hogwarts", "Magic", "Hagrid"],
-  },
-  {
+},
+{
     firstName: "Sherlock",
     lastName: "Holmes",
     number: "0487345643",
     likes: ["Intriguing Cases", "Violin"],
-  },
-  {
+},
+{
     firstName: "Kristian",
     lastName: "Vos",
     number: "unknown",
-    likes: ["JavaScript", "Gaming", "Foxes"],
-  },
+      likes: ["JavaScript", "Gaming", "Foxes"],
+    },
 ];
 
 function lookUpProfile(name, prop) {
-  // Only change code below this line
-  for (let i = 0; i < contacts.length; i++) {
-    if (contacts[i].firstName === name) {
-      if (contacts[i].hasOwnProperty(prop)) {
-        return contacts[i][prop];
-      } else {
-        return "No such property";
-      }
+    // Only change code below this line
+    for (let i = 0; i < contacts.length; i++) {
+        if (contacts[i].firstName === name) {
+            if (contacts[i].hasOwnProperty(prop)) {
+                return contacts[i][prop];
+            } else {
+                return "No such property";
+            }
+        }
     }
-  }
-  return "No such contact";
-  // Only change code above this line
+    return "No such contact";
+    // Only change code above this line
 }
 console.log(lookUpProfile("Kristian", "lastName"));
 console.log(lookUpProfile("Sherlock", "likes"));
@@ -1619,3 +1618,21 @@ console.log(lookUpProfile("Harry", "likes"));
 console.log(lookUpProfile("Bob", "number"));
 console.log(lookUpProfile("Bob", "potato"));
 console.log(lookUpProfile("Akira", "address"));
+*/
+
+// ===> Generate Random Fractions with JavaScript <===
+
+// Random numbers are useful for creating random behavior.
+
+// JavaScript has a Math.random() function that generates a random decimal number between 0 (inclusive) and 1 (exclusive). Thus Math.random() can return a 0 but never return a 1.
+
+// Note: Like Storing Values with the Assignment Operator, all function calls will be resolved before the return executes, so we can return the value of the Math.random() function.
+
+function randomFraction() {
+  // Only change code below this line
+
+  return Math.random();
+
+  // Only change code above this line
+}
+console.log(randomFraction());
