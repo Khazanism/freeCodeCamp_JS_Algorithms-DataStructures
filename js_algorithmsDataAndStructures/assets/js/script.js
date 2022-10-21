@@ -1653,7 +1653,6 @@ function randomWholeNum() {
 
 console.log(randomWholeNum());
 
-*/
 
 // ===> Generate Random Whole Numbers within a Range <===
 
@@ -1666,9 +1665,21 @@ console.log(randomWholeNum());
 // Math.floor(Math.random() * (max - min + 1)) + min
 
 function randomRange(myMin, myMax) {
-  // Only change code below this line
-  return Math.floor(Math.random() * (myMax - myMin + 1) + myMin);
-  // Only change code above this line
+    // Only change code below this line
+    return Math.floor(Math.random() * (myMax - myMin + 1) + myMin);
+    // Only change code above this line
 }
 
 console.log(randomRange(1, 2));
+
+*/
+// ===> Use the parseInt Function <===
+
+// The parseInt() function parses a string and returns an integer.
+
+function convertToInteger(str) {
+  return parseInt(str);
+}
+console.log(convertToInteger("56"));
+console.log(convertToInteger("77"));
+console.log(convertToInteger("JamesBond"));
