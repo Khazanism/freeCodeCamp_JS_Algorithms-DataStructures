@@ -1635,7 +1635,6 @@ function randomFraction() {
     // Only change code above this line
 }
 console.log(randomFraction());
-*/
 
 // ===> Generate Random Whole Numbers with JavaScript <===
 
@@ -1646,10 +1645,30 @@ console.log(randomFraction());
 // Use another function, Math.floor() to round the number down to its nearest whole number.
 // Remember that Math.random() can never quite return a 1 and, because we're rounding down, it's impossible to actually get 20. This technique will give us a whole number between 0 and 19.
 function randomWholeNum() {
-
+    
     // Only change code below this line
-  
+    
     return Math.floor(Math.random() * 10);
-  }
-  
-  console.log(randomWholeNum());
+}
+
+console.log(randomWholeNum());
+
+*/
+
+// ===> Generate Random Whole Numbers within a Range <===
+
+// Instead of generating a random whole number between zero and a given number like we did before, we can generate a random whole number that falls within a range of two specific numbers.
+
+// To do this, we'll define a minimum number min and a maximum number max.
+
+// Here's the formula we'll use. Take a moment to read it and try to understand what this code is doing:
+
+// Math.floor(Math.random() * (max - min + 1)) + min
+
+function randomRange(myMin, myMax) {
+  // Only change code below this line
+  return Math.floor(Math.random() * (myMax - myMin + 1) + myMin);
+  // Only change code above this line
+}
+
+console.log(randomRange(1, 2));
