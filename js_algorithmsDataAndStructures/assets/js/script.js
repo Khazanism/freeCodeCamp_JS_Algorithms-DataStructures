@@ -1672,14 +1672,25 @@ function randomRange(myMin, myMax) {
 
 console.log(randomRange(1, 2));
 
-*/
 // ===> Use the parseInt Function <===
 
 // The parseInt() function parses a string and returns an integer.
 
 function convertToInteger(str) {
-  return parseInt(str);
+    return parseInt(str);
 }
 console.log(convertToInteger("56"));
 console.log(convertToInteger("77"));
+console.log(convertToInteger("JamesBond"));
+*/
+
+// ===> Use the parseInt Function with a Radix <===
+
+// The parseInt() function parses a string and returns an integer. It takes a second argument for the radix, which specifies the base of the number in the string. The radix can be an integer between 2 and 36.
+function convertToInteger(str) {
+  return parseInt(str, 2);
+}
+
+console.log(convertToInteger("10011"));
+console.log(convertToInteger("111001"));
 console.log(convertToInteger("JamesBond"));
