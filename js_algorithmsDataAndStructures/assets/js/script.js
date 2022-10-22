@@ -1682,15 +1682,29 @@ function convertToInteger(str) {
 console.log(convertToInteger("56"));
 console.log(convertToInteger("77"));
 console.log(convertToInteger("JamesBond"));
-*/
 
 // ===> Use the parseInt Function with a Radix <===
 
 // The parseInt() function parses a string and returns an integer. It takes a second argument for the radix, which specifies the base of the number in the string. The radix can be an integer between 2 and 36.
 function convertToInteger(str) {
-  return parseInt(str, 2);
+    return parseInt(str, 2);
 }
 
 console.log(convertToInteger("10011"));
 console.log(convertToInteger("111001"));
 console.log(convertToInteger("JamesBond"));
+*/
+
+// ===> Use the Conditional (Ternary) Operator <===
+
+// The conditional operator, also called the ternary operator, can be used as a one line if-else expression.
+
+// The syntax is a ? b : c, where a is the condition, b is the code to run when the condition returns true, and c is the code to run when the condition returns false.
+
+function checkEqual(a, b) {
+  return a == b ? "Equal" : "Not Equal";
+}
+
+console.log(checkEqual(1, 2));
+console.log(checkEqual(1, 1));
+console.log(checkEqual(1, -1));
