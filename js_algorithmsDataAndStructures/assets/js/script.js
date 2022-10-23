@@ -1693,7 +1693,6 @@ function convertToInteger(str) {
 console.log(convertToInteger("10011"));
 console.log(convertToInteger("111001"));
 console.log(convertToInteger("JamesBond"));
-*/
 
 // ===> Use the Conditional (Ternary) Operator <===
 
@@ -1702,9 +1701,46 @@ console.log(convertToInteger("JamesBond"));
 // The syntax is a ? b : c, where a is the condition, b is the code to run when the condition returns true, and c is the code to run when the condition returns false.
 
 function checkEqual(a, b) {
-  return a == b ? "Equal" : "Not Equal";
+    return a == b ? "Equal" : "Not Equal";
 }
 
 console.log(checkEqual(1, 2));
 console.log(checkEqual(1, 1));
 console.log(checkEqual(1, -1));
+
+*/
+
+// ===> Use Multiple Conditional (Ternary) Operators <===
+
+// In the previous challenge, you used a single conditional operator. You can also chain them together to check for multiple conditions.
+
+// The following function uses if, else if, and else statements to check multiple conditions:
+
+// function findGreaterOrEqual(a, b) {
+//   if (a === b) {
+//     return "a and b are equal";
+//   }
+//   else if (a > b) {
+//     return "a is greater";
+//   }
+//   else {
+//     return "b is greater";
+//   }
+// }
+// The above function can be re-written using multiple conditional operators:
+
+// function findGreaterOrEqual(a, b) {
+//   return (a === b) ? "a and b are equal" 
+//     : (a > b) ? "a is greater" 
+//     : "b is greater";
+// }
+
+function checkSign(num) {
+  return num > 0 ? "positive" 
+  : num < 0 ? "negative" 
+  : "zero";
+}
+
+console.log(checkSign(10));
+console.log(checkSign(-12));
+console.log(checkSign(0));
