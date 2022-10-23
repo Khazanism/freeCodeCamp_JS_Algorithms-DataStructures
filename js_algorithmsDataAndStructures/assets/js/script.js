@@ -1708,7 +1708,6 @@ console.log(checkEqual(1, 2));
 console.log(checkEqual(1, 1));
 console.log(checkEqual(1, -1));
 
-*/
 
 // ===> Use Multiple Conditional (Ternary) Operators <===
 
@@ -1718,7 +1717,7 @@ console.log(checkEqual(1, -1));
 
 // function findGreaterOrEqual(a, b) {
 //   if (a === b) {
-//     return "a and b are equal";
+    //     return "a and b are equal";
 //   }
 //   else if (a > b) {
 //     return "a is greater";
@@ -1744,3 +1743,22 @@ function checkSign(num) {
 console.log(checkSign(10));
 console.log(checkSign(-12));
 console.log(checkSign(0));
+*/
+
+// ===> Use Recursion to Create a Countdown <===
+
+// Only change code below this line
+function countdown(n) {
+  if (n < 1) {
+    return [];
+  } else {
+    const countArray = countdown(n - 1);
+    countArray.unshift(n);
+    return countArray;
+  }
+  // return;
+}
+// Only change code above this line
+console.log(countdown(-1));
+console.log(countdown(10));
+console.log(countdown(5));
