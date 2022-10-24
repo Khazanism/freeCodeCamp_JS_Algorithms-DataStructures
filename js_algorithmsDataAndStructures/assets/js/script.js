@@ -1764,11 +1764,17 @@ console.log(countdown(5));
 */
 
 // ===> Use Recursion to Create a Range of Numbers <===
+
 function rangeOfNumbers(startNum, endNum) {
-  return [];
+  if (startNum > endNum) {
+    return [];
+  } else {
+    const x = rangeOfNumbers(startNum, endNum - 1);
+    x.push(endNum);
+    return x;
+  }
 }
 
 console.log(rangeOfNumbers(1, 5));
 console.log(rangeOfNumbers(6, 9));
-console.log(rangeOfNumbers(4, 4));
 console.log(rangeOfNumbers(4, 4));
