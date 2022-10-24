@@ -1743,22 +1743,32 @@ function checkSign(num) {
 console.log(checkSign(10));
 console.log(checkSign(-12));
 console.log(checkSign(0));
-*/
 
 // ===> Use Recursion to Create a Countdown <===
 
 // Only change code below this line
 function countdown(n) {
-  if (n < 1) {
-    return [];
-  } else {
-    const countArray = countdown(n - 1);
-    countArray.unshift(n);
-    return countArray;
-  }
-  // return;
+    if (n < 1) {
+        return [];
+    } else {
+        const countArray = countdown(n - 1);
+        countArray.unshift(n);
+        return countArray;
+    }
+    // return;
 }
 // Only change code above this line
 console.log(countdown(-1));
 console.log(countdown(10));
 console.log(countdown(5));
+*/
+
+// ===> Use Recursion to Create a Range of Numbers <===
+function rangeOfNumbers(startNum, endNum) {
+  return [];
+}
+
+console.log(rangeOfNumbers(1, 5));
+console.log(rangeOfNumbers(6, 9));
+console.log(rangeOfNumbers(4, 4));
+console.log(rangeOfNumbers(4, 4));
