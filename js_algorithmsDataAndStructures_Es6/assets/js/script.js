@@ -36,12 +36,10 @@ function editInPlace() {
   // Only change code above this line
 }
 console.log(editInPlace());
-*/
 
 // ---> Prevent Object Mutation <---
 
 // To ensure your data doesn't change, JavaScript provides a function Object.freeze to prevent data mutation.
-
 // Any attempt at changing the object will be rejected, with an error thrown if the script is running in strict mode.
 
 function freezeObj() {
@@ -61,3 +59,12 @@ function freezeObj() {
 const PI = freezeObj();
 
 console.log(freezeObj());
+*/
+
+// ---> Use Arrow Functions to Write Concise Anonymous Functions <---
+
+var magic = function() {
+  return new Date();
+};
+
+const magic = () => new Date; // ANSWER
