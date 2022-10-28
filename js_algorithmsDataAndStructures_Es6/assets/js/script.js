@@ -59,7 +59,6 @@ function freezeObj() {
 const PI = freezeObj();
 
 console.log(freezeObj());
-*/
 
 // ---> Use Arrow Functions to Write Concise Anonymous Functions <---
 
@@ -68,3 +67,16 @@ var magic = function() {
 };
 
 const magic = () => new Date; // ANSWER
+*/
+
+// ---> Write Arrow Functions with Parameters <---
+
+// const myConcat = function (arr1, arr2) {
+//   return arr1.concat(arr2);
+// };
+
+// console.log(myConcat([1, 2], [3, 4, 5]));
+
+const myConcat = (arr1, arr2) => arr1.concat(arr2);
+
+console.log(myConcat([1, 2], [3, 4, 5]));
