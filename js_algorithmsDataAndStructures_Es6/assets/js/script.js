@@ -79,15 +79,22 @@ const magic = () => new Date; // ANSWER
   const myConcat = (arr1, arr2) => arr1.concat(arr2);
   
   console.log(myConcat([1, 2], [3, 4, 5]));
+  
+  // ---> Set Default Parameters for Your Functions <---
+  
+  // Only change code below this line
+  const increment = (number, value = 1) => number + value;
+  // Only change code above this line
+  
+  console.log(increment(5, 2));
+  console.log(increment(5));
   */
- 
- // ---> Set Default Parameters for Your Functions <---
+
+// ---> Use the Rest Parameter with Function Parameters <---
 
 //  In order to help us create more flexible functions, ES6 introduces the rest parameter for function parameters. With the rest parameter, you can create functions that take a variable number of arguments. These arguments are stored in an array that can be accessed later from inside the function.
 
-// Only change code below this line
-const increment = (number, value = 1) => number + value;
-// Only change code above this line
-
-console.log(increment(5, 2));
-console.log(increment(5));
+const sum = (x, y, z) => {
+  const args = [x, y, z];
+  return args.reduce((a, b) => a + b, 0);
+};
