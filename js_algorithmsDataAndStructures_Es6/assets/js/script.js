@@ -67,16 +67,27 @@ var magic = function() {
 };
 
 const magic = () => new Date; // ANSWER
-*/
 
 // ---> Write Arrow Functions with Parameters <---
 
 // const myConcat = function (arr1, arr2) {
-//   return arr1.concat(arr2);
-// };
+  //   return arr1.concat(arr2);
+  // };
+  
+  // console.log(myConcat([1, 2], [3, 4, 5]));
+  
+  const myConcat = (arr1, arr2) => arr1.concat(arr2);
+  
+  console.log(myConcat([1, 2], [3, 4, 5]));
+  */
+ 
+ // ---> Set Default Parameters for Your Functions <---
 
-// console.log(myConcat([1, 2], [3, 4, 5]));
+//  In order to help us create more flexible functions, ES6 introduces the rest parameter for function parameters. With the rest parameter, you can create functions that take a variable number of arguments. These arguments are stored in an array that can be accessed later from inside the function.
 
-const myConcat = (arr1, arr2) => arr1.concat(arr2);
+// Only change code below this line
+const increment = (number, value = 1) => number + value;
+// Only change code above this line
 
-console.log(myConcat([1, 2], [3, 4, 5]));
+console.log(increment(5, 2));
+console.log(increment(5));
