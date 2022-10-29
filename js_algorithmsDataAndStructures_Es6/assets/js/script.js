@@ -106,17 +106,48 @@ const magic = () => new Date; // ANSWER
   console.log(sum(1, 2, 3, 4));
   console.log(sum(5));
   console.log(sum());
+  
+  // ---> Use the Spread Operator to Evaluate Arrays In-Place <---
+  
+  // ES6 introduces the spread operator, which allows us to expand arrays and other expressions in places where multiple parameters or elements are expected.
+  // ...arr returns an unpacked array. In other words, it spreads the array. However, the spread operator only works in-place, like in an argument to a function or in an array literal. The following code will not work:
+  // const spreaded = ...arr;
+  
+  const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+  let arr2;
+  
+  arr2 = [...arr1];  // Change this line just added ...arr1
+  
+  console.log(arr2);
   */
 
-// ---> Use the Spread Operator to Evaluate Arrays In-Place <---
+// ---> Use Destructuring Assignment to Extract Values from Objects <---
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
 
-// ES6 introduces the spread operator, which allows us to expand arrays and other expressions in places where multiple parameters or elements are expected.
-// ...arr returns an unpacked array. In other words, it spreads the array. However, the spread operator only works in-place, like in an argument to a function or in an array literal. The following code will not work:
-// const spreaded = ...arr;
+// Only change code below this line
 
-const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
-let arr2;
+const today = HIGH_TEMPERATURES.today;
+const tomorrow = HIGH_TEMPERATURES.tomorrow;
 
-arr2 = [...arr1];  // Change this line just added ...arr1
+// Only change code above this line
 
-console.log(arr2);
+// --> answer 
+
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
+
+// Only change code below this line
+
+// const today = HIGH_TEMPERATURES.today;
+// const tomorrow = HIGH_TEMPERATURES.tomorrow;
+
+const {today, tomorrow} = HIGH_TEMPERATURES
+
+// Only change code above this line
