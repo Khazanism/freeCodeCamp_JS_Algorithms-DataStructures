@@ -150,31 +150,52 @@ const magic = () => new Date; // ANSWER
   const {today, tomorrow} = HIGH_TEMPERATURES
   
   // Only change code above this line
-  */
   
-// ---> Use Destructuring Assignment to Assign Variables from Objects <---
+  // ---> Use Destructuring Assignment to Assign Variables from Objects <---
 
-// Destructuring allows you to assign a new variable name when extracting values. You can do this by putting the new name after a colon when assigning the value.
+  // Destructuring allows you to assign a new variable name when extracting values. You can do this by putting the new name after a colon when assigning the value.
+  
+  // Using the same object from the last example:
+  
+  const user = { name: 'John Doe', age: 34 };
+  // Here's how you can give new variable names in the assignment:
+  
+  const { name: userName, age: userAge } = user;
+  // You may read it as "get the value of user.name and assign it to a new variable named userName" and so on. The value of userName would be the string John Doe, and the value of userAge would be the number 34.
+  
+  const HIGH_TEMPERATURES = {
+    yesterday: 75,
+    today: 77,
+    tomorrow: 80
+  };
+  
+  // Only change code below this line
+  
+  // const highToday = HIGH_TEMPERATURES.today;
+  // const highTomorrow = HIGH_TEMPERATURES.tomorrow; 
+  const {today: highToday, tomorrow: highTomorrow} = HIGH_TEMPERATURES
+  
+  // Only change code above this line
+  console.log(HIGH_TEMPERATURES);
+  */
 
-// Using the same object from the last example:
+// ---> Use Destructuring Assignment to Assign Variables from Nested Objects <---
 
-const user = { name: 'John Doe', age: 34 };
-// Here's how you can give new variable names in the assignment:
-
-const { name: userName, age: userAge } = user;
-// You may read it as "get the value of user.name and assign it to a new variable named userName" and so on. The value of userName would be the string John Doe, and the value of userAge would be the number 34.
-
-const HIGH_TEMPERATURES = {
-  yesterday: 75,
-  today: 77,
-  tomorrow: 80
+const LOCAL_FORECAST = {
+  yesterday: { low: 61, high: 75 },
+  today: { low: 64, high: 77 },
+  tomorrow: { low: 68, high: 80 },
 };
 
 // Only change code below this line
-  
-// const highToday = HIGH_TEMPERATURES.today;
-// const highTomorrow = HIGH_TEMPERATURES.tomorrow; 
-const {today: highToday, tomorrow: highTomorrow} = HIGH_TEMPERATURES
+
+// const lowToday = LOCAL_FORECAST.today.low;
+// const highToday = LOCAL_FORECAST.today.high;
+
+const {
+  today: { low: lowToday, high: highToday },
+} = LOCAL_FORECAST;
 
 // Only change code above this line
-console.log(HIGH_TEMPERATURES);
+
+console.log(LOCAL_FORECAST);
