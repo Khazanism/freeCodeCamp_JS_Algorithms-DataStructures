@@ -98,3 +98,12 @@ const sum = (x, y, z) => {
   const args = [x, y, z];
   return args.reduce((a, b) => a + b, 0);
 };
+// ---> check diff between syntax
+const sum = (...args) => {
+  return args.reduce((a, b) => a + b, 0);
+};
+
+console.log(sum(0, 1, 2));
+console.log(sum(1, 2, 3, 4));
+console.log(sum(5));
+console.log(sum());
