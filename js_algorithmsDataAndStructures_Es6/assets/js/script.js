@@ -88,22 +88,35 @@ const magic = () => new Date; // ANSWER
   
   console.log(increment(5, 2));
   console.log(increment(5));
+  
+  // ---> Use the Rest Parameter with Function Parameters <---
+  
+  //  In order to help us create more flexible functions, ES6 introduces the rest parameter for function parameters. With the rest parameter, you can create functions that take a variable number of arguments. These arguments are stored in an array that can be accessed later from inside the function.
+  
+  const sum = (x, y, z) => {
+    const args = [x, y, z];
+    return args.reduce((a, b) => a + b, 0);
+  };
+  // ---> check diff between syntax
+  const sum = (...args) => {
+    return args.reduce((a, b) => a + b, 0);
+  };
+
+  console.log(sum(0, 1, 2));
+  console.log(sum(1, 2, 3, 4));
+  console.log(sum(5));
+  console.log(sum());
   */
 
-// ---> Use the Rest Parameter with Function Parameters <---
+// ---> Use the Spread Operator to Evaluate Arrays In-Place <---
 
-//  In order to help us create more flexible functions, ES6 introduces the rest parameter for function parameters. With the rest parameter, you can create functions that take a variable number of arguments. These arguments are stored in an array that can be accessed later from inside the function.
+// ES6 introduces the spread operator, which allows us to expand arrays and other expressions in places where multiple parameters or elements are expected.
+// ...arr returns an unpacked array. In other words, it spreads the array. However, the spread operator only works in-place, like in an argument to a function or in an array literal. The following code will not work:
+// const spreaded = ...arr;
 
-const sum = (x, y, z) => {
-  const args = [x, y, z];
-  return args.reduce((a, b) => a + b, 0);
-};
-// ---> check diff between syntax
-const sum = (...args) => {
-  return args.reduce((a, b) => a + b, 0);
-};
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arr2;
 
-console.log(sum(0, 1, 2));
-console.log(sum(1, 2, 3, 4));
-console.log(sum(5));
-console.log(sum());
+arr2 = [...arr1];  // Change this line just added ...arr1
+
+console.log(arr2);
