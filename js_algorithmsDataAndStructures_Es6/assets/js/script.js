@@ -177,25 +177,48 @@ const magic = () => new Date; // ANSWER
   
   // Only change code above this line
   console.log(HIGH_TEMPERATURES);
-  */
-
-// ---> Use Destructuring Assignment to Assign Variables from Nested Objects <---
-
-const LOCAL_FORECAST = {
-  yesterday: { low: 61, high: 75 },
-  today: { low: 64, high: 77 },
-  tomorrow: { low: 68, high: 80 },
-};
-
-// Only change code below this line
-
-// const lowToday = LOCAL_FORECAST.today.low;
-// const highToday = LOCAL_FORECAST.today.high;
-
-const {
-  today: { low: lowToday, high: highToday },
+  
+  // ---> Use Destructuring Assignment to Assign Variables from Nested Objects <---
+  
+  const LOCAL_FORECAST = {
+    yesterday: { low: 61, high: 75 },
+    today: { low: 64, high: 77 },
+    tomorrow: { low: 68, high: 80 },
+  };
+  
+  // Only change code below this line
+  
+  // const lowToday = LOCAL_FORECAST.today.low;
+  // const highToday = LOCAL_FORECAST.today.high;
+  
+  const {
+    today: { low: lowToday, high: highToday },
 } = LOCAL_FORECAST;
 
 // Only change code above this line
 
 console.log(LOCAL_FORECAST);
+*/
+
+// ---> Use Destructuring Assignment to Assign Variables from Arrays <---
+
+// One key difference between the spread operator and array destructuring is that the spread operator unpacks all contents of an array into a comma-separated list. Consequently, you cannot pick or choose which elements you want to assign to variables.
+
+// Destructuring an array lets us do exactly that:
+
+const [a, b] = [1, 2, 3, 4, 5, 6];
+console.log(a, b);
+// The console will display the values of a and b as 1, 2.
+
+// The variable a is assigned the first value of the array, and b is assigned the second value of the array. We can also access the value at any index in an array with destructuring by using commas to reach the desired index:
+
+const [a, b, , , c] = [1, 2, 3, 4, 5, 6];
+console.log(a, b, c);
+// The console will display the values of a, b, and c as 1, 2, 5.
+
+let a = 8,
+  b = 6;
+// Only change code below this line
+[a, b] = [b, a];
+console.log(a, b);
+// swap
