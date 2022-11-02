@@ -234,7 +234,6 @@ function removeFirstTwo(list) {
 }
 const arr = removeFirstTwo(source);
 console.log(arr);
-*/
 
 // ---> Use Destructuring Assignment to Pass an Object as a Function's Parameters <---
 
@@ -253,3 +252,19 @@ const half = ({max, min}) => (max + min) / 2.0;
 // Only change code above this line
 
 console.log(half(stats));
+*/
+// ---> Create Strings using Template Literals <---
+const result = {
+  success: ["max-length", "no-amd", "prefer-arrow-functions"],
+  failure: ["no-var", "var-on-top", "linebreak"],
+  skipped: ["no-extra-semi", "no-dup-keys"]
+};
+function makeList(arr) {
+  // Only change code below this line
+  const failureItems = [];
+  // Only change code above this line
+
+  return failureItems;
+}
+
+const failuresList = makeList(result.failure);
