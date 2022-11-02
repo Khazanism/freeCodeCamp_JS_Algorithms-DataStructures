@@ -198,7 +198,6 @@ const magic = () => new Date; // ANSWER
 // Only change code above this line
 
 console.log(LOCAL_FORECAST);
-*/
 
 // ---> Use Destructuring Assignment to Assign Variables from Arrays <---
 
@@ -217,8 +216,23 @@ console.log(a, b, c);
 // The console will display the values of a, b, and c as 1, 2, 5.
 
 let a = 8,
-  b = 6;
+b = 6;
 // Only change code below this line
 [a, b] = [b, a];
 console.log(a, b);
 // swap
+*/
+
+// ---> Use Destructuring Assignment with the Rest Parameter to Reassign Array Elements <---
+
+const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function removeFirstTwo(list) {
+  // Only change code below this line
+  // const arr = list; // Change this line
+  const [a, b, ...arr] = list; // Change this line
+  // Only change code above this line
+  return arr;
+}
+const arr = removeFirstTwo(source);
+
+console.log(arr);
