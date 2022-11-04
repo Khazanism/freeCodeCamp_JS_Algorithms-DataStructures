@@ -254,6 +254,7 @@ const half = ({max, min}) => (max + min) / 2.0;
 console.log(half(stats));
 */
 // ---> Create Strings using Template Literals <---
+
 const result = {
   success: ["max-length", "no-amd", "prefer-arrow-functions"],
   failure: ["no-var", "var-on-top", "linebreak"],
@@ -261,10 +262,19 @@ const result = {
 };
 function makeList(arr) {
   // Only change code below this line
-  const failureItems = [];
+  const failureItems = [
+    `<li class="text-warning">${result.failure[0]}</li>,
+
+    <li class="text-warning">${result.failure[0]}</li>, 
+    
+    <li class="text-warning">${result.failure[0]}</li>
+    `
+  ];
   // Only change code above this line
 
   return failureItems;
 }
 
 const failuresList = makeList(result.failure);
+
+console.log(makeList());
