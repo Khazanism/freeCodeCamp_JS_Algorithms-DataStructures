@@ -278,3 +278,8 @@ function makeList(arr) {
 const failuresList = makeList(result.failure);
 
 console.log(makeList());
+
+for (let i = 0; i < arr.length; i++) {
+  const element = arr[i];
+  
+}
