@@ -258,48 +258,19 @@ console.log(half(stats));
 const result = {
   success: ["max-length", "no-amd", "prefer-arrow-functions"],
   failure: ["no-var", "var-on-top", "linebreak"],
-  skipped: ["no-extra-semi", "no-dup-keys"]
+  skipped: ["no-extra-semi", "no-dup-keys"],
 };
 function makeList(arr) {
   // Only change code below this line
-  const failureItems = [
-    `<li class="text-warning">${result.failure[0]}</li>,
-
-    <li class="text-warning">${result.failure[0]}</li>, 
-    
-    <li class="text-warning">${result.failure[0]}</li>
-    `
-  ];
-  // Only change code above this line
-
-  return failureItems;
-}
-
-const failuresList = makeList(result.failure);
-
-console.log(makeList());
-
-for (let i = 0; i < arr.length; i++) {
-  const element = arr[i];
-  
-}
-// ----> ANSWER 2 
-const result = {
-  success: ["max-length", "no-amd", "prefer-arrow-functions"],
-  failure: ["no-var", "var-on-top", "linebreak"],
-  skipped: ["no-extra-semi", "no-dup-keys"]
-};
-function makeList(arr) {
-  // Only change code below this line
-  const failureItems = [];
-  for (let i = 0; i < array.length; i += 1) {
-    failureItems.push(`<li class="text-warning">${array[i]}</li>`);
+  let failuresList = [];
+  for (let i = 0; i < arr.length; i += 1) {
+    failuresList.push(`<li class="text-warning">${arr[i]}</li>`);
   }
   // Only change code above this line
 
-  return failureItems;
+  return failuresList;
 }
 
 const failuresList = makeList(result.failure);
 
-console.log(makeList());
+console.log(failuresList);
