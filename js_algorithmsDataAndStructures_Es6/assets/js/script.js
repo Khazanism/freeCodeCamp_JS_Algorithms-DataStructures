@@ -252,7 +252,6 @@ const half = ({max, min}) => (max + min) / 2.0;
 // Only change code above this line
 
 console.log(half(stats));
-*/
 // ---> Create Strings using Template Literals <---
 
 const result = {
@@ -267,7 +266,7 @@ function makeList(arr) {
     failuresList.push(`<li class="text-warning">${arr[i]}</li>`);
   }
   // Only change code above this line
-
+  
   return failuresList;
 }
 
@@ -289,10 +288,36 @@ function makeList(arr) {
     failureItems.push(`<li class="text-warning">${arr[i]}</li>`);
   }
   // Only change code above this line
-
+  
   return failureItems;
 }
 
 const failuresList = makeList(result.failure);
 
 console.log(failuresList);
+*/
+
+// ---> Write Concise Object Literal Declarations Using Object Property Shorthand <---
+const createPerson = (name, age, gender) => {
+  // Only change code below this line
+  return {
+    name: name,
+    age: age,
+    gender: gender
+  };
+  // Only change code above this line
+};
+
+console.log(createPerson("Zodiac Hasbro", 56, "male"));
+
+// answer 
+
+const createPerson = (name, age, gender) => {
+  // Only change code below this line
+  return {
+    name, age, gender
+  };
+  // Only change code above this line
+};
+
+console.log(createPerson("Zodiac Hasbro", 56, "male"));
