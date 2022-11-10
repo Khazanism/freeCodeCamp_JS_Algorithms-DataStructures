@@ -320,8 +320,6 @@ const createPerson = (name, age, gender) => {
 };
 
 console.log(createPerson("Zodiac Hasbro", 56, "male"));
-*/
-
 
 // ---> Write Concise Declarative Functions with ES6 <---
 
@@ -331,8 +329,8 @@ console.log(createPerson("Zodiac Hasbro", 56, "male"));
 // const bicycle = {
 //   gear: 2,
 //   setGear: function (newGear) {
-//     this.gear = newGear;
-//   }
+  //     this.gear = newGear;
+  //   }
 // };
 
 const bicycle = {
@@ -346,3 +344,28 @@ bicycle.setGear(3);
 console.log(bicycle.gear);
 bicycle.setGear(48);
 console.log(bicycle.gear);
+*/
+
+// ---> Use class Syntax to Define a Constructor Function <---
+
+// ES6 provides a new syntax to create objects, using the class keyword.
+
+// It should be noted that the class syntax is just syntax, and not a full-fledged class-based implementation of an object-oriented paradigm, unlike in languages such as Java, Python, Ruby, etc.
+
+// In ES5, an object can be created by defining a constructor function and using the new keyword to instantiate the object.
+
+// In ES6, a class declaration has a constructor method that is invoked with the new keyword. If the constructor method is not explicitly defined, then it is implicitly defined with no arguments.
+
+// Only change code below this line
+
+class Vegetable {
+  constructor (name) {
+    this.name = name;
+  }
+}
+
+// Only change code above this line
+
+const carrot = new Vegetable('carrot');
+
+console.log(carrot.name); // Should display 'carrot'
