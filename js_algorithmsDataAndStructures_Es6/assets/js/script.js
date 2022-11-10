@@ -295,20 +295,19 @@ function makeList(arr) {
 const failuresList = makeList(result.failure);
 
 console.log(failuresList);
-*/
 
 // ---> Write Concise Object Literal Declarations Using Object Property Shorthand <---
-const createPerson = (name, age, gender) => {
-  // Only change code below this line
-  return {
-    name: name,
-    age: age,
-    gender: gender
-  };
-  // Only change code above this line
-};
+// const createPerson = (name, age, gender) => {
+//   // Only change code below this line
+//   return {
+//     name: name,
+//     age: age,
+//     gender: gender
+//   };
+//   // Only change code above this line
+// };
 
-console.log(createPerson("Zodiac Hasbro", 56, "male"));
+// console.log(createPerson("Zodiac Hasbro", 56, "male"));
 
 // answer 
 
@@ -321,3 +320,29 @@ const createPerson = (name, age, gender) => {
 };
 
 console.log(createPerson("Zodiac Hasbro", 56, "male"));
+*/
+
+
+// ---> Write Concise Declarative Functions with ES6 <---
+
+// you can remove the function keyword and colon altogether when defining functions in objects.
+
+// Only change code below this line
+// const bicycle = {
+//   gear: 2,
+//   setGear: function (newGear) {
+//     this.gear = newGear;
+//   }
+// };
+
+const bicycle = {
+  gear: 2,
+  setGear(newGear) {
+    this.gear = newGear
+  }
+};
+// Only change code above this line
+bicycle.setGear(3);
+console.log(bicycle.gear);
+bicycle.setGear(48);
+console.log(bicycle.gear);
