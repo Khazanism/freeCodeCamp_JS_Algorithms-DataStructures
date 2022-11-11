@@ -344,7 +344,6 @@ bicycle.setGear(3);
 console.log(bicycle.gear);
 bicycle.setGear(48);
 console.log(bicycle.gear);
-*/
 
 // ---> Use class Syntax to Define a Constructor Function <---
 
@@ -369,3 +368,28 @@ class Vegetable {
 const carrot = new Vegetable('carrot');
 
 console.log(carrot.name); // Should display 'carrot'
+*/
+
+// ---> Use getters and setters to Control Access to an Object <---
+
+// Getters and setters are critical parts of a class/object.
+// They allow you to control their attributes from the outside.
+// They will become more prominent when you get started with the Object-Oriented Programming unit (coming up!).
+//  For now, this exercise shows you how to manipulate them with ES6.
+
+// Only change code below this line
+
+class Thermostat {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+// Only change code above this line
+
+const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+let temp = thermos.temperature; // 24.44 in Celsius
+thermos.temperature = 26;
+temp = thermos.temperature; // 26 in Celsius
+
+console.log(Thermostat(76));
