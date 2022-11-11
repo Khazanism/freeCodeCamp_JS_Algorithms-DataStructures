@@ -380,8 +380,17 @@ console.log(carrot.name); // Should display 'carrot'
 // Only change code below this line
 
 class Thermostat {
-  constructor(name) {
-    this.name = name;
+  constructor(fahrenheit) {
+    this.fahrenheit = fahrenheit;
+  }
+
+  // getter
+  get temp() {
+    return (5 / 9) * (this.fahrenheit - 32);
+  }
+  // setter
+  set temp(celsius) {
+    this.farenheit = (celsius * 9.0) / 5 + 32;
   }
 }
 
@@ -392,4 +401,4 @@ let temp = thermos.temperature; // 24.44 in Celsius
 thermos.temperature = 26;
 temp = thermos.temperature; // 26 in Celsius
 
-console.log(Thermostat(76));
+// console.log(Thermostat(76));
