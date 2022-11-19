@@ -448,10 +448,18 @@ stringFunctions.uppercaseString("hello");
 stringFunctions.lowercaseString("WORLD!");
 
 import * as stringFunctions from "./string_functions.js";
-*/
 
 // ---> Create an Export Fallback with export default <---
 
 export default function subtract(x, y) {
   return x - y;
 }
+*/
+
+// ---> Import a Default Export <---
+
+// Only change code above this line
+
+subtract(7, 4);
+
+import subtract from "./math_functions.js";
