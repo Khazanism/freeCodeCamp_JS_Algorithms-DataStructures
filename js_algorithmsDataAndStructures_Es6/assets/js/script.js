@@ -466,14 +466,13 @@ import subtract from "./math_functions.js";
 // ---> Create a JavaScript Promise <---
 
 const makeServerRequest = new Promise((resolve, reject) => {});
-*/
 
 // ---> Complete a Promise with resolve and reject <---
 
 const makeServerRequest = new Promise((resolve, reject) => {
   // responseFromServer represents a response from a server
   let responseFromServer;
-
+  
   if (responseFromServer) {
     // Change this line
     resolve("We got the data");
@@ -481,4 +480,24 @@ const makeServerRequest = new Promise((resolve, reject) => {
     // Change this line
     reject("Data not received");
   }
+});
+
+*/
+
+// ---> Handle a Fulfilled Promise with then <---
+
+// When you make a server request it takes some amount of time, and after it completes you usually want to do something with the response from the server. This can be achieved by using the then method. The then method is executed immediately after your promise is fulfilled with resolve.
+
+const makeServerRequest = new Promise((resolve, reject) => {
+  // responseFromServer is set to true to represent a successful response from a server
+  let responseFromServer = true;
+
+  if (responseFromServer) {
+    resolve("We got the data");
+  } else {
+    reject("Data not received");
+  }
+});
+  makeServerRequest.then((result) => {
+  console.log(result);
 });
