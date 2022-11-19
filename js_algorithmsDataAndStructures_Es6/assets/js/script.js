@@ -424,13 +424,12 @@ export { uppercaseString, lowercaseString };
 
 
 // export const uppercaseString = (string) => {
-  //   return string.toUpperCase();
-  // }
-  
-  // export const lowercaseString = (string) => {
-    //   return string.toLowerCase()
-    // }
-    */
+//   return string.toUpperCase();
+// }
+
+// export const lowercaseString = (string) => {
+//   return string.toLowerCase()
+// }
 
 // ---> Reuse JavaScript Code Using import <---
 
@@ -440,3 +439,13 @@ uppercaseString("hello");
 lowercaseString("WORLD!");
 
 import { uppercaseString, lowercaseString } from "./string_functions.js";
+*/
+
+// ---> Use * to Import Everything from a File <---
+
+// Only change code above this line
+
+stringFunctions.uppercaseString("hello");
+stringFunctions.lowercaseString("WORLD!");
+
+import * as stringFunctions from "./string_functions.js";
