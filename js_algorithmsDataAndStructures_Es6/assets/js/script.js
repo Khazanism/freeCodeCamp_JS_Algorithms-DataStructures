@@ -439,7 +439,6 @@ uppercaseString("hello");
 lowercaseString("WORLD!");
 
 import { uppercaseString, lowercaseString } from "./string_functions.js";
-*/
 
 // ---> Use * to Import Everything from a File <---
 
@@ -449,3 +448,10 @@ stringFunctions.uppercaseString("hello");
 stringFunctions.lowercaseString("WORLD!");
 
 import * as stringFunctions from "./string_functions.js";
+*/
+
+// ---> Create an Export Fallback with export default <---
+
+export default function subtract(x, y) {
+  return x - y;
+}
