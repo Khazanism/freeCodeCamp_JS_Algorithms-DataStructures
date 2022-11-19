@@ -462,8 +462,23 @@ export default function subtract(x, y) {
 subtract(7, 4);
 
 import subtract from "./math_functions.js";
-*/
 
 // ---> Create a JavaScript Promise <---
 
 const makeServerRequest = new Promise((resolve, reject) => {});
+*/
+
+// ---> Complete a Promise with resolve and reject <---
+
+const makeServerRequest = new Promise((resolve, reject) => {
+  // responseFromServer represents a response from a server
+  let responseFromServer;
+
+  if (responseFromServer) {
+    // Change this line
+    resolve("We got the data");
+  } else {
+    // Change this line
+    reject("Data not received");
+  }
+});
