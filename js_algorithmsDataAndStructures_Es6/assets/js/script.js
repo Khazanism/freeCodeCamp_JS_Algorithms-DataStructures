@@ -399,14 +399,39 @@ const thermos = new Thermostat(76); // Setting in Fahrenheit scale
 let temp = thermos.temperature; // 24.44 in Celsius
 thermos.temperature = 26;
 temp = thermos.temperature; // 26 in Celsius
-*/
 
 // ---> Create a Module Script <---
-
 <html>
-  <body>
-    <!-- Only change code below this line -->
+<body>
+<!-- Only change code below this line -->
 <script type="module" src="index.js"></script>
-    <!-- Only change code above this line -->
-  </body>
+<!-- Only change code above this line -->
+</body>
 </html>
+*/
+
+// ---> Use export to Share a Code Block <---
+
+const uppercaseString = (string) => {
+  return string.toUpperCase();
+}
+
+const lowercaseString = (string) => {
+  return string.toLowerCase()
+}
+
+export { uppercaseString, lowercaseString };
+
+
+
+// export const uppercaseString = (string) => {
+//   return string.toUpperCase();
+// }
+
+// export const lowercaseString = (string) => {
+//   return string.toLowerCase()
+// }
+
+
+
+
