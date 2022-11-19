@@ -454,7 +454,6 @@ import * as stringFunctions from "./string_functions.js";
 export default function subtract(x, y) {
   return x - y;
 }
-*/
 
 // ---> Import a Default Export <---
 
@@ -463,3 +462,8 @@ export default function subtract(x, y) {
 subtract(7, 4);
 
 import subtract from "./math_functions.js";
+*/
+
+// ---> Create a JavaScript Promise <---
+
+const makeServerRequest = new Promise((resolve, reject) => {});
