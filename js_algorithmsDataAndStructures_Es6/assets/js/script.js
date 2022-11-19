@@ -408,7 +408,6 @@ temp = thermos.temperature; // 26 in Celsius
 <!-- Only change code above this line -->
 </body>
 </html>
-*/
 
 // ---> Use export to Share a Code Block <---
 
@@ -425,13 +424,19 @@ export { uppercaseString, lowercaseString };
 
 
 // export const uppercaseString = (string) => {
-//   return string.toUpperCase();
-// }
+  //   return string.toUpperCase();
+  // }
+  
+  // export const lowercaseString = (string) => {
+    //   return string.toLowerCase()
+    // }
+    */
 
-// export const lowercaseString = (string) => {
-//   return string.toLowerCase()
-// }
+// ---> Reuse JavaScript Code Using import <---
 
+// Only change code above this line
 
+uppercaseString("hello");
+lowercaseString("WORLD!");
 
-
+import { uppercaseString, lowercaseString } from "./string_functions.js";
