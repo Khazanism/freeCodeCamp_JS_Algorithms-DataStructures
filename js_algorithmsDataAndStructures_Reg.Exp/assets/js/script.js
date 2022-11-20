@@ -1,7 +1,6 @@
 //  js_algorithmsDataAndStructures
 
 /*
-*/
 // ---> Using the Test Method <---
 
 // Regular expressions are used in programming languages to match parts of strings. You create patterns to help you do that matching.
@@ -15,3 +14,10 @@ let myRegex = /Hello/;
 // let result = myRegex; // Change this line
 
 let result = myRegex.test(myString); // Change this line
+*/
+
+// ---> Match Literal Strings <---
+
+let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
+let waldoRegex = /Waldo/; // Change this line
+let result = waldoRegex.test(waldoIsHiding);
