@@ -38,7 +38,6 @@ let result = petRegex.test(petString);
 let myString = "freeCodeCamp";
 let fccRegex = /freecodecamp/i; // Change this line ------> the i 
 let result = fccRegex.test(myString);
-*/
 
 // ---> Extract Matches <---
 
@@ -49,5 +48,17 @@ let extractStr = "Extract the word 'coding' from this string.";
 let codingRegex = /coding/; // Change this line
 let result = extractStr.match(codingRegex); // Change this line
 console.log(result);
+*/
+
+// ---> Find More Than the First Match <---
+
+// To search or extract a pattern more than once, you can use the global search flag: g.
+
+let twinkleStar = "Twinkle, twinkle, little star";
+let starRegex = /Twinkle/gi; // Change this line
+let result = twinkleStar.match(starRegex); // Change this line
+
+console.log(result);
+
 
 
