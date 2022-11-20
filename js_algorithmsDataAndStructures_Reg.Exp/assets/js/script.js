@@ -29,7 +29,6 @@ let result = waldoRegex.test(waldoIsHiding);
 let petString = "James has a pet cat.";
 let petRegex = /dog|cat|bird|fish/; // Change this line
 let result = petRegex.test(petString);
-*/
 
 // ---> Ignore Case While Matching <---
 
@@ -39,3 +38,16 @@ let result = petRegex.test(petString);
 let myString = "freeCodeCamp";
 let fccRegex = /freecodecamp/i; // Change this line ------> the i 
 let result = fccRegex.test(myString);
+*/
+
+// ---> Extract Matches <---
+
+// You can also extract the actual matches you found with the .match() method.
+// To use the .match() method, apply the method on a string and pass in the regex inside the parentheses.
+
+let extractStr = "Extract the word 'coding' from this string.";
+let codingRegex = /coding/; // Change this line
+let result = extractStr.match(codingRegex); // Change this line
+console.log(result);
+
+
