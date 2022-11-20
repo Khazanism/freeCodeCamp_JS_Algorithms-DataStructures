@@ -20,7 +20,6 @@ let result = myRegex.test(myString); // Change this line
 let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
 let waldoRegex = /Waldo/; // Change this line
 let result = waldoRegex.test(waldoIsHiding);
-*/
 
 // ---> Match a Literal String with Different Possibilities <---
 
@@ -30,3 +29,13 @@ let result = waldoRegex.test(waldoIsHiding);
 let petString = "James has a pet cat.";
 let petRegex = /dog|cat|bird|fish/; // Change this line
 let result = petRegex.test(petString);
+*/
+
+// ---> Ignore Case While Matching <---
+
+// You can match both cases using what is called a flag. There are other flags but here you'll focus on the flag that ignores case - the i flag.
+// You can use it by appending it to the regex. An example of using this flag is /ignorecase/i. This regex can match the strings ignorecase, igNoreCase, and IgnoreCase.
+
+let myString = "freeCodeCamp";
+let fccRegex = /freecodecamp/i; // Change this line ------> the i 
+let result = fccRegex.test(myString);
