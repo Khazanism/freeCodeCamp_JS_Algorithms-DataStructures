@@ -48,7 +48,6 @@ let extractStr = "Extract the word 'coding' from this string.";
 let codingRegex = /coding/; // Change this line
 let result = extractStr.match(codingRegex); // Change this line
 console.log(result);
-*/
 
 // ---> Find More Than the First Match <---
 
@@ -59,6 +58,10 @@ let starRegex = /Twinkle/gi; // Change this line
 let result = twinkleStar.match(starRegex); // Change this line
 
 console.log(result);
+*/
 
+// ---> Match Anything with Wildcard Period <---
 
-
+let exampleStr = "Let's have fun with regular expressions!";
+let unRegex = /run|sun|fun|pun|nun|bun./; // Change this line
+let result = unRegex.test(exampleStr);
