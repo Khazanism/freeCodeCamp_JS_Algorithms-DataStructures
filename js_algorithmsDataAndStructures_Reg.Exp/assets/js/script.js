@@ -92,11 +92,25 @@ let quoteSample = "Blueberry 3.141592653s are delicious.";
 let myRegex = /[h-s2-6]/gi; // Change this line
 let result = quoteSample.match(myRegex); // Change this line
 console.log(result);
-*/
 
 // ---> Match Single Characters Not Specified <---
 
 let quoteSample = "3 blind mice.";
 let myRegex = /[^aeiou^0-9]/gi; // Change this line
 let result = quoteSample.match(myRegex); // Change this line
+console.log(result);
+*/
+
+// ---> Match Characters that Occur One or More Times <---
+
+// You can use the + character to check if that is the case. Remember, the character or pattern has to be present consecutively. That is, the character has to repeat one after the other.
+
+// For example, /a+/g would find one match in abc and return ["a"]. Because of the +, it would also find a single match in aabc and return ["aa"].
+
+// If it were instead checking the string abab, it would find two matches and return ["a", "a"] because the a characters are not in a row - there is a b between them. Finally, since there is no a in the string bcd, it wouldn't find a match.
+
+let difficultSpelling = "Mississippi";
+let myRegex = /s+/g; // Change this line
+let result = difficultSpelling.match(myRegex);
+
 console.log(result);
