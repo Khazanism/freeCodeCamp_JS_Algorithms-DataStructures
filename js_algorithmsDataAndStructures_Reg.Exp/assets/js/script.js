@@ -69,7 +69,6 @@ let exampleStr = "Let's have fun with regular expressions!";
 let unRegex = /run|sun|fun|pun|nun|bun./; // Change this line
 let unRegex = /.un/; // Change this line
 let result = unRegex.test(exampleStr);
-*/
 
 // ---> Match Single Character with Multiple Possibilities <---
 
@@ -77,3 +76,13 @@ let quoteSample = "Beware of bugs in the above code; I have only proved it corre
 let vowelRegex = /[aeiou]/gi; // Change this line
 let result = quoteSample.match(vowelRegex); // Change this line
 console.log(result);
+*/
+
+// ---> Match Letters of the Alphabet <---
+
+// Inside a character set, you can define a range of characters to match using a hyphen character: -.
+// For example, to match lowercase letters a through e you would use [a-e].
+
+let quoteSample = "The quick brown fox jumps over the lazy dog.";
+let alphabetRegex = /[a-z]/gi; // Change this line
+let result = quoteSample.match(alphabetRegex); // Change this line
