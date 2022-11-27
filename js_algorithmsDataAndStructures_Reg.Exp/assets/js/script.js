@@ -99,7 +99,6 @@ let quoteSample = "3 blind mice.";
 let myRegex = /[^aeiou^0-9]/gi; // Change this line
 let result = quoteSample.match(myRegex); // Change this line
 console.log(result);
-*/
 
 // ---> Match Characters that Occur One or More Times <---
 
@@ -112,5 +111,18 @@ console.log(result);
 let difficultSpelling = "Mississippi";
 let myRegex = /s+/g; // Change this line
 let result = difficultSpelling.match(myRegex);
+console.log(result);
+*/
 
+//-----------------------> upload here
+// ---> Match Characters that Occur Zero or More Times <---
+
+// There's also an option that matches characters that occur zero or more times.
+// The character to do this is the asterisk or star: *.
+
+// Only change code below this line
+let chewieRegex = /Aa*/; // Change this line
+// Only change code above this line
+
+let result = chewieQuote.match(chewieRegex);
 console.log(result);
