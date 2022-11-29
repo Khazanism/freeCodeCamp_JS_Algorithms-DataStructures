@@ -112,9 +112,7 @@ let difficultSpelling = "Mississippi";
 let myRegex = /s+/g; // Change this line
 let result = difficultSpelling.match(myRegex);
 console.log(result);
-*/
 
-//-----------------------> upload here
 // ---> Match Characters that Occur Zero or More Times <---
 
 // There's also an option that matches characters that occur zero or more times.
@@ -126,3 +124,12 @@ let chewieRegex = /Aa*/; // Change this line
 
 let result = chewieQuote.match(chewieRegex);
 console.log(result);
+*/
+
+// ---> Find Characters with Lazy Matching <---
+
+let text = "<h1>Winter is coming</h1>";
+let myRegex = /<.*?>/; // Change this line
+let result = text.match(myRegex);
+
+console.log(text.match(myRegex));
