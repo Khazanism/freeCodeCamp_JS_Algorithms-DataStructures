@@ -137,7 +137,7 @@ console.log(text.match(myRegex));
 // ---> Find One or More Criminals in a Hunt <---
 
 let text = "P1P5P4CCCcP2P6P3";
-let reCriminals = /c+/i; // Change this line
+let reCriminals = /C+/g; // Change this line
 
 let result = text.match(reCriminals);
 console.log(result);
