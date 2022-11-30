@@ -119,12 +119,11 @@ console.log(result);
 // The character to do this is the asterisk or star: *.
 
 // Only change code below this line
-let chewieRegex = /Aa*/; // Change this line
+// let chewieRegex = /Aa/; // Change this line * is before /
 // Only change code above this line
 
 let result = chewieQuote.match(chewieRegex);
 console.log(result);
-*/
 
 // ---> Find Characters with Lazy Matching <---
 
@@ -133,3 +132,12 @@ let myRegex = /<.*?>/; // Change this line
 let result = text.match(myRegex);
 
 console.log(text.match(myRegex));
+*/
+
+// ---> Find One or More Criminals in a Hunt <---
+
+let text = "P1P5P4CCCcP2P6P3";
+let reCriminals = /c+/i; // Change this line
+
+let result = text.match(reCriminals);
+console.log(result);
