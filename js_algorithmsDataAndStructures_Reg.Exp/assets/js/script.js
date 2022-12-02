@@ -132,7 +132,7 @@ let myRegex = /<.*?>/; // Change this line
 let result = text.match(myRegex);
 
 console.log(text.match(myRegex));
-*/
+
 
 // ---> Find One or More Criminals in a Hunt <---
 
@@ -140,4 +140,13 @@ let text = "P1P5P4CCCcP2P6P3";
 let reCriminals = /C+/g; // Change this line
 
 let result = text.match(reCriminals);
+console.log(result);
+*/
+
+
+// ---> Match Beginning String Patterns <---
+
+let rickyAndCal = "Cal and Ricky both like racing.";
+let calRegex = /^Cal/; // Change this line
+let result = calRegex.test(rickyAndCal);
 console.log(result);
