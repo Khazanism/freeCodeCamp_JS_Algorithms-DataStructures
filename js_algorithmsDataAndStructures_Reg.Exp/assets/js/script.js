@@ -158,7 +158,6 @@ let caboose = "The last car on a train is the caboose";
 let lastRegex = /caboose$/; // Change this line
 let result = lastRegex.test(caboose);
 console.log(result);
-*/
 
 // ---> Match All Letters and Numbers <---
 // shorthand character classes----> the name of shortcut character classes
@@ -166,4 +165,16 @@ console.log(result);
 let quoteSample = "The five boxing wizards jump quickly.";
 let alphabetRegexV2 = /\w/g; // Change this line
 let result = quoteSample.match(alphabetRegexV2).length;
+console.log(result);
+*/
+
+// ---> Match Everything But Letters and Numbers <---
+
+// ou can search for the opposite of the \w with \W. 
+// Note, the opposite pattern uses a capital letter.
+//This shortcut is the same as [^A-Za-z0-9_].
+
+let quoteSample = "The five boxing wizards jump quickly.";
+let nonAlphabetRegex = /\W/g; // Change this line
+let result = quoteSample.match(nonAlphabetRegex).length;
 console.log(result);
