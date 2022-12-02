@@ -141,12 +141,22 @@ let reCriminals = /C+/g; // Change this line
 
 let result = text.match(reCriminals);
 console.log(result);
-*/
-
 
 // ---> Match Beginning String Patterns <---
+
+// Outside of a character set, the caret is used to search for patterns at the beginning of strings.
 
 let rickyAndCal = "Cal and Ricky both like racing.";
 let calRegex = /^Cal/; // Change this line
 let result = calRegex.test(rickyAndCal);
+console.log(result);
+*/
+
+// ---> Match Ending String Patterns <---
+
+// You can search the end of strings using the dollar sign character $ at the end of the regex.
+
+let caboose = "The last car on a train is the caboose";
+let lastRegex = /caboose$/; // Change this line
+let result = lastRegex.test(caboose);
 console.log(result);
