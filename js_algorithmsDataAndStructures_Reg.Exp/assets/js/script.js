@@ -150,13 +150,20 @@ let rickyAndCal = "Cal and Ricky both like racing.";
 let calRegex = /^Cal/; // Change this line
 let result = calRegex.test(rickyAndCal);
 console.log(result);
-*/
 
 // ---> Match Ending String Patterns <---
-
 // You can search the end of strings using the dollar sign character $ at the end of the regex.
 
 let caboose = "The last car on a train is the caboose";
 let lastRegex = /caboose$/; // Change this line
 let result = lastRegex.test(caboose);
+console.log(result);
+*/
+
+// ---> Match All Letters and Numbers <---
+// shorthand character classes----> the name of shortcut character classes
+
+let quoteSample = "The five boxing wizards jump quickly.";
+let alphabetRegexV2 = /\w/g; // Change this line
+let result = quoteSample.match(alphabetRegexV2).length;
 console.log(result);
