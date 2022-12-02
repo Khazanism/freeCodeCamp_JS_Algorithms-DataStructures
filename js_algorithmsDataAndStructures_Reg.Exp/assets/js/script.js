@@ -188,8 +188,6 @@ let movieName = "2001: A Space Odyssey";
 let numRegex = /\d/g; // Change this line
 let result = movieName.match(numRegex).length;
 console.log(result);
-*/
-
 
 // ---> Match All Non-Numbers <---
 
@@ -200,4 +198,14 @@ console.log(result);
 let movieName = "2001: A Space Odyssey";
 let noNumRegex = /\D/g; // Change this line
 let result = movieName.match(noNumRegex).length;
+console.log(result);
+*/
+
+
+// ---> Restrict Possible Usernames <---
+
+let username = "JackOfAllTrades";
+// let userCheck = /\w\D/; // Change this line
+let userCheck = /[a-z]{2,}\d*$/i; // Change this line
+let result = userCheck.test(username);
 console.log(result);
