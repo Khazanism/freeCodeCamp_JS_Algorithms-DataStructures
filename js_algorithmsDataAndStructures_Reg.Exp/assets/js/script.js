@@ -201,17 +201,9 @@ let result = movieName.match(noNumRegex).length;
 console.log(result);
 */
 
-
 // ---> Restrict Possible Usernames <---
 
-let username = "JackOfAllTrades";
-// let userCheck = /\w\D/; // Change this line
-
-// let userCheck = /[a-z]{2,}\d*$/i; // Change this line
-
-let userCheck = /^[a-z]{2,}\d*$/i; // Change this line opt 2
-
+let username = "Z97";
+let userCheck = /^[a-z][a-z]+\d*$|[a-z]\d\d+$/i; // Change this line
 let result = userCheck.test(username);
 console.log(result);
-
-
