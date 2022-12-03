@@ -277,7 +277,6 @@ let sampleWord = "astronaut";
 let pwRegex = /(?=\w{6})(?=\w*\d\d)/; // Change this line----------> check
 let result = pwRegex.test(sampleWord);
 console.log(result);
-*/
 
 
 // ---> Check For Mixed Grouping of Characters <---
@@ -288,5 +287,12 @@ let myRegex = /(Franklin|Eleanor)\s.*Roosevelt/; // Change this line
 // let myRegex = /(Franklin|Eleanor) (([A-Z]\.?|[A-Z][a-z]+) )?Roosevelt/; // option 2 --> model answer
 let result = myRegex.test(myString); // Change this line
 // After passing the challenge experiment with myString and see how the grouping works
+console.log(result);
+*/
 
+// ---> Reuse Patterns Using Capture Groups <---
+
+let repeatNum = "42 42 42";
+let reRegex = /(\d+) \1 \1/; // Change this line
+let result = reRegex.test(repeatNum);
 console.log(result);
