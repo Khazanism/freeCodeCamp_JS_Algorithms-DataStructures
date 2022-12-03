@@ -245,7 +245,6 @@ let haStr = "Hazzzzah";
 let haRegex = /Haz{4,}ah/; // Change this line
 let result = haRegex.test(haStr);
 console.log(result);
-*/
 
 // ---> Specify Exact Number of Matches <---
 
@@ -255,4 +254,11 @@ let timStr = "Timmmmber";
 let timRegex = /Tim{4}ber/; // Change this line
 let result = timRegex.test(timStr);
 console.log(result);
+*/
 
+// ---> Check for All or None <---
+
+let favWord = "favorite";
+let favRegex = /favou?rite/; // Change this line
+let result = favRegex.test(favWord);
+console.log(result);
