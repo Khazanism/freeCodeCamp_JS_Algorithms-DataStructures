@@ -206,11 +206,24 @@ let username = "Z97";
 let userCheck = /^[a-z][a-z]+\d*$|[a-z]\d\d+$/i; // Change this line
 let result = userCheck.test(username);
 console.log(result);
-*/
 
 // ---> Match Whitespace <---
 
 let sample = "Whitespace is important in separating words";
 let countWhiteSpace = /\s/g; // Change this line
 let result = sample.match(countWhiteSpace);
+console.log(result);
+*/
+
+// ---> Match Non-Whitespace Characters <---
+
+// You can also search for everything except whitespace.
+
+// Search for non-whitespace using \S, which is an uppercase s.
+// This pattern will not match whitespace, carriage return, tab, form feed, and new line characters.
+// You can think of it being similar to the character class [^ \r\t\f\n\v].
+
+let sample = "Whitespace is important in separating words";
+let countNonWhiteSpace = /\S/g; // Change this line
+let result = sample.match(countNonWhiteSpace);
 console.log(result);
