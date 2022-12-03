@@ -261,7 +261,6 @@ let favWord = "favorite";
 let favRegex = /favou?rite/; // Change this line
 let result = favRegex.test(favWord);
 console.log(result);
-*/
 
 
 // ---> Positive and Negative Lookahead <---
@@ -277,4 +276,17 @@ console.log(result);
 let sampleWord = "astronaut";
 let pwRegex = /(?=\w{6})(?=\w*\d\d)/; // Change this line----------> check
 let result = pwRegex.test(sampleWord);
+console.log(result);
+*/
+
+
+// ---> Check For Mixed Grouping of Characters <---
+
+// let myString = "Eleanor Roosevelt";
+let myString = "Franklin D. Roosevelt";
+let myRegex = /(Franklin|Eleanor)\s.*Roosevelt/; // Change this line
+// let myRegex = /(Franklin|Eleanor) (([A-Z]\.?|[A-Z][a-z]+) )?Roosevelt/; // option 2 --> model answer
+let result = myRegex.test(myString); // Change this line
+// After passing the challenge experiment with myString and see how the grouping works
+
 console.log(result);
