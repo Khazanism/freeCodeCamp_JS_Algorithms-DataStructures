@@ -206,6 +206,12 @@ console.log(result);
 
 let username = "JackOfAllTrades";
 // let userCheck = /\w\D/; // Change this line
-let userCheck = /[a-z]{2,}\d*$/i; // Change this line
+
+// let userCheck = /[a-z]{2,}\d*$/i; // Change this line
+
+let userCheck = /^[a-z]{2,}\d*$/i; // Change this line opt 2
+
 let result = userCheck.test(username);
 console.log(result);
+
+
