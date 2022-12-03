@@ -238,7 +238,6 @@ let ohStr = "Ohhh no";
 let ohRegex = /oh{3,6}\sno/i; // Change this line
 let result = ohRegex.test(ohStr);
 console.log(result);
-*/
 
 // ---> Specify Only the Lower Number of Matches <---
 
@@ -246,3 +245,14 @@ let haStr = "Hazzzzah";
 let haRegex = /Haz{4,}ah/; // Change this line
 let result = haRegex.test(haStr);
 console.log(result);
+*/
+
+// ---> Specify Exact Number of Matches <---
+
+// To specify a certain number of patterns, just have that one number between the curly brackets.
+
+let timStr = "Timmmmber";
+let timRegex = /Tim{4}ber/; // Change this line
+let result = timRegex.test(timStr);
+console.log(result);
+
