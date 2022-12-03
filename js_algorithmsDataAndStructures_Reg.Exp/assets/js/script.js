@@ -269,7 +269,12 @@ console.log(result);
 // positive lookahead ---> (?=...)  where the ... is the required part that is not matched.
 // negative lookahead ---> (?!...)  where the ... is the pattern that you do not want to be there. 
 
+// let sampleWord = "astronaut";
+// let pwRegex = /(?=\w{5,})(?=\d\d*)/; // Change this line
+// let result = pwRegex.test(sampleWord);
+// console.log(result);
+
 let sampleWord = "astronaut";
-let pwRegex = /(?=\w{5,})(?=\d\d*)/; // Change this line
+let pwRegex = /(?=\w{6})(?=\w*\d\d)/; // Change this line----------> check
 let result = pwRegex.test(sampleWord);
 console.log(result);
