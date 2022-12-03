@@ -254,11 +254,22 @@ let timStr = "Timmmmber";
 let timRegex = /Tim{4}ber/; // Change this line
 let result = timRegex.test(timStr);
 console.log(result);
-*/
 
 // ---> Check for All or None <---
 
 let favWord = "favorite";
 let favRegex = /favou?rite/; // Change this line
 let result = favRegex.test(favWord);
+console.log(result);
+*/
+
+
+// ---> Positive and Negative Lookahead <---
+
+// positive lookahead ---> (?=...)  where the ... is the required part that is not matched.
+// negative lookahead ---> (?!...)  where the ... is the pattern that you do not want to be there. 
+
+let sampleWord = "astronaut";
+let pwRegex = /(?=\w{5,})(?=\d\d*)/; // Change this line
+let result = pwRegex.test(sampleWord);
 console.log(result);
