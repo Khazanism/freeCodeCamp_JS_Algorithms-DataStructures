@@ -288,11 +288,22 @@ let myRegex = /(Franklin|Eleanor)\s.*Roosevelt/; // Change this line
 let result = myRegex.test(myString); // Change this line
 // After passing the challenge experiment with myString and see how the grouping works
 console.log(result);
-*/
 
 // ---> Reuse Patterns Using Capture Groups <---
 
 let repeatNum = "42 42 42 42";
 let reRegex = /^(\d+) \1 \1$/; // Change this line
 let result = reRegex.test(repeatNum);
+console.log(result);
+*/
+
+// ---> Use Capture Groups to Search and Replace <---
+
+// You can search and replace text in a string using .replace() on a string. The inputs for .replace() is 
+// first the regex pattern you want to search for. The second parameter is the string to replace the match or a function to do something.
+
+let str = "one two three";
+let fixRegex = /(\w+)\s(\w+)\s(\w+)/; // Change this line
+let replaceText = "$3 $2 $1"; // Change this line
+let result = str.replace(fixRegex, replaceText);
 console.log(result);
