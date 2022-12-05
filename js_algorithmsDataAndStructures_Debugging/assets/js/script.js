@@ -14,7 +14,6 @@ console.log(sumAB);
 let output = "Get this to show once in the freeCodeCamp console and not at all in the browser console";
 console.log(output);
 console.clear();
-*/
 
 // ---> Use typeof to Check the Type of a Variabl <---
 
@@ -26,3 +25,10 @@ console.log(seven + three);
 // Only change code below this line
 console.log(typeof seven);
 console.log(typeof three);
+*/
+
+// ---> Catch Misspelled Variable and Function Names <---
+let receivables = 10;
+let payables = 8;
+let netWorkingCapital = receivables - payables;
+console.log(`Net working capital is: ${netWorkingCapital}`);
