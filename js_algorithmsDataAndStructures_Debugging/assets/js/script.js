@@ -43,7 +43,6 @@ console.log(`Sum of array values is: ${arraySum}`);
 
 let innerHtml = "<p>Click here to <a href='#Home'>return home</a></p>";
 console.log(innerHtml);
-*/
 
 // ---> Catch Use of Assignment Operator Instead of Equality Operator <---
 let x = 7;
@@ -56,4 +55,15 @@ if (x == y) {
   result = "Not equal!";
 }
 
+console.log(result);
+*/
+
+// ---> Catch Missing Open and Closing Parenthesis After a Function Call <---
+
+function getNine() {
+  let x = 6;
+  let y = 3;
+  return x + y;
+}
+let result = getNine();
 console.log(result);
