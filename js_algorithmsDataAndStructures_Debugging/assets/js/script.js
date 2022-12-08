@@ -91,7 +91,6 @@ function countToFive() {
 }
 
 countToFive();
-*/
 
 // ---> Use Caution When Reinitializing Variables Inside a Loop <---
 
@@ -101,7 +100,7 @@ function zeroArray(m, n) {
   for (let i = 0; i < m; i++) {
     let row = [];
     // Adds the m-th row into newArray
-
+    
     for (let j = 0; j < n; j++) {
       // Pushes n zeroes into the current row to create the columns
       row.push(0);
@@ -114,3 +113,12 @@ function zeroArray(m, n) {
 
 let matrix = zeroArray(3, 2);
 console.log(matrix);
+*/
+
+// ---> Prevent Infinite Loops with a Valid Terminal Condition <---
+function myFunc() {
+  for (let i = 1; i <= 4; i += 2) {
+    console.log("Still going!");
+  }
+}
+console.log(myFunc());
