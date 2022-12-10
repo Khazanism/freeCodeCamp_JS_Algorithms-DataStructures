@@ -58,17 +58,33 @@ console.log(
         "FireBrick",
     ])
     );
-*/
-
-// ---> Copy Array Items Using slice() <---
-
-function forecast(arr) {
-    // Only change code below this line
-//   arr.splice(0, 2); // answer 1
+    
+    // ---> Copy Array Items Using slice() <---
+    
+    function forecast(arr) {
+        // Only change code below this line
+        //   arr.splice(0, 2); // answer 1
 //   arr.splice(2, 4); // answer 1
 //   let forecast = arr .slice(0,1); // answer 1
-    return arr.slice(2, 4); // answer 2
-  }
-  
+return arr.slice(2, 4); // answer 2
+}
+
   // Only change code above this line
   console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+  */
+
+// ---> Copy an Array with the Spread Operator <---
+function copyMachine(arr, num) {
+  let newArr = [];
+  while (num >= 1) {
+    // Only change code below this line
+    newArr.push([...arr]);
+    // Only change code above this line
+    num--;
+  }
+  return newArr;
+}
+console.log(copyMachine([true, false, true], 2));
+console.log(copyMachine([1, 2, 3], 5));
+console.log(copyMachine([true, true, null], 1));
+console.log(copyMachine(["it works"], 3));
