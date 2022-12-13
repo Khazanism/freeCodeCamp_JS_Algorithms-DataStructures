@@ -100,7 +100,6 @@ function spreadOut() {
 
 console.log(spreadOut());
 
-*/
 // ---> Check For The Presence of an Element With indexOf() <---
 
 function quickCheck(arr, elem) {
@@ -114,10 +113,35 @@ function quickCheck(arr, elem) {
 }
 
 console.log(quickCheck(["squash", "onions", "shallots"], "mushrooms"));
-
 console.log(quickCheck(["onions", "squash", "shallots"], "onions"));
-
 console.log(quickCheck([3, 5, 9, 125, 45, 2], 125));
-
 console.log(quickCheck([true, false, false], undefined));
+*/
+
+// ---> Iterate Through All an Array's Items Using For Loops <---
+
+function filteredArray(arr, elem) {
+  let newArr = [];
+
+  // Only change code below this line
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].indexOf(elem) == -1) {
+      newArr.push(arr[i]);
+    }
+  }
+  // Only change code above this line
+  return newArr;
+}
+
+console.log(
+  filteredArray(
+    [
+      [3, 2, 3],
+      [1, 6, 3],
+      [3, 13, 26],
+      [19, 3, 9],
+    ],
+    3
+  )
+);
 
