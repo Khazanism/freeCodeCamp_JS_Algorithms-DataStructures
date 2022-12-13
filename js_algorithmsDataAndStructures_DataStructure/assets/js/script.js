@@ -87,11 +87,10 @@ return arr.slice(2, 4); // answer 2
   console.log(copyMachine([1, 2, 3], 5));
   console.log(copyMachine([true, true, null], 1));
   console.log(copyMachine(["it works"], 3));
-*/
-
-// ---> Combine Arrays with the Spread Operator <---
-
-// Another huge advantage of the spread operator is the ability to combine arrays, or to insert all the elements of one array into another, at any index.
+  
+  // ---> Combine Arrays with the Spread Operator <---
+  
+  // Another huge advantage of the spread operator is the ability to combine arrays, or to insert all the elements of one array into another, at any index.
 
 function spreadOut() {
   let fragment = ["to", "code"];
@@ -100,3 +99,25 @@ function spreadOut() {
 }
 
 console.log(spreadOut());
+
+*/
+// ---> Check For The Presence of an Element With indexOf() <---
+
+function quickCheck(arr, elem) {
+  // Only change code below this line
+  if (arr.indexOf(elem) === -1) {
+    return false;
+  } else {
+    return true;
+  }
+  // Only change code above this line
+}
+
+console.log(quickCheck(["squash", "onions", "shallots"], "mushrooms"));
+
+console.log(quickCheck(["onions", "squash", "shallots"], "onions"));
+
+console.log(quickCheck([3, 5, 9, 125, 45, 2], 125));
+
+console.log(quickCheck([true, false, false], undefined));
+
