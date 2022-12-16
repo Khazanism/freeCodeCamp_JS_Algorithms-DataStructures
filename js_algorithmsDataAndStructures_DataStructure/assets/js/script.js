@@ -116,7 +116,6 @@ console.log(quickCheck(["squash", "onions", "shallots"], "mushrooms"));
 console.log(quickCheck(["onions", "squash", "shallots"], "onions"));
 console.log(quickCheck([3, 5, 9, 125, 45, 2], 125));
 console.log(quickCheck([true, false, false], undefined));
-*/
 
 // ---> Iterate Through All an Array's Items Using For Loops <---
 
@@ -151,7 +150,7 @@ let myNestedArray = [
   // Only change code below this line
 
   ["unshift", false, 1, 2, 3, "complex", "nested"],
-
+  
   [["loop", "shift", 6, 7, 1000, "method"]],
 
   [
@@ -162,7 +161,7 @@ let myNestedArray = [
   ],
 
   [[[["iterate", 1.3849, 7, "8.4876", "arbitrary", "depth"]]]],
-
+  
   // Only change code above this line
 ];
 myNestedArray[1][0][0] = "deep";
@@ -171,3 +170,23 @@ myNestedArray[3][0][0][0][2] = "deepest";
 console.log(myNestedArray[3][0][0][0][2]);
 console.log(myNestedArray[2][0][0]);
 console.log(myNestedArray);
+*/
+
+// ---> Add Key-Value Pairs to JavaScript Objects <---
+
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28,
+};
+
+// Only change code below this line
+const bananas = "bananas";
+foods[bananas] = 13;
+const strawberries = "strawberries";
+foods[strawberries] = 27;
+const grapes = "grapes";
+foods[grapes] = 35;
+// Only change code above this line
+
+console.log(foods);
