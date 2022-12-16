@@ -181,12 +181,16 @@ let foods = {
 };
 
 // Only change code below this line
-const bananas = "bananas";
-foods[bananas] = 13;
-const strawberries = "strawberries";
-foods[strawberries] = 27;
-const grapes = "grapes";
-foods[grapes] = 35;
+// const bananas = "bananas";
+// foods[bananas] = 13;
+// const strawberries = "strawberries";
+// foods[strawberries] = 27;
+// const grapes = "grapes";
+// foods[grapes] = 35;
+
+foods.bananas = 13;
+foods.strawberries = 27;
+foods.grapes = 35;
 // Only change code above this line
 
 console.log(foods);
