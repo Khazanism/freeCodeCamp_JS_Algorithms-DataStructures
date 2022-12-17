@@ -248,7 +248,6 @@ delete foods.strawberries;
 // Only change code above this line
 
 console.log(foods);
-*/
 
 // ---> Check if an Object has a Property <---
 
@@ -278,11 +277,42 @@ function isEveryoneHere(userObj) {
     userObj.hasOwnProperty("Jeff") &&
     userObj.hasOwnProperty("Sarah") &&
     userObj.hasOwnProperty("Ryan")
-  ) {
-    return true;
+    ) {
+      return true;
+    }
+    return false;
+    // Only change code above this line
   }
-  return false;
+  
+  console.log(isEveryoneHere(users));
+*/
+
+// ---> Iterate Through the Keys of an Object with a for...in Statement <---
+
+const users = {
+  Alan: {
+    online: false,
+  },
+  Jeff: {
+    online: true,
+  },
+  Sarah: {
+    online: false,
+  },
+};
+
+function countOnline(usersObj) {
+  // Only change code below this line
+  let usersOnline = 0;
+  //  let userStatus = usersObj[users][online];
+  for (let user in users) {
+    if (usersObj[user]["online"] === true) {
+      usersOnline += 1;
+    }
+  }
+  console.log(usersOnline);
+  return usersOnline;
   // Only change code above this line
 }
 
-console.log(isEveryoneHere(users));
+console.log(countOnline(users));
