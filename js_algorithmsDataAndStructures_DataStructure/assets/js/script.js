@@ -306,7 +306,8 @@ function countOnline(usersObj) {
   let usersOnline = 0;
   //  let userStatus = usersObj[users][online];
   for (let user in users) {
-    if (usersObj[user]["online"] === true) {
+    let onlineStatus = usersObj[user]["online"];
+    if (onlineStatus) {
       usersOnline += 1;
     }
   }
