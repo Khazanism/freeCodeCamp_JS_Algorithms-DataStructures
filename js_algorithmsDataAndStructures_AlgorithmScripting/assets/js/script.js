@@ -1,7 +1,6 @@
 //  js_algorithmsDataAndStructures
 
 /*
- */
 // ---> Convert Celsius to Fahrenheit <---
 function convertCtoF(celsius) {
   let fahrenheit;
@@ -25,3 +24,18 @@ function reverseString(str) {
 console.log(reverseString("hello"));
 console.log(reverseString("Howdy"));
 console.log(reverseString("Greetings from Earth"));
+*/
+
+// ---> Factorialize a Number <---
+function factorialize(num) {
+  if (num == 0) {
+    return 1;
+  } else {
+    return num * factorialize(num - 1);
+  }
+}
+
+console.log(factorialize(5));
+console.log(factorialize(10));
+console.log(factorialize(20));
+console.log(factorialize(5));
