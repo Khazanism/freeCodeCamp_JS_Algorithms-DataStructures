@@ -42,6 +42,7 @@ console.log(factorialize(5));
 
 // ---> Find the Longest Word in a String <---
 
+// ------------------> option 1
 function findLongestWordLength(str) {
   let array = str.split(" ");
   if (array.length == 1) {
@@ -73,3 +74,25 @@ console.log(
     "What if we try a super-long word such as otorhinolaryngology"
   )
 );
+// ------------------> option 2
+
+function findLongestWordLength(str) {
+  let longestLength = 0;
+  let currentLength = 0;
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === " ") {
+      if (currentLength > longestLength) {
+        longestLength = currentLength;
+      }
+      currentLength = 0;
+    } else {
+      currentLength++;
+    }
+  }
+  if (currentLength > longestLength) {
+    longestLength = currentLength;
+  }
+
+  return longestLength;
+}
