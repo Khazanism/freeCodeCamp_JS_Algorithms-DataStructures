@@ -119,3 +119,9 @@ function findLongestWordLength(s) {
     .split(" ")
     .reduce((longest, word) => Math.max(longest, word.length), 0);
 }
+
+// ------------------> option 5
+
+function findLongestWordLength(str) {
+  return Math.max(...str.split(" ").map((word) => word.length));
+}
