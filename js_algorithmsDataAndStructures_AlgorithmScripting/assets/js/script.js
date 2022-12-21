@@ -129,19 +129,23 @@ function findLongestWordLength(str) {
 // ---> Return Largest Numbers in Arrays <---
 
 function largestOfFour(array) {
+  // variabeles
+  let result = [];
   let largestNumber = [];
-
-  let largestNumberFrmSubArray = [];
-
+  // iterating throught first array
   for (let i = 0; i < array.length; i++) {
-    largestNumber = array[i];
-    for (let x = 0; x < largestNumber.length; x++) {
-      largestNumberFrmSubArray = Math.max(...array[i]);
+    largestNumber = array[i][0];
+    // console.log(array[i]);
+    // iterating throught second array
+    for (let x = 0; x < array[i].length; x++) {
+      if (array[i][x] > largestNumber) {
+        largestNumber = result;
+        console.log(result);
+      }
     }
   }
   // console.log(largestNumberFrmSubArray);
-  return largestNumberFrmSubArray;
-  // return largestNumber;
+  return result;
 }
 
 console.log(
