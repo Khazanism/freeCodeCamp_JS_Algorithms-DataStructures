@@ -130,21 +130,18 @@ function findLongestWordLength(str) {
 
 function largestOfFour(array) {
   // variabeles
-  let result = [];
-  let largestNumber = [];
+  const result = [];
   // iterating throught first array
   for (let i = 0; i < array.length; i++) {
-    largestNumber = array[i][0];
-    // console.log(array[i]);
+    let largestNumber = array[i][0];
     // iterating throught second array
-    for (let x = 0; x < array[i].length; x++) {
-      if (array[i][x] > largestNumber) {
-        largestNumber = result;
-        console.log(result);
+    for (let j = 1; j < array[i].length; j++) {
+      if (array[i][j] > largestNumber) {
+        largestNumber = array[i][j];
       }
     }
+    result[i] = largestNumber;
   }
-  // console.log(largestNumberFrmSubArray);
   return result;
 }
 
@@ -165,6 +162,7 @@ console.log(
     [1000000, 1001, 857, 1],
   ])
 );
+
 console.log(
   largestOfFour([
     [17, 23, 25, 12],
@@ -174,34 +172,3 @@ console.log(
   ])
 );
 
-function largestOfFour(array) {
-  // variabeles
-  let result = [];
-  // let largestNumber = [];
-  // iterating throught first array
-  for (let i = 0; i < array.length; i++) {
-    largestNumber = array[i][0];
-    // console.log(array[i]);
-    // iterating throught second array
-    for (let x = 1; x < array[i].length; x++) {
-      if (array[i][x] > largestNumber) {
-        largestNumber = result;
-        console.log(result);
-      }
-    }
-  }
-  // console.log(largestNumberFrmSubArray);
-  return result;
-}
-
-console.log(
-  largestOfFour([
-    [4, 5, 1, 3],
-    [13, 27, 18, 26],
-    [32, 35, 37, 39],
-    [1000, 1001, 857, 1],
-  ])
-);
-
-// console.log(largestOfFour([[4, 9, 1, 3], [13, 35, 18, 26], [32, 35, 97, 39], [1000000, 1001, 857, 1]]));
-// console.log(largestOfFour([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]]));
