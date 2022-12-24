@@ -149,7 +149,7 @@ console.log(
     [4, 5, 1, 3],
     [13, 27, 18, 26],
     [32, 35, 37, 39],
-    [1000, 1001, 857, 1],
+    [1000, 1001, 857, 1], 
   ])
   );
   
@@ -171,11 +171,14 @@ console.log(
       ])
       );
       */
-      
-      // ---> Confirm the Ending <---
-      
-      function confirmEnding(str, target) {
-        return str;
-      }
-      
-      confirmEnding("Bastian", "n");
+
+// ---> Confirm the Ending <---
+
+function confirmEnding(str, target) {
+  let strRegex = /{target}$/;
+  let result = strRegex.test(str);
+  console.log(result);
+  return result;
+}
+
+console.log(confirmEnding("Bastian", "n"));
