@@ -175,10 +175,15 @@ console.log(
 // ---> Confirm the Ending <---
 
 function confirmEnding(str, target) {
-  let strRegex = /{target}$/;
+  var target = target;
+  let strRegex = new RegExp(target + "$");
+
   let result = strRegex.test(str);
-  console.log(result);
+
+  // console.log(str.includes(target));
+
   return result;
 }
 
 console.log(confirmEnding("Bastian", "n"));
+console.log(confirmEnding("Connor", "n"));
