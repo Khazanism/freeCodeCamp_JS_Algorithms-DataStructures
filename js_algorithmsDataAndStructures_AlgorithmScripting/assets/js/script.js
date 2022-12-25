@@ -189,7 +189,7 @@ console.log(
 */
 
 // ---> Repeat a String Repeat a String <---
-
+// --------------------> 1st answer (while loop)
 function repeatStringNumTimes(str, num) {
   let stringNum = "";
   while (num > 0) {
@@ -204,3 +204,16 @@ console.log(repeatStringNumTimes("abc", 4));
 console.log(repeatStringNumTimes("abc", 1));
 console.log(repeatStringNumTimes("*", 8));
 console.log(repeatStringNumTimes("abc", -2));
+
+// --------------------> 2nd answer (recursion)
+function repeatStringNumTimes(str, num) {
+  if (num < 0) {
+    return "";
+  }
+
+  if (num === 1) {
+    return str;
+  } else {
+    return str + repeatStringNumTimes(str, num - 1);
+  }
+}
