@@ -170,20 +170,37 @@ console.log(
         [-72, -3, -17, -10],
       ])
       );
-      */
+      
+      // ---> Confirm the Ending <---
+      
+      function confirmEnding(str, target) {
+        var target = target;
+        let strRegex = new RegExp(target + "$");
+        
+        let result = strRegex.test(str);
+        
+        // console.log(str.includes(target));
+        
+        return result;
+      }
+      
+      console.log(confirmEnding("Bastian", "n"));
+      console.log(confirmEnding("Connor", "n"));
+*/
 
-// ---> Confirm the Ending <---
+// ---> Repeat a String Repeat a String <---
 
-function confirmEnding(str, target) {
-  var target = target;
-  let strRegex = new RegExp(target + "$");
-
-  let result = strRegex.test(str);
-
-  // console.log(str.includes(target));
-
-  return result;
+function repeatStringNumTimes(str, num) {
+  let stringNum = "";
+  while (num > 0) {
+    stringNum += str;
+    num--;
+  }
+  return stringNum;
 }
-
-console.log(confirmEnding("Bastian", "n"));
-console.log(confirmEnding("Connor", "n"));
+console.log(repeatStringNumTimes("*", 3));
+console.log(repeatStringNumTimes("abc", 3));
+console.log(repeatStringNumTimes("abc", 4));
+console.log(repeatStringNumTimes("abc", 1));
+console.log(repeatStringNumTimes("*", 8));
+console.log(repeatStringNumTimes("abc", -2));
