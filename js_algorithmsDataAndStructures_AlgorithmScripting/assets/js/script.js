@@ -186,9 +186,8 @@ console.log(
       
       console.log(confirmEnding("Bastian", "n"));
       console.log(confirmEnding("Connor", "n"));
-*/
-
-// ---> Repeat a String Repeat a String <---
+      
+      // ---> Repeat a String Repeat a String <---
 // --------------------> 1st answer (while loop)
 function repeatStringNumTimes(str, num) {
   let stringNum = "";
@@ -217,6 +216,7 @@ function repeatStringNumTimes(str, num) {
     return str + repeatStringNumTimes(str, num - 1);
   }
 }
+*/
 
 // ---> Truncate a String <---
 
@@ -249,3 +249,8 @@ console.log(
 console.log(truncateString("A-", 1));
 
 console.log(truncateString("Absolutely Longer", 2));
+
+// --------------------> 2nd answer (terenary operator)
+function truncateString(str, num) {
+  return str.length <= num ? str : str.slice(0, num) + "...";
+}
