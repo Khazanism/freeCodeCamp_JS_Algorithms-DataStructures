@@ -207,7 +207,7 @@ console.log(repeatStringNumTimes("abc", -2));
 
 // --------------------> 2nd answer (recursion)
 function repeatStringNumTimes(str, num) {
-  if (num < 0) {
+  if (num <= 0) {
     return "";
   }
 
@@ -217,3 +217,35 @@ function repeatStringNumTimes(str, num) {
     return str + repeatStringNumTimes(str, num - 1);
   }
 }
+
+// ---> Truncate a String <---
+
+function truncateString(str, num) {
+  if (str.length <= num) {
+    return str;
+  } else {
+    return str.slice(0, num) + "...";
+  }
+}
+
+console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8));
+
+console.log(truncateString("Peter Piper picked a peck of pickled peppers", 11));
+
+console.log(
+  truncateString(
+    "A-tisket a-tasket A green and yellow basket",
+    "A-tisket a-tasket A green and yellow basket".length
+  )
+);
+
+console.log(
+  truncateString(
+    "A-tisket a-tasket A green and yellow basket",
+    "A-tisket a-tasket A green and yellow basket".length + 2
+  )
+);
+
+console.log(truncateString("A-", 1));
+
+console.log(truncateString("Absolutely Longer", 2));
