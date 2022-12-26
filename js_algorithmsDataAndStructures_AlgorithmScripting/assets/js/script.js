@@ -216,7 +216,6 @@ function repeatStringNumTimes(str, num) {
     return str + repeatStringNumTimes(str, num - 1);
   }
 }
-*/
 
 // ---> Truncate a String <---
 
@@ -236,21 +235,44 @@ console.log(
   truncateString(
     "A-tisket a-tasket A green and yellow basket",
     "A-tisket a-tasket A green and yellow basket".length
-  )
-);
-
-console.log(
-  truncateString(
-    "A-tisket a-tasket A green and yellow basket",
-    "A-tisket a-tasket A green and yellow basket".length + 2
-  )
-);
-
-console.log(truncateString("A-", 1));
-
-console.log(truncateString("Absolutely Longer", 2));
-
+    )
+    );
+    
+    console.log(
+      truncateString(
+        "A-tisket a-tasket A green and yellow basket",
+        "A-tisket a-tasket A green and yellow basket".length + 2
+    )
+    );
+    
+    console.log(truncateString("A-", 1));
+    
+    console.log(truncateString("Absolutely Longer", 2));
+    
 // --------------------> 2nd answer (terenary operator)
 function truncateString(str, num) {
   return str.length <= num ? str : str.slice(0, num) + "...";
 }
+*/
+
+// ---> Finders Keepers <---
+// --------------------> 1st answer
+function findElement(arr, func) {
+  let num = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    const element = arr[i];
+    // console.log(arr[i]);
+    if (element === 0) {
+      return undefined;
+    } else if (func(arr[i]) == true) {
+      return arr[i];
+    }
+  }
+}
+
+console.log(findElement([1, 2, 3, 4], (num) => num % 2 === 0));
+
+console.log(findElement([1, 3, 5, 8, 9, 10], (num) => num % 2 === 0));
+
+console.log(findElement([1, 3, 5, 9], (num) => num % 2 === 0));
