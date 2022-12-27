@@ -253,13 +253,12 @@ console.log(
 function truncateString(str, num) {
   return str.length <= num ? str : str.slice(0, num) + "...";
 }
-*/
 
 // ---> Finders Keepers <---
 // --------------------> 1st answer
 function findElement(arr, func) {
   let num = 0;
-
+  
   for (let i = 0; i < arr.length; i++) {
     const element = arr[i];
     // console.log(arr[i]);
@@ -282,3 +281,20 @@ console.log(findElement([1, 3, 5, 9], (num) => num % 2 === 0));
 function findElement(arr, func) {
   return arr.find(func);
 }
+*/
+
+// ---> Boo who <---
+
+function booWho(bool) {
+  if (typeof bool == "boolean") {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(booWho(true));
+console.log(booWho(false));
+console.log(booWho("false"));
+console.log(booWho(null));
+console.log(booWho(NaN));
