@@ -302,16 +302,17 @@ console.log(booWho(NaN));
 // ---> Title Case a Sentence <---
 function titleCase(str) {
   let text = str;
+  let word = [];
   const myArray = text.split(" ");
-
   for (let i = 0; i < myArray.length; i++) {
-    let word = myArray[i][0].toUpperCase();
-    console.log(word);
-    // returning first letters UpperCase of a string
+    word[i] = myArray[i][0].toUpperCase() + myArray[i].slice(1).toLowerCase();
+
+    console.log(word[i]);
   }
-  return str;
+  return word.join(" ");
 }
 
 console.log(titleCase("I'm a little tea pot"));
 console.log(titleCase("sHoRt AnD sToUt"));
 console.log(titleCase("HERE IS MY HANDLE HERE IS MY SPOUT"));
+
