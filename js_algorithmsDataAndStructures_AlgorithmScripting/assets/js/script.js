@@ -297,7 +297,6 @@ console.log(booWho(false));
 console.log(booWho("false"));
 console.log(booWho(null));
 console.log(booWho(NaN));
-*/
 
 // ---> Title Case a Sentence <---
 
@@ -329,3 +328,21 @@ function titleCase(str) {
 }
 
 console.log(titleCase("I'm a little tea pot"));
+
+*/
+
+// ---> Slice and Splice <---
+
+function frankenSplice(arr1, arr2, n) {
+  console.log(arr2.splice(n, ...arr2));
+
+  const elementOfFirst = arr1.slice();
+  // console.log(elementOfFirst);
+  // console.log(arr2[n]);
+  const elementOfSecond = arr2.splice(n, ...arr2);
+  console.log([elementOfSecond, elementOfFirst]);
+
+  // return arr2;
+}
+
+console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
