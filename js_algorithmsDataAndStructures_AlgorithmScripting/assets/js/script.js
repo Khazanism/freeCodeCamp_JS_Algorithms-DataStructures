@@ -281,7 +281,6 @@ console.log(findElement([1, 3, 5, 9], (num) => num % 2 === 0));
 function findElement(arr, func) {
   return arr.find(func);
 }
-*/
 
 // ---> Boo who <---
 
@@ -298,3 +297,21 @@ console.log(booWho(false));
 console.log(booWho("false"));
 console.log(booWho(null));
 console.log(booWho(NaN));
+*/
+
+// ---> Title Case a Sentence <---
+function titleCase(str) {
+  let text = str;
+  const myArray = text.split(" ");
+
+  for (let i = 0; i < myArray.length; i++) {
+    let word = myArray[i][0].toUpperCase();
+    console.log(word);
+    // returning first letters UpperCase of a string
+  }
+  return str;
+}
+
+console.log(titleCase("I'm a little tea pot"));
+console.log(titleCase("sHoRt AnD sToUt"));
+console.log(titleCase("HERE IS MY HANDLE HERE IS MY SPOUT"));
