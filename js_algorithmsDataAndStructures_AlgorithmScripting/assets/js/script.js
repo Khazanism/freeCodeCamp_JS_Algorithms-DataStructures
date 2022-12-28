@@ -300,6 +300,9 @@ console.log(booWho(NaN));
 */
 
 // ---> Title Case a Sentence <---
+
+// --------------------> 1st answer
+
 function titleCase(str) {
   let text = str;
   let word = [];
@@ -316,3 +319,13 @@ console.log(titleCase("I'm a little tea pot"));
 console.log(titleCase("sHoRt AnD sToUt"));
 console.log(titleCase("HERE IS MY HANDLE HERE IS MY SPOUT"));
 
+// --------------------> 2nd answer
+
+function titleCase(str) {
+  let sentence = str.toLowerCase();
+  let regx = /(^|\s)\S/g;
+  let result = sentence.replace(regx, func => func.toUpperCase());
+  return result;
+}
+
+console.log(titleCase("I'm a little tea pot"));
