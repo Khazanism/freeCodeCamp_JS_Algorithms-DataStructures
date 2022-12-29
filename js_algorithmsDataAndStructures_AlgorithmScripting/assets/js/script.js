@@ -335,13 +335,13 @@ console.log(titleCase("I'm a little tea pot"));
 
 function frankenSplice(arr1, arr2, n) {
   console.log(arr2.splice(n, ...arr2));
-  
+
   const elementOfFirst = arr1.slice();
   // console.log(elementOfFirst);
   // console.log(arr2[n]);
   const elementOfSecond = arr2.splice(n, ...arr2);
   console.log([elementOfSecond, elementOfFirst]);
-  
+
   // return arr2;
 }
 
@@ -366,4 +366,10 @@ function frankenSplice(arr1, arr2, n) {
   let localArr = arr2.slice();
   localArr.splice(n, 0, ...arr1);
   return localArr;
+}
+
+// --------------------> 3rd answer
+
+function frankenSplice(arr1, arr2, n) {
+  return [...arr2.slice(0, n), ...arr1, ...arr2.slice(n)];
 }
