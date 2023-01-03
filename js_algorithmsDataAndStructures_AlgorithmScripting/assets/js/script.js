@@ -374,8 +374,9 @@ function frankenSplice(arr1, arr2, n) {
 }
 
 */
-// ---> Falsy Bouncer <---
+// ---> Remove all falsy values from an array - Falsy Bouncer <---
 
+// --------------------> 1st answer
 function bouncer(arr) {
   return arr.filter(Boolean);
 }
@@ -384,3 +385,15 @@ console.log(bouncer([7, "ate", "", false, 9]));
 console.log(bouncer(["a", "b", "c"]));
 console.log(bouncer([false, null, 0, NaN, undefined, ""]));
 console.log(bouncer([null, NaN, 1, 2, undefined]));
+
+// --------------------> 2nd answer
+
+function bouncer(arr) {
+  let filtered = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i]) filtered.push(arr[i]);
+  }
+
+  return filtered;
+}
