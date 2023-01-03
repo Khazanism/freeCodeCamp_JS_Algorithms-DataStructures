@@ -419,3 +419,12 @@ console.log(getIndexToIns([20, 3, 5], 19));
 console.log(getIndexToIns([40, 60], 50));
 console.log(getIndexToIns([2, 5, 10], 15));
 console.log(getIndexToIns([, 1], 1));
+
+// --------------------> 2nd answer
+
+function getIndexToIns(arr, num) {
+  return arr
+    .concat(num)
+    .sort((a, b) => a - b)
+    .indexOf(num);
+}
