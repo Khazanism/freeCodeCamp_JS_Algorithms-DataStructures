@@ -384,16 +384,38 @@ console.log(bouncer([7, "ate", "", false, 9]));
 console.log(bouncer(["a", "b", "c"]));
 console.log(bouncer([false, null, 0, NaN, undefined, ""]));
 console.log(bouncer([null, NaN, 1, 2, undefined]));
-*/
 
 // --------------------> 2nd answer
 
 function bouncer(arr) {
   let filtered = [];
-
+  
   for (let i = 0; i < arr.length; i++) {
     if (arr[i]) filtered.push(arr[i]);
   }
-
+  
   return filtered;
 }
+*/
+
+// ---> Return the lowest index from an array - Where do I Belong <---
+
+// --------------------> 1st answer
+
+function getIndexToIns(arr, num) {
+  arr = arr.sort((a, b) => a - b);
+  console.log(arr);
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] >= num) {
+      return arr.indexOf(arr[i]);
+    }
+  }
+  return arr.length;
+}
+
+console.log(getIndexToIns([1, 2, 3, 4], 1.5));
+console.log(getIndexToIns([20, 3, 5], 19));
+console.log(getIndexToIns([40, 60], 50));
+console.log(getIndexToIns([2, 5, 10], 15));
+console.log(getIndexToIns([, 1], 1));
