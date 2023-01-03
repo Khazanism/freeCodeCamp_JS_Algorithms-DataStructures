@@ -329,19 +329,18 @@ function titleCase(str) {
 
 console.log(titleCase("I'm a little tea pot"));
 
-*/
 
 // ---> Slice and Splice <---
 
 function frankenSplice(arr1, arr2, n) {
   console.log(arr2.splice(n, ...arr2));
-
+  
   const elementOfFirst = arr1.slice();
   // console.log(elementOfFirst);
   // console.log(arr2[n]);
   const elementOfSecond = arr2.splice(n, ...arr2);
   console.log([elementOfSecond, elementOfFirst]);
-
+  
   // return arr2;
 }
 
@@ -373,3 +372,15 @@ function frankenSplice(arr1, arr2, n) {
 function frankenSplice(arr1, arr2, n) {
   return [...arr2.slice(0, n), ...arr1, ...arr2.slice(n)];
 }
+
+*/
+// ---> Falsy Bouncer <---
+
+function bouncer(arr) {
+  return arr.filter(Boolean);
+}
+
+console.log(bouncer([7, "ate", "", false, 9]));
+console.log(bouncer(["a", "b", "c"]));
+console.log(bouncer([false, null, 0, NaN, undefined, ""]));
+console.log(bouncer([null, NaN, 1, 2, undefined]));
