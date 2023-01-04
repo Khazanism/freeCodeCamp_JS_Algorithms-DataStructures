@@ -432,19 +432,17 @@ function getIndexToIns(arr, num) {
 // ---> Mutations <---
 
 function mutation(arr) {
-  const array = [];
   let firstElement = arr[0].toLowerCase().split("");
   let secondElement = arr[1].toLowerCase().split("");
-  console.log(firstElement);
-  console.log(secondElement);
 
-  let compile = secondElement.indexOf(firstElement);
-  console.log(compile);
-  while (compile === -1) {
-    return false;
+  for (let i = 0; i < secondElement.length; i++) {
+    console.log(secondElement[i]);
+    if (firstElement.indexOf(secondElement[i]) < 0) {
+      return false;
+    }
   }
   return true;
 }
 
-// console.log(mutation(["hello", "hey"]));
+console.log(mutation(["hello", "hey"]));
 console.log(mutation(["Noel", "Ole"]));
