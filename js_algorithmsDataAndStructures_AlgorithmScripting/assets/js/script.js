@@ -427,7 +427,6 @@ function getIndexToIns(arr, num) {
     .sort((a, b) => a - b)
     .indexOf(num);
 }
-*/
 
 // ---> Mutations <---
 
@@ -446,3 +445,27 @@ function mutation(arr) {
 
 console.log(mutation(["hello", "hey"]));
 console.log(mutation(["Noel", "Ole"]));
+*/
+
+// ---> Basic Algorithm Scripting: Chunky Monkey <---
+
+function chunkArrayInGroups(arr, size) {
+  let newArray = [];
+
+  arr.slice(0, size);
+
+  for (let i = 0; i < arr.length; i++) {
+    // console.log(arr[i]);
+    newArray.push(arr[i]);
+    // console.log(newArray);
+  }
+  return [arr.slice(0, size), arr.slice(size)];
+}
+
+console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
+
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3));
+
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2));
+
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4));
