@@ -28,7 +28,6 @@ let dog = {
 };
 
 console.log(dog.sayLegs());
-*/
 
 // ---> Make Code More Reusable with the this Keyword <---
 let dog = {
@@ -40,3 +39,11 @@ let dog = {
 };
 
 console.log(dog.sayLegs());
+*/
+
+// ---> Define a Constructor Function <---
+function Dog() {
+  this.name = "a7oka";
+  this.color = "gray";
+  this.numLegs = 6;
+}
