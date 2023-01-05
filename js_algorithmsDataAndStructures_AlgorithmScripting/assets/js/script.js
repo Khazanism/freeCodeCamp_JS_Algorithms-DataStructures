@@ -426,14 +426,14 @@ function getIndexToIns(arr, num) {
     .concat(num)
     .sort((a, b) => a - b)
     .indexOf(num);
-}
+  }
 
-// ---> Mutations <---
-
-function mutation(arr) {
+  // ---> Mutations <---
+  
+  function mutation(arr) {
   let firstElement = arr[0].toLowerCase().split("");
   let secondElement = arr[1].toLowerCase().split("");
-
+  
   for (let i = 0; i < secondElement.length; i++) {
     console.log(secondElement[i]);
     if (firstElement.indexOf(secondElement[i]) < 0) {
@@ -449,6 +449,7 @@ console.log(mutation(["Noel", "Ole"]));
 
 // ---> Basic Algorithm Scripting: Chunky Monkey <---
 
+// --------------------> 1st answer
 function chunkArrayInGroups(arr, size) {
   let newArray = [];
 
@@ -460,6 +461,23 @@ function chunkArrayInGroups(arr, size) {
     // console.log(newArray);
   }
   return [arr.slice(0, size), arr.slice(size)];
+}
+
+console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
+
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3));
+
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2));
+
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4));
+
+// --------------------> 2nd answer
+function chunkArrayInGroups(arr, size) {
+  var newArray = [];
+  for (let i = 0; i < arr.length; i += size) {
+    newArray.push(arr.slice(i, i + size));
+  }
+  return newArray;
 }
 
 console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
