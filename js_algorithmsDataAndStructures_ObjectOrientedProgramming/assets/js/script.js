@@ -186,7 +186,6 @@ Dog.prototype = {
     console.log("My name is " + this.name);
   },
 };
-*/
 
 // ---> Remember to Set the Constructor Property when Changing the Prototype <---
 
@@ -205,3 +204,15 @@ Dog.prototype = {
     console.log("My name is " + this.name);
   },
 };
+*/
+
+// ---> Understand Where an Object’s Prototype Comes From <---
+
+function Dog(name) {
+  this.name = name;
+}
+
+let beagle = new Dog("Snoopy");
+
+// Only change code below this line
+console.log(Dog.prototype.isPrototypeOf(beagle));
