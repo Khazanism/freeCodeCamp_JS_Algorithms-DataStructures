@@ -71,7 +71,6 @@ function Dog(name, color) {
 }
 let terrier = new Dog("A7oka", "White");
 console.log(terrier.color);
-*/
 
 // ---> Verify an Object's Constructor with instanceof <---
 
@@ -81,3 +80,23 @@ function House(numBedrooms) {
 // Only change code below this line
 let myHouse = new House(5);
 console.log(myHouse instanceof House);
+*/
+
+// ---> Understand Own Properties <---
+
+function Bird(name) {
+  this.name = name;
+  this.numLegs = 2;
+}
+
+let canary = new Bird("Tweety");
+let ownProps = [];
+// Only change code below this line
+
+for (let prop in canary) {
+  if (canary.hasOwnProperty(prop)) {
+    ownProps.push(prop);
+  }
+}
+console.log(canary instanceof Bird);
+console.log(ownProps);
