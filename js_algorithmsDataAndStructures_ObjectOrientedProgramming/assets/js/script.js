@@ -80,7 +80,6 @@ function House(numBedrooms) {
 // Only change code below this line
 let myHouse = new House(5);
 console.log(myHouse instanceof House);
-*/
 
 // ---> Understand Own Properties <---
 
@@ -100,3 +99,17 @@ for (let prop in canary) {
 }
 console.log(canary instanceof Bird);
 console.log(ownProps);
+*/
+
+// ---> Use Prototype Properties to Reduce Duplicate Code <---
+
+function Dog(name) {
+  this.name = name;
+}
+Dog.prototype.numLegs = 4;
+
+// Only change code above this line
+let beagle = new Dog("Snoopy");
+let techno = new Dog("tezo");
+console.log(beagle.numLegs);
+console.log(techno.numLegs);
