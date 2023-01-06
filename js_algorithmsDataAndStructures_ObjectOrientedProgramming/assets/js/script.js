@@ -112,7 +112,6 @@ let beagle = new Dog("Snoopy");
 let techno = new Dog("tezo");
 console.log(beagle.numLegs);
 console.log(techno.numLegs);
-*/
 
 // ---> Iterate Over All Properties <---
 
@@ -139,3 +138,34 @@ for (let ownProperty in beagle) {
 
 console.log(ownProps);
 console.log(prototypeProps);
+*/
+
+// ---> Understand the Constructor Property <---
+
+// The advantage of the constructor property is that it's possible to check for this property to find out what kind of object it is. Here's an example of how this could be used:
+
+// function joinBirdFraternity(candidate) {
+//   if (candidate.constructor === Bird) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+function Dog(name) {
+  this.name = name; // ownProperty
+}
+
+let hund = new Dog();
+
+// Only change code below this line
+function joinDogFraternity(candidate) {
+  if (candidate.constructor === Dog) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(joinDogFraternity(hund));
+
