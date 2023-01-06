@@ -41,12 +41,16 @@ let dog = {
 console.log(dog.sayLegs());
 
 // ---> Define a Constructor Function <---
+
+// Constructors are defined with a capitalized name to distinguish them from other functions that are not constructors.
+// Constructors use the keyword this to set properties of the object they will create. Inside the constructor, this refers to the new object it will create.
+// Constructors define properties and behaviors instead of returning a value as other functions might.
+
 function Dog() {
   this.name = "a7oka";
   this.color = "gray";
   this.numLegs = 6;
 }
-*/
 
 // ---> Use a Constructor to Create Objects <---
 function Dog() {
@@ -57,3 +61,14 @@ function Dog() {
 // Only change code below this line
 
 let hound = new Dog();
+*/
+
+// ---> Extend Constructors to Receive Arguments <---
+
+function Dog(name, color) {
+  this.name = name;
+  this.color = color;
+  this.numLegs = 4;
+}
+let terrier = new Dog("A7oka", "White");
+console.log(terrier.color);
