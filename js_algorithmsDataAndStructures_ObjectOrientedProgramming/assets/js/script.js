@@ -99,7 +99,6 @@ for (let prop in canary) {
 }
 console.log(canary instanceof Bird);
 console.log(ownProps);
-*/
 
 // ---> Use Prototype Properties to Reduce Duplicate Code <---
 
@@ -113,3 +112,30 @@ let beagle = new Dog("Snoopy");
 let techno = new Dog("tezo");
 console.log(beagle.numLegs);
 console.log(techno.numLegs);
+*/
+
+// ---> Iterate Over All Properties <---
+
+function Dog(name) {
+  this.name = name; // ownProperty
+}
+
+Dog.prototype.numLegs = 4; // proprotype property
+
+let beagle = new Dog("Snoopy");
+
+let ownProps = [];
+let prototypeProps = [];
+
+// Only change code below this line
+
+for (let ownProperty in beagle) {
+  if (beagle.hasOwnProperty(ownProperty)) {
+    ownProps.push(ownProperty);
+  } else {
+    prototypeProps.push(ownProperty);
+  }
+}
+
+console.log(ownProps);
+console.log(prototypeProps);
