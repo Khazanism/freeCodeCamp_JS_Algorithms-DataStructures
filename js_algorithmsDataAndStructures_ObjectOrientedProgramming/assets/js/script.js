@@ -138,7 +138,6 @@ for (let ownProperty in beagle) {
 
 console.log(ownProps);
 console.log(prototypeProps);
-*/
 
 // ---> Understand the Constructor Property <---
 
@@ -168,4 +167,23 @@ function joinDogFraternity(candidate) {
 }
 
 console.log(joinDogFraternity(hund));
+*/
 
+// ---> Change the Prototype to a New Object <---
+
+function Dog(name) {
+  this.name = name;
+}
+
+Dog.prototype = {
+  // Only change code below this line
+  numLegs: 4,
+
+  eat: function () {
+    console.log("aww awww awwww");
+  },
+
+  describe: function () {
+    console.log("My name is " + this.name);
+  },
+};
