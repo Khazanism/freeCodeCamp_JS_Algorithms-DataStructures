@@ -61,7 +61,6 @@ function Dog() {
 // Only change code below this line
 
 let hound = new Dog();
-*/
 
 // ---> Extend Constructors to Receive Arguments <---
 
@@ -72,3 +71,13 @@ function Dog(name, color) {
 }
 let terrier = new Dog("A7oka", "White");
 console.log(terrier.color);
+*/
+
+// ---> Verify an Object's Constructor with instanceof <---
+
+function House(numBedrooms) {
+  this.numBedrooms = numBedrooms;
+}
+// Only change code below this line
+let myHouse = new House(5);
+console.log(myHouse instanceof House);
