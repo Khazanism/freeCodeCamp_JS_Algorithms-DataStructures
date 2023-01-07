@@ -281,27 +281,48 @@ Cat.prototype = {
     
     console.log(duck instanceof Animal);
     console.log(beagle instanceof Animal);
+    
+    // ---> Set the Child's Prototype to an Instance of the Parent <---
+    
+    // Remember that the prototype is like the "recipe" for creating an object.
+    // In a way, the recipe for Bird now includes all the key "ingredients" from Animal.
+    
+    function Animal() {}
+    
+    Animal.prototype = {
+      constructor: Animal,
+      eat: function () {
+        console.log("nom nom nom");
+      },
+    };
+    
+    function Dog() {}
+    
+    // Only change code below this line
+    
+    Dog.prototype = Object.create(Animal.prototype);
+    let beagle = new Dog();
+    console.log(beagle.eat("")); // nom nom nom
+    console.log(Dog.prototype instanceof Animal); // true
 */
 
-// ---> Set the Child's Prototype to an Instance of the Parent <---
-
-// Remember that the prototype is like the "recipe" for creating an object.
-// In a way, the recipe for Bird now includes all the key "ingredients" from Animal.
+// ---> Reset an Inherited Constructor Property <---
 
 function Animal() {}
-
-Animal.prototype = {
-  constructor: Animal,
-  eat: function () {
-    console.log("nom nom nom");
-  },
-};
-
+function Bird() {}
 function Dog() {}
+
+Bird.prototype = Object.create(Animal.prototype);
+Dog.prototype = Object.create(Animal.prototype);
 
 // Only change code below this line
 
-Dog.prototype = Object.create(Animal.prototype);
+let duck = new Bird();
+Bird.prototype.constructor = Bird;
+duck.constructor;
+console.log(duck.constructor);
+
 let beagle = new Dog();
-console.log(beagle.eat("")); // nom nom nom
-console.log(Dog.prototype instanceof Animal); // true
+Dog.prototype.constructor = Dog;
+beagle.constructor;
+console.log(beagle.constructor);
