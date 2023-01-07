@@ -262,9 +262,31 @@ Cat.prototype = {
         console.log("nom nom nom");
       },
     };
+    
+    // ---> Inherit Behaviors from a Supertype <---
+    
+    function Animal() {}
+    
+    Animal.prototype = {
+      constructor: Animal,
+      eat: function () {
+        console.log("nom nom nom");
+      },
+    };
+    
+    // Only change code below this line
+    
+    let duck = Object.create(Animal.prototype); // Change this line
+    let beagle = Object.create(Animal.prototype); // Change this line
+    
+    console.log(duck instanceof Animal);
+    console.log(beagle instanceof Animal);
 */
 
-// ---> Inherit Behaviors from a Supertype <---
+// ---> Set the Child's Prototype to an Instance of the Parent <---
+
+// Remember that the prototype is like the "recipe" for creating an object.
+// In a way, the recipe for Bird now includes all the key "ingredients" from Animal.
 
 function Animal() {}
 
@@ -275,11 +297,11 @@ Animal.prototype = {
   },
 };
 
+function Dog() {}
+
 // Only change code below this line
 
-let duck = Object.create(Animal.prototype); // Change this line
-let beagle = Object.create(Animal.prototype); // Change this line
-
-console.log(duck instanceof Animal);
-console.log(beagle instanceof Animal);
-console.log(Animal instanceof Animal);
+Dog.prototype = Object.create(Animal.prototype);
+let beagle = new Dog();
+console.log(beagle.eat("")); // nom nom nom
+console.log(Dog.prototype instanceof Animal); // true
