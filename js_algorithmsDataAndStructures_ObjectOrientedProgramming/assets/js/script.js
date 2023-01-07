@@ -304,9 +304,8 @@ Cat.prototype = {
     let beagle = new Dog();
     console.log(beagle.eat("")); // nom nom nom
     console.log(Dog.prototype instanceof Animal); // true
-*/
-
-// ---> Reset an Inherited Constructor Property <---
+    
+    // ---> Reset an Inherited Constructor Property <---
 
 function Animal() {}
 function Bird() {}
@@ -326,3 +325,28 @@ let beagle = new Dog();
 Dog.prototype.constructor = Dog;
 beagle.constructor;
 console.log(beagle.constructor);
+*/
+
+// ---> Add Methods After Inheritance <---
+
+function Animal() {}
+Animal.prototype.eat = function () {
+  console.log("nom nom nom");
+};
+
+function Dog() {}
+
+// Only change code below this line
+
+Dog.prototype = Object.create(Animal.prototype);
+Dog.prototype.constructor = Dog;
+Dog.prototype.bark = function () {
+  console.log("Woof!");
+};
+
+// Only change code above this line
+
+let beagle = new Dog();
+
+beagle.bark();
+beagle.eat();
