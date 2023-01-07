@@ -215,7 +215,6 @@ let beagle = new Dog("Snoopy");
 
 // Only change code below this line
 console.log(Dog.prototype.isPrototypeOf(beagle));
-*/
 
 // ---> Understand the Prototype Chain <---
 
@@ -230,3 +229,37 @@ Dog.prototype.isPrototypeOf(beagle); // yields true
 // Fix the code below so that it evaluates to true
 Object.prototype.isPrototypeOf(Dog.prototype);
 console.log(Object.prototype.isPrototypeOf(Dog.prototype));
+*/
+
+// ---> Use Inheritance So You Don't Repeat Yourself <---
+
+function Cat(name) {
+  this.name = name;
+}
+
+Cat.prototype = {
+  constructor: Cat,
+  // eat: function () {
+  //   console.log("nom nom nom");
+  // }
+};
+
+function Bear(name) {
+  this.name = name;
+}
+
+Bear.prototype = {
+  constructor: Bear,
+  // eat: function () {
+  //   console.log("nom nom nom");
+  // }
+};
+
+function Animal() {}
+
+Animal.prototype = {
+  constructor: Animal,
+  eat: function () {
+    console.log("nom nom nom");
+  },
+};
