@@ -325,7 +325,6 @@ let beagle = new Dog();
 Dog.prototype.constructor = Dog;
 beagle.constructor;
 console.log(beagle.constructor);
-*/
 
 // ---> Add Methods After Inheritance <---
 
@@ -350,3 +349,27 @@ let beagle = new Dog();
 
 beagle.bark();
 beagle.eat();
+*/
+
+// ---> Override Inherited Methods <---
+
+function Bird() {}
+
+Bird.prototype.fly = function () {
+  return "I am flying!";
+};
+
+function Penguin() {}
+Penguin.prototype = Object.create(Bird.prototype);
+Penguin.prototype.constructor = Penguin;
+
+// Only change code below this line
+
+Penguin.prototype.fly = function () {
+  return "Alas, this is a flightless bird.";
+};
+
+// Only change code above this line
+
+let penguin = new Penguin();
+console.log(penguin.fly());
