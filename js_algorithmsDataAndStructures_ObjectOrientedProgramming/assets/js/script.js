@@ -397,7 +397,6 @@ glideMixin(bird);
 glideMixin(boat);
 console.log(bird.glide());
 console.log(boat.glide());
-*/
 
 // ---> Use a Mixin to Add Common Behavior Between Unrelated Objects <---
 
@@ -429,3 +428,9 @@ function Bird() {
 let duck = new Bird();
 duck.getWeight();
 console.log(duck.getWeight());
+*/
+
+// ---> Understand the Immediately Invoked Function Expression (IIFE) <---
+(function () {
+  console.log("A cozy nest is ready");
+})();
