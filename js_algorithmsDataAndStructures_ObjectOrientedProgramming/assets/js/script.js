@@ -229,7 +229,6 @@ Dog.prototype.isPrototypeOf(beagle); // yields true
 // Fix the code below so that it evaluates to true
 Object.prototype.isPrototypeOf(Dog.prototype);
 console.log(Object.prototype.isPrototypeOf(Dog.prototype));
-*/
 
 // ---> Use Inheritance So You Don't Repeat Yourself <---
 
@@ -240,20 +239,32 @@ function Cat(name) {
 Cat.prototype = {
   constructor: Cat,
   // eat: function () {
-  //   console.log("nom nom nom");
-  // }
-};
+    //   console.log("nom nom nom");
+    // }
+  };
+  
+  function Bear(name) {
+    this.name = name;
+  }
+  
+  Bear.prototype = {
+    constructor: Bear,
+    // eat: function () {
+      //   console.log("nom nom nom");
+      // }
+    };
+    
+    function Animal() {}
+    
+    Animal.prototype = {
+      constructor: Animal,
+      eat: function () {
+        console.log("nom nom nom");
+      },
+    };
+*/
 
-function Bear(name) {
-  this.name = name;
-}
-
-Bear.prototype = {
-  constructor: Bear,
-  // eat: function () {
-  //   console.log("nom nom nom");
-  // }
-};
+// ---> Inherit Behaviors from a Supertype <---
 
 function Animal() {}
 
@@ -263,3 +274,12 @@ Animal.prototype = {
     console.log("nom nom nom");
   },
 };
+
+// Only change code below this line
+
+let duck = Object.create(Animal.prototype); // Change this line
+let beagle = Object.create(Animal.prototype); // Change this line
+
+console.log(duck instanceof Animal);
+console.log(beagle instanceof Animal);
+console.log(Animal instanceof Animal);
