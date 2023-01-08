@@ -127,7 +127,6 @@ const finalTabs = socialWindow
   .join(videoWindow.tabClose(2)) // Close third tab in video window, and join
   .join(workWindow.tabClose(1).tabOpen());
 console.log(finalTabs.tabs);
-*/
 
 // ---> Avoid Mutations and Side Effects Using Functional Programming <---
 
@@ -141,3 +140,19 @@ function incrementer() {
   // Only change code above this line
 }
 console.log(incrementer());
+*/
+
+// Recall that in functional programming, changing or altering things is called mutation, and the outcome is called a side effect. A function, ideally, should be a pure function, meaning that it does not cause any side effects.
+
+// ---> Pass Arguments to Avoid External Dependence in a Function <---
+
+// The global variable
+let fixedValue = 4;
+
+// Only change code below this line
+function incrementer(fixedValue) {
+  return fixedValue + 1;
+  // Only change code above this line
+}
+
+console.log(incrementer(4));
