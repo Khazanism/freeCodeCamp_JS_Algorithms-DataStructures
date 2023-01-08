@@ -140,11 +140,14 @@ function incrementer() {
   // Only change code above this line
 }
 console.log(incrementer());
-*/
 
 // Recall that in functional programming, changing or altering things is called mutation, and the outcome is called a side effect. A function, ideally, should be a pure function, meaning that it does not cause any side effects.
 
 // ---> Pass Arguments to Avoid External Dependence in a Function <---
+
+// Another principle of functional programming is to always declare your dependencies explicitly. This means if a function depends on a variable or object being present, then pass that variable or object directly into the function as an argument.
+
+// Finally, the function would always produce the same output for the same set of inputs, no matter what part of the code executes it.
 
 // The global variable
 let fixedValue = 4;
@@ -156,3 +159,38 @@ function incrementer(fixedValue) {
 }
 
 console.log(incrementer(4));
+*/
+
+// ---> Refactor Global Variables Out of Functions <---
+// The global variable
+const bookList = [
+  "The Hound of the Baskervilles",
+  "On The Electrodynamics of Moving Bodies",
+  "Philosophiæ Naturalis Principia Mathematica",
+  "Disquisitiones Arithmeticae",
+];
+
+// Change code below this line
+function add(bookList, bookName) {
+  bookList.push(bookName);
+  return bookList;
+
+  // Change code above this line
+}
+
+// Change code below this line
+function remove(bookList, bookName) {
+  const book_index = bookList.indexOf(bookName);
+  if (book_index >= 0) {
+    bookList.splice(book_index, 1);
+    return bookList;
+
+    // Change code above this line
+  }
+}
+
+// console.log(add(bookList, "A Brief History of Time"));
+
+// console.log(remove(bookList, "On The Electrodynamics of Moving Bodies"));
+
+// console.log(remove(add(bookList, "A Brief History of Time"), "On The Electrodynamics of Moving Bodies"));
