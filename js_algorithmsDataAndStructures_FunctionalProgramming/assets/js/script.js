@@ -70,7 +70,6 @@ console.log(tea4GreenTeamFCC, tea4BlackTeamFCC);
 
 // When functions are passed in to or returned from another function, then those functions which were passed in or returned can be called a lambda.
 
-*/
 
 // ---> Understand the Hazards of Using Imperative Code <---
 
@@ -128,3 +127,17 @@ const finalTabs = socialWindow
   .join(videoWindow.tabClose(2)) // Close third tab in video window, and join
   .join(workWindow.tabClose(1).tabOpen());
 console.log(finalTabs.tabs);
+*/
+
+// ---> Avoid Mutations and Side Effects Using Functional Programming <---
+
+// The global variable
+let fixedValue = 4;
+
+function incrementer() {
+  // Only change code below this line
+
+  return fixedValue + 1;
+  // Only change code above this line
+}
+console.log(incrementer());
