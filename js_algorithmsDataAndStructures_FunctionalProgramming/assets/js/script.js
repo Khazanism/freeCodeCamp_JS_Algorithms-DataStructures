@@ -331,6 +331,9 @@ var ratings = watchList.map((funcToAccessMovie) => {
   return {
     title: funcToAccessMovie.Title,
     rating: funcToAccessMovie.imdbRating,
+
+    // title: funcToAccessMovie["Title"], // option 2
+    // rating: funcToAccessMovie["imdbRating"], // option 2
   };
 });
 
