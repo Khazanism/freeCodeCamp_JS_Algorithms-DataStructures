@@ -503,7 +503,6 @@ const filteredList = watchList
 console.log(filteredList);
 
 // filter calls a function on each element of an array and returns a new array containing only the elements for which that function returns a truthy value - that is, a value which returns true if passed to the Boolean() constructor. In other words, it filters the array, based on the function passed to it. Like map, it does this without needing to modify the original array.
-*/
 
 // ---> Implement the filter Method on a Prototype <---
 
@@ -523,10 +522,25 @@ var newArr = [23, 65, 98, 5, 13].myFilter((item) => item % 2);
 
 var newArr = ["naomi", "quincy", "camperbot"].myFilter(
   (element) => element === "naomi"
-);
+  );
+  
+  var newArr = [1, 1, 2, 5, 2].myFilter(
+    (element, index, array) => array.indexOf(element) === index
+    );
+    
+    console.log(newArr);
+    */
 
-var newArr = [1, 1, 2, 5, 2].myFilter(
-  (element, index, array) => array.indexOf(element) === index
-);
+// ---> Return Part of an Array Using the slice Method <---
 
-console.log(newArr);
+function sliceArray(anim, beginSlice, endSlice) {
+  // Only change code below this line
+
+  let newArr = anim.slice(beginSlice, endSlice);
+  // Only change code above this line
+}
+
+const inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
+sliceArray(inputAnim, 1, 3);
+
+console.log(sliceArray(["Cat", "Dog", "Tiger", "Zebra", "Ant"], 1, 3));
