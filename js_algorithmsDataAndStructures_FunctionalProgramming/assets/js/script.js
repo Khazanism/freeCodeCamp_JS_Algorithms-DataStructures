@@ -368,7 +368,6 @@ var newArr = [1, 1, 2, 5, 2].myMap(
 );
 
 console.log(newArr);
-*/
 
 // ---> Use the filter Method to Extract Data from an Array <---
 // The global variable
@@ -504,3 +503,30 @@ const filteredList = watchList
 console.log(filteredList);
 
 // filter calls a function on each element of an array and returns a new array containing only the elements for which that function returns a truthy value - that is, a value which returns true if passed to the Boolean() constructor. In other words, it filters the array, based on the function passed to it. Like map, it does this without needing to modify the original array.
+*/
+
+// ---> Implement the filter Method on a Prototype <---
+
+Array.prototype.myFilter = function (callback) {
+  const newArray = [];
+  // Only change code below this line
+  for (let i = 0; i < this.length; i++) {
+    if (callback(this[i], i, this) == true) {
+      newArray.push(this[i]);
+    }
+  }
+  // Only change code above this line
+  return newArray;
+};
+
+var newArr = [23, 65, 98, 5, 13].myFilter((item) => item % 2);
+
+var newArr = ["naomi", "quincy", "camperbot"].myFilter(
+  (element) => element === "naomi"
+);
+
+var newArr = [1, 1, 2, 5, 2].myFilter(
+  (element, index, array) => array.indexOf(element) === index
+);
+
+console.log(newArr);
