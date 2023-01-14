@@ -371,7 +371,6 @@ console.log(newArr);
 */
 
 // ---> Use the filter Method to Extract Data from an Array <---
-
 // The global variable
 const watchList = [
   {
@@ -495,8 +494,13 @@ const watchList = [
 
 // Only change code below this line
 
-const filteredList = "";
-
+const filteredList = watchList
+  .filter((movie) => movie.imdbRating >= 8)
+  .map((movie) => {
+    return { title: movie["Title"], rating: movie["imdbRating"] };
+  });
 // Only change code above this line
 
 console.log(filteredList);
+
+// filter calls a function on each element of an array and returns a new array containing only the elements for which that function returns a truthy value - that is, a value which returns true if passed to the Boolean() constructor. In other words, it filters the array, based on the function passed to it. Like map, it does this without needing to modify the original array.
