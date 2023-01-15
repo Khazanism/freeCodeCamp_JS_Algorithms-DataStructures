@@ -535,12 +535,13 @@ var newArr = ["naomi", "quincy", "camperbot"].myFilter(
 
 function sliceArray(anim, beginSlice, endSlice) {
   // Only change code below this line
-
-  let newArr = anim.slice(beginSlice, endSlice);
+  const newArr = anim.slice(beginSlice, endSlice);
+  return newArr;
   // Only change code above this line
 }
 
 const inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
 sliceArray(inputAnim, 1, 3);
 
-console.log(sliceArray(["Cat", "Dog", "Tiger", "Zebra", "Ant"], 1, 3));
+console.log(inputAnim);
+console.log(typeof inputAnim);
