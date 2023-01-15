@@ -537,6 +537,9 @@ function sliceArray(anim, beginSlice, endSlice) {
   // Only change code below this line
   const newArr = anim.slice(beginSlice, endSlice);
   return newArr;
+  //--------------> Simplified
+  return anim.slice(beginSlice, endSlice);
+  //--------------> Simplified
   // Only change code above this line
 }
 
