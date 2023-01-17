@@ -564,8 +564,7 @@ nonMutatingSplice(inputCities);
 console.log(
   nonMutatingSplice(["Chicago", "Delhi", "Islamabad", "London", "Berlin"])
   );
-  */
-
+  
 // ---> Combine Two Arrays Using the concat Method <---
 
 //  Concatenation means to join items end to end. JavaScript offers the concat method for both strings and arrays that work in the same way.
@@ -582,3 +581,22 @@ const second = [4, 5];
 nonMutatingConcat(first, second);
 
 console.log(nonMutatingConcat(first, second));
+*/
+
+// ---> Add Elements to the End of an Array Using concat Instead of push <---
+
+// Functional programming is all about creating and using non-mutating functions.
+// the push method adds new element to the end of the orginal array, the concat method creates a new array containing the elements from the original array and the new element.
+// The original array remains the same when using concat.
+
+function nonMutatingPush(original, newItem) {
+  // Only change code below this line
+  return original.concat(newItem);
+  // Only change code above this line
+}
+
+const first = [1, 2, 3];
+const second = [4, 5];
+nonMutatingPush(first, second);
+
+console.log(nonMutatingPush([1, 2, 3], [4, 5]));
