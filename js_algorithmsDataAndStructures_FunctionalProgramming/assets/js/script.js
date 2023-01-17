@@ -599,7 +599,7 @@ const second = [4, 5];
 nonMutatingPush(first, second);
 
 console.log(nonMutatingPush([1, 2, 3], [4, 5]));
-*/
+
 
 // ---> Use the reduce Method to Analyze Data <---
 
@@ -629,7 +629,7 @@ const watchList = [
     Country: "USA, UK",
     Awards: "Won 4 Oscars. Another 143 wins & 198 nominations.",
     Poster:
-      "http://ia.media-imdb.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+    "http://ia.media-imdb.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
     Metascore: "74",
     imdbRating: "8.8",
     imdbVotes: "1,446,708",
@@ -652,7 +652,7 @@ const watchList = [
     Country: "USA, UK",
     Awards: "Won 1 Oscar. Another 39 wins & 132 nominations.",
     Poster:
-      "http://ia.media-imdb.com/images/M/MV5BMjIxNTU4MzY4MF5BMl5BanBnXkFtZTgwMzM4ODI3MjE@._V1_SX300.jpg",
+    "http://ia.media-imdb.com/images/M/MV5BMjIxNTU4MzY4MF5BMl5BanBnXkFtZTgwMzM4ODI3MjE@._V1_SX300.jpg",
     Metascore: "74",
     imdbRating: "8.6",
     imdbVotes: "910,366",
@@ -669,14 +669,14 @@ const watchList = [
     Genre: "Action, Adventure, Crime",
     Director: "Christopher Nolan",
     Writer:
-      "Jonathan Nolan (screenplay), Christopher Nolan (screenplay), Christopher Nolan (story), David S. Goyer (story), Bob Kane (characters)",
+    "Jonathan Nolan (screenplay), Christopher Nolan (screenplay), Christopher Nolan (story), David S. Goyer (story), Bob Kane (characters)",
     Actors: "Christian Bale, Heath Ledger, Aaron Eckhart, Michael Caine",
     Plot: "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.",
     Language: "English, Mandarin",
     Country: "USA, UK",
     Awards: "Won 2 Oscars. Another 146 wins & 142 nominations.",
     Poster:
-      "http://ia.media-imdb.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg",
+    "http://ia.media-imdb.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg",
     Metascore: "82",
     imdbRating: "9.0",
     imdbVotes: "1,652,832",
@@ -693,14 +693,14 @@ const watchList = [
     Genre: "Action, Adventure",
     Director: "Christopher Nolan",
     Writer:
-      "Bob Kane (characters), David S. Goyer (story), Christopher Nolan (screenplay), David S. Goyer (screenplay)",
+    "Bob Kane (characters), David S. Goyer (story), Christopher Nolan (screenplay), David S. Goyer (screenplay)",
     Actors: "Christian Bale, Michael Caine, Liam Neeson, Katie Holmes",
     Plot: "After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from the corruption that Scarecrow and the League of Shadows have cast upon it.",
     Language: "English, Urdu, Mandarin",
     Country: "USA, UK",
     Awards: "Nominated for 1 Oscar. Another 15 wins & 66 nominations.",
     Poster:
-      "http://ia.media-imdb.com/images/M/MV5BNTM3OTc0MzM2OV5BMl5BanBnXkFtZTYwNzUwMTI3._V1_SX300.jpg",
+    "http://ia.media-imdb.com/images/M/MV5BNTM3OTc0MzM2OV5BMl5BanBnXkFtZTYwNzUwMTI3._V1_SX300.jpg",
     Metascore: "70",
     imdbRating: "8.3",
     imdbVotes: "972,584",
@@ -723,7 +723,7 @@ const watchList = [
     Country: "USA, UK",
     Awards: "Won 3 Oscars. Another 80 wins & 121 nominations.",
     Poster:
-      "http://ia.media-imdb.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_SX300.jpg",
+    "http://ia.media-imdb.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_SX300.jpg",
     Metascore: "83",
     imdbRating: "7.9",
     imdbVotes: "876,575",
@@ -736,9 +736,9 @@ const watchList = [
 function getRating(watchList) {
   // Only change code below this line
   let averageRating = watchList
-    .filter((movie) => movie.Director == "Christopher Nolan")
-    .map((movie) => parseFloat(movie["imdbRating"], 36));
-
+  .filter((movie) => movie.Director == "Christopher Nolan")
+  .map((movie) => parseFloat(movie["imdbRating"], 36));
+  
   const sum = averageRating.reduce((sum, value) => sum + value);
   const average = sum / averageRating.length;
   // Only change code above this line
@@ -746,3 +746,16 @@ function getRating(watchList) {
 }
 
 console.log(getRating(watchList));
+*/
+// ---> Use Higher-Order Functions map, filter, or reduce to Solve a Complex Problem <---
+const squareList = (arr) => {
+  // Only change code below this line
+  return arr.filter((num) => num > 1);
+  // Only change code above this line
+};
+
+const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+
+const squaredIntegers = squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2]);
+
+console.log(squaredIntegers);
