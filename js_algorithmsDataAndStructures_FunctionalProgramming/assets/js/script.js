@@ -529,9 +529,8 @@ var newArr = ["naomi", "quincy", "camperbot"].myFilter(
     );
     
     console.log(newArr);
-    */
-
-// ---> Return Part of an Array Using the slice Method <---
+    
+    // ---> Return Part of an Array Using the slice Method <---
 
 function sliceArray(anim, beginSlice, endSlice) {
   // Only change code below this line
@@ -548,3 +547,21 @@ sliceArray(inputAnim, 1, 3);
 
 console.log(inputAnim);
 console.log(typeof inputAnim);
+*/
+
+// ---> Remove Elements from an Array Using slice Instead of splice <---
+
+function nonMutatingSplice(cities) {
+  // Only change code below this line
+  return cities.slice(0, 3);
+
+  // Only change code above this line
+}
+
+const inputCities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
+
+nonMutatingSplice(inputCities);
+
+console.log(
+  nonMutatingSplice(["Chicago", "Delhi", "Islamabad", "London", "Berlin"])
+);
