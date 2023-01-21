@@ -831,7 +831,6 @@ function splitify(str) {
 console.log(splitify("Hello World,I-am code"));
 console.log(splitify("Earth-is-our home"));
 console.log(splitify("This.is.a-sentence"));
-*/
 
 // ---> Combine an Array into a String Using the join Method <---
 
@@ -841,7 +840,7 @@ console.log(splitify("This.is.a-sentence"));
 function sentensify(str) {
   // Only change code below this line
   return str.split(/\W/).join(" ");
-
+  
   // Only change code above this line
 }
 
@@ -850,3 +849,13 @@ console.log(sentensify("May-the-force-be-with-you"));
 console.log(sentensify("The.force.is.strong.with.this.one"));
 
 console.log(sentensify("There,has,been,an,awakening"));
+*/
+
+// ---> Apply Functional Programming to Convert Strings to URL Slugs <---
+
+// Only change code below this line
+function urlSlug(title) {
+  
+}
+// Only change code above this line
+urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone");
