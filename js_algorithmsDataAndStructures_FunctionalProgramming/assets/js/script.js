@@ -765,11 +765,16 @@ console.log(squaredIntegers);
 
 // ---> Sort an Array Alphabetically using the sort Method <---
 
+// ----------> 1st Opt
+// The sort method sorts the elements of an array according to the callback function.
+
 function alphabeticalOrder(arr) {
   // Only change code below this line
-
-  return arr;
+  return arr.sort();
   // Only change code above this line
 }
 
-alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
+console.log(alphabeticalOrder(["a", "d", "c", "a", "z", "g"]));
+console.log(alphabeticalOrder(["a", "d", "c", "a", "z", "g"]));
+console.log(alphabeticalOrder(["x", "h", "a", "m", "n", "m"]));
+console.log(alphabeticalOrder(["a", "a", "a", "a", "x", "t"]));
