@@ -761,7 +761,6 @@ const squaredIntegers = squareList([-3.7, -5, 3, 10, 12.5, 7, -4.5, -17, 0.3]);
 const squaredIntegers = squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2]);
 
 console.log(squaredIntegers);
-*/
 
 // ---> Sort an Array Alphabetically using the sort Method <---
 
@@ -788,3 +787,15 @@ function alphabeticalOrder(arr) {
   });
   // Only change code above this line
 }
+*/
+
+// ---> Return a Sorted Array Without Changing the Original Array <---
+
+const globalArray = [5, 6, 3, 2, 9];
+
+function nonMutatingSort(arr) {
+  // Only change code below this line
+  // Only change code above this line
+}
+
+nonMutatingSort(globalArray);
