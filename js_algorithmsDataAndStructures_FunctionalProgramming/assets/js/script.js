@@ -853,11 +853,15 @@ console.log(sentensify("There,has,been,an,awakening"));
 
 // ---> Apply Functional Programming to Convert Strings to URL Slugs <---
 
+var globalTitle = "Winter Is Coming";
+
 // Only change code below this line
 function urlSlug(title) {
-  return title.split(" ").join("-").toLowerCase();
+  return title.toLowerCase().trim().split(/\s+/).join("-");
 }
 // Only change code above this line
+
+var winterComing = urlSlug(globalTitle);
 
 console.log(urlSlug("Hold The Door"));
 
