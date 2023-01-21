@@ -867,7 +867,6 @@ console.log(urlSlug("Hold The Door"));
 console.log(urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone"));
 
 console.log(urlSlug(" Winter Is  Coming"));
-*/
 
 // ---> Use the every Method to Check that Every Element in an Array Meets a Criteria <---
 
@@ -882,3 +881,22 @@ function checkPositive(arr) {
 console.log(checkPositive([1, 2, 3, -4, 5]));
 console.log(checkPositive([1, 2, 3, 4, 5]));
 console.log(checkPositive([1, -2, 3, -4, 5]));
+*/
+
+// ---> Use the some Method to Check that Any Elements in an Array Meet a Criteria <---
+
+// The some method works with arrays to check if any element passes a particular test.
+// It returns a Boolean value - true if any of the values meet the criteria, false if not.
+
+function checkPositive(arr) {
+  // Only change code below this line
+
+  return arr.some(function (num) {
+    return num > 0;
+  });
+  // Only change code above this line
+}
+
+console.log(checkPositive([1, 2, 3, -4, 5]));
+console.log(checkPositive([1, 2, 3, 4, 5]));
+console.log(checkPositive([-1, -2, -3, -4, -5]));
