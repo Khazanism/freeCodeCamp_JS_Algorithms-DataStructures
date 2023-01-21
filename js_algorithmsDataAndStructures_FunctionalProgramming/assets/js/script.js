@@ -787,7 +787,6 @@ function alphabeticalOrder(arr) {
   });
   // Only change code above this line
 }
-*/
 
 // ---> Return a Sorted Array Without Changing the Original Array <---
 
@@ -818,3 +817,13 @@ function nonMutatingSort(arr) {
   });
   // Only change code above this line
 }
+*/
+
+// ---> Split a String into an Array Using the split Method <---
+
+function splitify(str) {
+  // Only change code below this line
+  // Only change code above this line
+}
+
+splitify("Hello World,I-am code");
