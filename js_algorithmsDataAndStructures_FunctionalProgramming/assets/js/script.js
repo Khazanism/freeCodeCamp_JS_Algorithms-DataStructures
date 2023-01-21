@@ -849,7 +849,6 @@ console.log(sentensify("May-the-force-be-with-you"));
 console.log(sentensify("The.force.is.strong.with.this.one"));
 
 console.log(sentensify("There,has,been,an,awakening"));
-*/
 
 // ---> Apply Functional Programming to Convert Strings to URL Slugs <---
 
@@ -868,3 +867,18 @@ console.log(urlSlug("Hold The Door"));
 console.log(urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone"));
 
 console.log(urlSlug(" Winter Is  Coming"));
+*/
+
+// ---> Use the every Method to Check that Every Element in an Array Meets a Criteria <---
+
+// The every method works with arrays to check if every element passes a particular test.
+// It returns a Boolean value - true if all values meet the criteria, false if not.
+
+function checkPositive(arr) {
+  // Only change code below this line
+  return arr.every((num) => num > 0);
+  // Only change code above this line
+}
+console.log(checkPositive([1, 2, 3, -4, 5]));
+console.log(checkPositive([1, 2, 3, 4, 5]));
+console.log(checkPositive([1, -2, 3, -4, 5]));
