@@ -881,7 +881,6 @@ function checkPositive(arr) {
 console.log(checkPositive([1, 2, 3, -4, 5]));
 console.log(checkPositive([1, 2, 3, 4, 5]));
 console.log(checkPositive([1, -2, 3, -4, 5]));
-*/
 
 // ---> Use the some Method to Check that Any Elements in an Array Meet a Criteria <---
 
@@ -890,7 +889,7 @@ console.log(checkPositive([1, -2, 3, -4, 5]));
 
 function checkPositive(arr) {
   // Only change code below this line
-
+  
   return arr.some(function (num) {
     return num > 0;
   });
@@ -900,3 +899,17 @@ function checkPositive(arr) {
 console.log(checkPositive([1, 2, 3, -4, 5]));
 console.log(checkPositive([1, 2, 3, 4, 5]));
 console.log(checkPositive([-1, -2, -3, -4, -5]));
+*/
+
+// ---> Introduction to Currying and Partial Application <---
+
+// The arity of a function is the number of arguments it requires. Currying a function means to convert a function of N arity into N functions of arity 1.
+
+// In other words, it restructures a function so it takes one argument, then returns another function that takes the next argument, and so on.
+
+function add(x) {
+  // Only change code below this line
+  // Only change code above this line
+}
+
+add(10)(20)(30);
