@@ -822,9 +822,9 @@ function nonMutatingSort(arr) {
 
 function splitify(str) {
   // Only change code below this line
-
+  
   return str.split(/\W/);
-
+  
   // Only change code above this line
 }
 
@@ -907,9 +907,17 @@ console.log(checkPositive([-1, -2, -3, -4, -5]));
 
 // In other words, it restructures a function so it takes one argument, then returns another function that takes the next argument, and so on.
 
+// ----------> 1st Opt
 function add(x) {
   // Only change code below this line
+  return function (y) {
+    return function (z) {
+      return x + y + z;
+    };
+  };
   // Only change code above this line
 }
 
-add(10)(20)(30);
+console.log(add(10)(20)(30));
+console.log(add(1)(2)(3));
+console.log(add(11)(22)(33));
