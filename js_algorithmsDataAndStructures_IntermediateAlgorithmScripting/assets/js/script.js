@@ -45,3 +45,15 @@ function sumAll(arr) {
 
   return sum;
 }
+
+// ----------> 3rd Opt
+
+function sumAll(arr) {
+  let sum = 0;
+
+  for (let i = Math.min(...arr); i <= Math.max(...arr); i++) {
+    sum += i;
+  }
+
+  return sum;
+}
