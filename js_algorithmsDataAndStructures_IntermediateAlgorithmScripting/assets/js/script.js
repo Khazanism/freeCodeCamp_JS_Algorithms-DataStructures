@@ -63,13 +63,13 @@ function sumAll(arr) {
 // ----------> 1st Opt
 function diffArray(arr1, arr2) {
   const newArr = [];
-  
+
   for (let i = 0; i < arr1.length; i++) {
     if (!newArr.includes(arr1[i])) {
       newArr.push(arr1[i]);
     }
   }
-  
+
   for (let i = 0; i < arr2.length; i++) {
     if (!newArr.includes(arr2[i])) {
       newArr.push(arr2[i]);
@@ -95,3 +95,30 @@ console.log(diffArray([1, "calf", 3, "piglet"], [1, "calf", 3, 4]));
 console.log(diffArray([], ["snuffleupagus", "cookie monster", "elmo"]));
 
 console.log(diffArray([1, "calf", 3, "piglet"], [7, "filly"]));
+
+// ----------> 2nd Opt
+function diffArray(arr1, arr2) {
+  const newArr = [];
+
+  for (const el of arr1) {
+    if (!newArr.includes(el)) {
+      newArr.push(el);
+    }
+  }
+
+  for (const el of arr2) {
+    if (!newArr.includes(el)) {
+      newArr.push(el);
+    }
+  }
+
+  const symmDif = [];
+  for (const currentEl of newArr) {
+    if (arr1.includes(currentEl) && !arr2.includes(currentEl)) {
+      symmDif.push(currentEl);
+    } else if (arr2.includes(currentEl) && !arr1.includes(currentEl)) {
+      symmDif.push(currentEl);
+    }
+  }
+  return symmDif;
+}
