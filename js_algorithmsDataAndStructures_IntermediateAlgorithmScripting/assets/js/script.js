@@ -122,3 +122,22 @@ function diffArray(arr1, arr2) {
   }
   return symmDif;
 }
+
+// ----------> 3rd Opt
+
+// The Set constructor lets you create Set objects that store unique values of any type, whether primitive values or object references.
+// Note: Set() can only be constructed with new. Attempting to call it without new throws a TypeError.
+
+function diffArray(arr1, arr2) {
+  const newArr = new Set([...arr1, ...arr2]);
+  console.log(newArr);
+  const symmDif = [];
+  for (const currentEl of newArr) {
+    if (arr1.includes(currentEl) && !arr2.includes(currentEl)) {
+      symmDif.push(currentEl);
+    } else if (arr2.includes(currentEl) && !arr1.includes(currentEl)) {
+      symmDif.push(currentEl);
+    }
+  }
+  return symmDif;
+}
