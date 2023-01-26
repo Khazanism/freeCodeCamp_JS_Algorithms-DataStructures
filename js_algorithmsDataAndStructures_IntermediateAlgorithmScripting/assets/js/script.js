@@ -148,7 +148,7 @@ function diffArray(arr1, arr2) {
 function destroyer(arr) {
   const newArr = Array.from(arguments).slice(1);
   console.log(newArr); // object withot arr.
-  
+
   return arr.filter((val) => !newArr.includes(val));
 }
 
@@ -181,3 +181,9 @@ console.log(
     "trojan"
   )
 );
+
+// ----------> 2nd Opt
+
+function destroyer(arr, ...newArr) {
+  return arr.filter((val) => !newArr.includes(val));
+}
