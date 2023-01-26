@@ -62,13 +62,13 @@ function sumAll(arr) {
 // ----------> 1st Opt
 function diffArray(arr1, arr2) {
   const newArr = [];
-
+  
   for (let i = 0; i < arr1.length; i++) {
     if (!newArr.includes(arr1[i])) {
       newArr.push(arr1[i]);
     }
   }
-
+  
   for (let i = 0; i < arr2.length; i++) {
     if (!newArr.includes(arr2[i])) {
       newArr.push(arr2[i]);
@@ -98,7 +98,7 @@ console.log(diffArray([1, "calf", 3, "piglet"], [7, "filly"]));
 // ----------> 2nd Opt
 function diffArray(arr1, arr2) {
   const newArr = [];
-
+  
   for (const el of arr1) {
     if (!newArr.includes(el)) {
       newArr.push(el);
@@ -144,8 +144,40 @@ function diffArray(arr1, arr2) {
 
 // ---> Seek and Destroy <---
 
+// ----------> 1st Opt
 function destroyer(arr) {
-  return arr;
+  const newArr = Array.from(arguments).slice(1);
+  console.log(newArr); // object withot arr.
+  
+  return arr.filter((val) => !newArr.includes(val));
 }
 
-destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
+
+console.log(destroyer(["tree", "hamburger", 53], "tree", 53));
+
+console.log(
+  destroyer(
+    [
+      "possum",
+      "trollo",
+      12,
+      "safari",
+      "hotdog",
+      92,
+      65,
+      "grandma",
+      "bugati",
+      "trojan",
+      "yacht",
+    ],
+    "yacht",
+    "possum",
+    "trollo",
+    "safari",
+    "hotdog",
+    "grandma",
+    "bugati",
+    "trojan"
+  )
+);
