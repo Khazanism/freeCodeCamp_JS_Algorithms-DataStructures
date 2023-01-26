@@ -56,7 +56,6 @@ function sumAll(arr) {
   
   return sum;
 }
-*/
 
 // ---> Diff Two Arrays <---
 
@@ -75,7 +74,7 @@ function diffArray(arr1, arr2) {
       newArr.push(arr2[i]);
     }
   }
-
+  
   const symmDif = [];
   for (let i = 0; i < newArr.length; i++) {
     const currentEl = newArr[i];
@@ -105,13 +104,13 @@ function diffArray(arr1, arr2) {
       newArr.push(el);
     }
   }
-
+  
   for (const el of arr2) {
     if (!newArr.includes(el)) {
       newArr.push(el);
     }
   }
-
+  
   const symmDif = [];
   for (const currentEl of newArr) {
     if (arr1.includes(currentEl) && !arr2.includes(currentEl)) {
@@ -141,3 +140,12 @@ function diffArray(arr1, arr2) {
   }
   return symmDif;
 }
+*/
+
+// ---> Seek and Destroy <---
+
+function destroyer(arr) {
+  return arr;
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
