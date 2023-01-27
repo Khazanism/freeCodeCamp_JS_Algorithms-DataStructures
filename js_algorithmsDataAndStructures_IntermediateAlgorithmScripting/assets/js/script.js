@@ -140,7 +140,6 @@ function diffArray(arr1, arr2) {
   }
   return symmDif;
 }
-*/
 
 // ---> Seek and Destroy <---
 
@@ -148,7 +147,7 @@ function diffArray(arr1, arr2) {
 function destroyer(arr) {
   const newArr = Array.from(arguments).slice(1);
   console.log(newArr); // object withot arr.
-
+  
   return arr.filter((val) => !newArr.includes(val));
 }
 
@@ -179,11 +178,25 @@ console.log(
     "grandma",
     "bugati",
     "trojan"
-  )
+    )
+    );
+    
+    // ----------> 2nd Opt
+    
+    function destroyer(arr, ...newArr) {
+      return arr.filter((val) => !newArr.includes(val));
+    }
+*/
+
+// ---> Wherefore art thou <---
+// ----------> 1st Opt
+function whatIsInAName(collection, source) {}
+
+whatIsInAName(
+  [
+    { first: "Romeo", last: "Montague" },
+    { first: "Mercutio", last: null },
+    { first: "Tybalt", last: "Capulet" },
+  ],
+  { last: "Capulet" }
 );
-
-// ----------> 2nd Opt
-
-function destroyer(arr, ...newArr) {
-  return arr.filter((val) => !newArr.includes(val));
-}
