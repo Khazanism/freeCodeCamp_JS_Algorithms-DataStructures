@@ -191,20 +191,23 @@ console.log(
 // ---> Wherefore art thou <---
 // ----------> 1st Opt
 function whatIsInAName(collection, source) {
-  const newArr = Array.from(arguments).slice(1);
-  console.log(newArr); // object withot arr.
+  const arr = [];
+  const keys = Object.keys(source);
+  console.log(keys); // keys of source.
 
-  const remArr = [];
-  for (let i = 0; i < collection.length; i++) {
-    const element = collection[i];
-    console.log(element);
-
-    if (collection.includes(newArr)) {
-      remArr.push(element);
+  for (const obj of collection) {
+    let keyVal = true;
+    for (const key of keys) {
+      if (obj[key] !== source[key]) {
+        keyVal = false;
+        break;
+      }
+    }
+    if (keyVal) {
+      arr.push(obj);
     }
   }
-
-  //   return collection.filter((val) => val.includes(val))
+  return arr;
 }
 
 let x = whatIsInAName(
