@@ -190,9 +190,24 @@ console.log(
 
 // ---> Wherefore art thou <---
 // ----------> 1st Opt
-function whatIsInAName(collection, source) {}
+function whatIsInAName(collection, source) {
+  const newArr = Array.from(arguments).slice(1);
+  console.log(newArr); // object withot arr.
 
-whatIsInAName(
+  const remArr = [];
+  for (let i = 0; i < collection.length; i++) {
+    const element = collection[i];
+    console.log(element);
+
+    if (collection.includes(newArr)) {
+      remArr.push(element);
+    }
+  }
+
+  //   return collection.filter((val) => val.includes(val))
+}
+
+let x = whatIsInAName(
   [
     { first: "Romeo", last: "Montague" },
     { first: "Mercutio", last: null },
@@ -200,3 +215,5 @@ whatIsInAName(
   ],
   { last: "Capulet" }
 );
+
+console.log(x);
