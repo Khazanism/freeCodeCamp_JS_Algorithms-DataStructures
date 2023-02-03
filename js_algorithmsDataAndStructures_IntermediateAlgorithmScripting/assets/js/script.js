@@ -305,7 +305,7 @@ function spinalCase(str) {
     words.push(word);
   }
 
-  return words;
+  return words.join("-");
 }
 
 console.log(spinalCase("This Is Spinal Tap"));
