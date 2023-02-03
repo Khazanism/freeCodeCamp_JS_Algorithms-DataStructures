@@ -280,9 +280,12 @@ let x = whatIsInAName(
         );
         
         console.log(x);
-*/
+        */
 
 // ---> Spinal Tap Case <---
+
+// ----------> 1st Opt
+
 function spinalCase(str) {
   const words = [];
   let word = "";
@@ -304,8 +307,8 @@ function spinalCase(str) {
   if (word.length) {
     words.push(word);
   }
-
-  return words.join("-");
+  const spinalCase = words.join("-");
+  return spinalCase;
 }
 
 console.log(spinalCase("This Is Spinal Tap"));
