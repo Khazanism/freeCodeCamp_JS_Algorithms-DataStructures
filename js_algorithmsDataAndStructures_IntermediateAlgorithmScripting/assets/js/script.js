@@ -283,7 +283,6 @@ let x = whatIsInAName(
 */
 
 // ---> Spinal Tap Case <---
-
 function spinalCase(str) {
   const words = [];
   let word = "";
@@ -300,6 +299,10 @@ function spinalCase(str) {
     } else {
       word += c;
     }
+  }
+
+  if (word.length) {
+    words.push(word);
   }
 
   return words;
