@@ -217,67 +217,75 @@ let x = whatIsInAName(
     { first: "Tybalt", last: "Capulet" },
   ],
   { last: "Capulet" }
-);
-
-console.log(x);
-
-// ----------> 2nd Opt
-
-function whatIsInAName(collection, source) {
-  const keys = Object.keys(source);
-  console.log(keys); // keys of source.
-
-  return collection.filter((obj) => {
-    let keyVal = true;
-    for (const key of keys) {
-      if (obj[key] !== source[key]) {
-        keyVal = false;
-        break;
-      }
+  );
+  
+  console.log(x);
+  
+  // ----------> 2nd Opt
+  
+  function whatIsInAName(collection, source) {
+    const keys = Object.keys(source);
+    console.log(keys); // keys of source.
+    
+    return collection.filter((obj) => {
+      let keyVal = true;
+      for (const key of keys) {
+        if (obj[key] !== source[key]) {
+          keyVal = false;
+          break;
+        }
     }
 
     return keyVal;
-
+    
     // if (keyVal) {
-    //   return true;
-    // } else {
-    //   return false;
-    // }
-  });
-}
-
-let x = whatIsInAName(
-  [
-    { first: "Romeo", last: "Montague" },
-    { first: "Mercutio", last: null },
-    { first: "Tybalt", last: "Capulet" },
-  ],
-  { last: "Capulet" }
-);
-
-console.log(x);
-
-// ----------> 2nd Opt
-
-function whatIsInAName(collection, source) {
-  const keys = Object.keys(source);
-  return collection.filter((obj) => {
-    return keys.reduce((acc, key) => {
-      if (obj[key] !== source[key]) {
-        return false;
+      //   return true;
+      // } else {
+        //   return false;
+        // }
+      });
+    }
+    
+    let x = whatIsInAName(
+      [
+        { first: "Romeo", last: "Montague" },
+        { first: "Mercutio", last: null },
+        { first: "Tybalt", last: "Capulet" },
+      ],
+      { last: "Capulet" }
+      );
+      
+      console.log(x);
+      
+      // ----------> 2nd Opt
+      
+      function whatIsInAName(collection, source) {
+        const keys = Object.keys(source);
+        return collection.filter((obj) => {
+          return keys.reduce((acc, key) => {
+            if (obj[key] !== source[key]) {
+              return false;
+            }
+            return acc;
+          }, true);
+        });
       }
-      return acc;
-    }, true);
-  });
-}
-
-let x = whatIsInAName(
-  [
+      
+      let x = whatIsInAName(
+        [
     { first: "Romeo", last: "Montague" },
     { first: "Mercutio", last: null },
     { first: "Tybalt", last: "Capulet" },
   ],
   { last: "Capulet" }
-);
+  );
+  
+  console.log(x);
+  
+  // ---> Spinal Tap Case <---
 
-console.log(x);
+  function spinalCase(str) {
+    return str;
+  }
+  
+  spinalCase('This Is Spinal Tap');
