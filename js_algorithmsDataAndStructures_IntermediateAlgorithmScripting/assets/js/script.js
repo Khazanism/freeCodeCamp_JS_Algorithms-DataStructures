@@ -186,15 +186,14 @@ console.log(
     function destroyer(arr, ...newArr) {
       return arr.filter((val) => !newArr.includes(val));
     }
-*/
-
-// ---> Wherefore art thou <---
+    
+    // ---> Wherefore art thou <---
 // ----------> 1st Opt
 function whatIsInAName(collection, source) {
   const arr = [];
   const keys = Object.keys(source);
   console.log(keys); // keys of source.
-
+  
   for (const obj of collection) {
     let keyVal = true;
     for (const key of keys) {
@@ -234,20 +233,20 @@ let x = whatIsInAName(
           keyVal = false;
           break;
         }
-    }
-
-    return keyVal;
-    
-    // if (keyVal) {
-      //   return true;
-      // } else {
-        //   return false;
-        // }
-      });
-    }
-    
-    let x = whatIsInAName(
-      [
+      }
+      
+      return keyVal;
+      
+      // if (keyVal) {
+        //   return true;
+        // } else {
+          //   return false;
+          // }
+        });
+      }
+      
+      let x = whatIsInAName(
+        [
         { first: "Romeo", last: "Montague" },
         { first: "Mercutio", last: null },
         { first: "Tybalt", last: "Capulet" },
@@ -273,19 +272,20 @@ let x = whatIsInAName(
       
       let x = whatIsInAName(
         [
-    { first: "Romeo", last: "Montague" },
-    { first: "Mercutio", last: null },
-    { first: "Tybalt", last: "Capulet" },
-  ],
-  { last: "Capulet" }
-  );
-  
-  console.log(x);
-  
-  // ---> Spinal Tap Case <---
+          { first: "Romeo", last: "Montague" },
+          { first: "Mercutio", last: null },
+          { first: "Tybalt", last: "Capulet" },
+        ],
+        { last: "Capulet" }
+        );
+        
+        console.log(x);
+*/
 
-  function spinalCase(str) {
-    return str;
-  }
-  
-  spinalCase('This Is Spinal Tap');
+// ---> Spinal Tap Case <---
+
+function spinalCase(str) {
+  return str.toLowerCase().trim().replace(/[ -]+/g, "-");
+}
+
+console.log(spinalCase("This Is Spinal Tap"));
