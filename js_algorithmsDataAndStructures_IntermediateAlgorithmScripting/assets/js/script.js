@@ -285,7 +285,30 @@ let x = whatIsInAName(
 // ---> Spinal Tap Case <---
 
 function spinalCase(str) {
-  return str.toLowerCase().trim().replace(/[ -]+/g, "-");
+  const words = [];
+  let word = "";
+
+  for (const c of str) {
+    if (c === "_" || c === " ") {
+      words.push(word);
+      word = "";
+    } else if (c >= "A" && c <= "Z" && !word.length) {
+      word = c.toLowerCase();
+    } else if (c >= "A" && c <= "Z" && word.length) {
+      words.push(word);
+      word = c.toLowerCase();
+    } else {
+      word += c;
+    }
+  }
+
+  return words;
 }
 
 console.log(spinalCase("This Is Spinal Tap"));
+
+console.log(spinalCase("AllThe-small Things"));
+
+// 1- all lowercase
+// 2- (_) and " " (spaces) becomes hyphens(-)
+// 3- capital case always determine the start  of a new word(but not always the case)
