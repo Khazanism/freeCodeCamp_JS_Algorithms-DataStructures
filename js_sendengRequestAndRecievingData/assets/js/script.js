@@ -1,7 +1,6 @@
 //  js_algorithmsDataAndStructures
 
 /*
- */
 // -----> Sending Request And Recieving Data <-----
 
 // any data i request ---> is recieved as array of objects 20 <---> 11:20.
@@ -25,11 +24,22 @@ xhttp.send(); // send request to ge t users
 //2nd METHOD
 
 // promise [resolve "if the data came"- reject "if th data didn;t came"]
+*/
 
 // fetch--> is a type of Promise
 
-fetch("https://jsonplaceholder.typicode.com/users");
+fetch("https://jsonplaceholder.typicode.com/users")
 // wriring the resolve
-.then()
+.then(function (test) {
+    test.json() // it holds the info (object) <---its a peomise by itself so we write then and catch again
+    .then(function (data) {
+      console.log(data);
+    })
+
+    .catch();
+})
 // writting the rejection
-.catch()
+.catch(function () {
+    
+});
+// IMPORTANT we write ; at the end of the last catch 
