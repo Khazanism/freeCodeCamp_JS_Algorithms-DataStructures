@@ -64,9 +64,10 @@ fetch("https://jsonplaceholder.typicode.com/users")
 
 function fetchUsers() {
   fetch("https://jsonplaceholder.typicode.com/users")
-    .then(res => {        // will be removed in react
-      return res.json();  // will be removed in react
-    })                    // will be removed in react
+    .then(res => {
+      // will be removed in react
+      return res.json(); // will be removed in react
+    }) // will be removed in react
     .then(data => {
       for (let i = 0; i < data.length; i++) {
         console.log(data[i].email);
@@ -78,3 +79,11 @@ function fetchUsers() {
 }
 
 fetchUsers(); // when we need to operate it --->  we just call the function <---
+
+// callback function
+// Action A will happen and Action B will finish
+function code(c) {
+  console.log("Ampolina");
+  c();
+}
+code(() => console.log("Bmpolina"));
